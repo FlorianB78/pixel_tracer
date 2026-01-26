@@ -1,0 +1,64 @@
+
+#Title:
+
+
+* Partie 1:
+On souhaite dans ce projet proposer de développer une application de dessin
+vectoriel.
+
+
+* Les commandes :
+
+- areas
+  liste toutes les aires de dessin (id, nom) et indique avec une étoile l'aire de dessin en cours
+
+- area p1
+  mettre l'aire p1 (id) comme zone de dessin en cours
+
+- layers
+  liste tous les calques de la zone de dessin courante
+
+- layer p1
+  mettre p1 comme calque en cours
+
+- visible
+  mettre le calque courant visible
+
+- invisible
+  mettre le calque courant invisible
+
+- print p1
+  p1 : peut prendre les valeurs suivantes :
+  + areas
+  + layers
+  +
+  
+  
+
+- plot
+  redessiner
+
+- clear
+  Effacer l'écran
+
+
+- line p1 p2 p3 p4
+
+- cercle p1 p2 p3
+
+- polygone p1 p2 p3 p4  ...
+
+- triangle p1 p2 p3 
+
+- rectangle p1 p2 p3 p4
+
+- square p1 p2 p3
+
+  
+
+
+
+
+
+
+

@@ -1,0 +1,246 @@
+\doxysection{readline\+\_\+state Struct Reference}
+\hypertarget{structreadline__state}{}\label{structreadline__state}\index{readline\_state@{readline\_state}}
+
+
+{\ttfamily \+\#include $<$readline.\+h$>$}
+
+
+
+Collaboration diagram for readline\+\_\+state:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{structreadline__state__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{structreadline__state_a2dee8b7fcecc7c2d190e9304b43ea886}{point}}
+\item 
+int \doxymbox{\hyperlink{structreadline__state_abce9f5dc9c83f2639b72024fdee5d388}{end}}
+\item 
+int \doxymbox{\hyperlink{structreadline__state_a29e4cceb1cfe4649dfe576defe5558e9}{mark}}
+\item 
+int \doxymbox{\hyperlink{structreadline__state_a20cc6ed09a3d84d74f09f49179a2ccc8}{buflen}}
+\item 
+char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structreadline__state_abd91b1aab0a10c5027ca2eb5577f759f}{buffer}}
+\item 
+\doxymbox{\hyperlink{readline_2include_2readline_2readline_8h_a81e2d502e59bdba3d55c53d623a7e670}{UNDO\+\_\+\+LIST}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structreadline__state_ad53b7d9af2b842be3d83dbfcd6f5a1f6}{ul}}
+\item 
+char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structreadline__state_ae10e54958360322adfd1df135f6a5968}{prompt}}
+\item 
+int \doxymbox{\hyperlink{structreadline__state_abd721208c863565a133171528274c434}{rlstate}}
+\item 
+int \doxymbox{\hyperlink{structreadline__state_a5992b274cfdcacdbc1fa8347fd01ebde}{done}}
+\item 
+\doxymbox{\hyperlink{lib_2readline_2mingw64_2include_2readline_2keymaps_8h_a6bb690c25047cc493b5cd284e9efde2e}{Keymap}} \doxymbox{\hyperlink{structreadline__state_a0b9dc3647b7f141d29f32f8bdaa7b3d4}{kmap}}
+\item 
+\doxymbox{\hyperlink{lib_2readline_2mingw64_2include_2readline_2rltypedefs_8h_aab34eb0191f796c9f9f418bf5c93d63d}{rl\+\_\+command\+\_\+func\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structreadline__state_ad25cb20550e0f4d9843b6abcbb2645e9}{lastfunc}}
+\item 
+int \doxymbox{\hyperlink{structreadline__state_ad4f8d78ba5b072aaf2a0e89f0ff9db90}{insmode}}
+\item 
+int \doxymbox{\hyperlink{structreadline__state_aa9853bc886cbeea2e9933f4e1922c16d}{edmode}}
+\item 
+char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structreadline__state_adfd54623000dded15d2cbc99da369585}{kseq}}
+\item 
+int \doxymbox{\hyperlink{structreadline__state_acb202a44a4f8a9d770908c5a30b4ce6d}{kseqlen}}
+\item 
+int \doxymbox{\hyperlink{structreadline__state_a0cd0e34ef64f6680447022ec244db0e7}{pendingin}}
+\item 
+FILE \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structreadline__state_a9d1bde92625404d7a6df08d261c31548}{inf}}
+\item 
+FILE \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structreadline__state_a2ef28d0f596e33cf96ad6aef790663c2}{outf}}
+\item 
+char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structreadline__state_ab38d12a3a6bfac751cfe8530eec61bb5}{macro}}
+\item 
+int \doxymbox{\hyperlink{structreadline__state_afe61b57ec66adf5857039c54a2b44afc}{catchsigs}}
+\item 
+int \doxymbox{\hyperlink{structreadline__state_aebb62b4d53fd427ddeac91fc97ea8124}{catchsigwinch}}
+\item 
+\doxymbox{\hyperlink{lib_2readline_2mingw64_2include_2readline_2rltypedefs_8h_a790a4f3abe025c9e7ba3b6d447378f62}{rl\+\_\+compentry\+\_\+func\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structreadline__state_af32de051baa4fa71048c0638499842fb}{entryfunc}}
+\item 
+\doxymbox{\hyperlink{lib_2readline_2mingw64_2include_2readline_2rltypedefs_8h_a790a4f3abe025c9e7ba3b6d447378f62}{rl\+\_\+compentry\+\_\+func\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structreadline__state_afb5609021064f166906f3ab09e3dc77b}{menuentryfunc}}
+\item 
+\doxymbox{\hyperlink{lib_2readline_2mingw64_2include_2readline_2rltypedefs_8h_a55df5cf38c01b19b7cc982d91f0406a5}{rl\+\_\+compignore\+\_\+func\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structreadline__state_a383a6c5426d9d623a83a5d33190c553f}{ignorefunc}}
+\item 
+\doxymbox{\hyperlink{lib_2readline_2mingw64_2include_2readline_2rltypedefs_8h_a47f8893dc7cde8e89dcb72b8f884112c}{rl\+\_\+completion\+\_\+func\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structreadline__state_ae0216ca1edf1a5df4ac38759cbca1026}{attemptfunc}}
+\item 
+const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structreadline__state_a1e91119a04da4d2ca67c7db837748b65}{wordbreakchars}}
+\item 
+char \doxymbox{\hyperlink{structreadline__state_a2751bbb2b7d034045bedf4fbb506fb47}{reserved}} \+[64]\+
+\end{DoxyCompactItemize}
+
+
+\label{doc-variable-members}
+\Hypertarget{structreadline__state_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{structreadline__state_ae0216ca1edf1a5df4ac38759cbca1026}\index{readline\_state@{readline\_state}!attemptfunc@{attemptfunc}}
+\index{attemptfunc@{attemptfunc}!readline\_state@{readline\_state}}
+\doxysubsubsection{\texorpdfstring{attemptfunc}{attemptfunc}}
+{\footnotesize\ttfamily \label{structreadline__state_ae0216ca1edf1a5df4ac38759cbca1026} 
+\doxymbox{\hyperlink{lib_2readline_2mingw64_2include_2readline_2rltypedefs_8h_a47f8893dc7cde8e89dcb72b8f884112c}{rl\+\_\+completion\+\_\+func\+\_\+t}} \texorpdfstring{$\ast$}{*} attemptfunc}
+
+\Hypertarget{structreadline__state_abd91b1aab0a10c5027ca2eb5577f759f}\index{readline\_state@{readline\_state}!buffer@{buffer}}
+\index{buffer@{buffer}!readline\_state@{readline\_state}}
+\doxysubsubsection{\texorpdfstring{buffer}{buffer}}
+{\footnotesize\ttfamily \label{structreadline__state_abd91b1aab0a10c5027ca2eb5577f759f} 
+char \texorpdfstring{$\ast$}{*} buffer}
+
+\Hypertarget{structreadline__state_a20cc6ed09a3d84d74f09f49179a2ccc8}\index{readline\_state@{readline\_state}!buflen@{buflen}}
+\index{buflen@{buflen}!readline\_state@{readline\_state}}
+\doxysubsubsection{\texorpdfstring{buflen}{buflen}}
+{\footnotesize\ttfamily \label{structreadline__state_a20cc6ed09a3d84d74f09f49179a2ccc8} 
+int buflen}
+
+\Hypertarget{structreadline__state_afe61b57ec66adf5857039c54a2b44afc}\index{readline\_state@{readline\_state}!catchsigs@{catchsigs}}
+\index{catchsigs@{catchsigs}!readline\_state@{readline\_state}}
+\doxysubsubsection{\texorpdfstring{catchsigs}{catchsigs}}
+{\footnotesize\ttfamily \label{structreadline__state_afe61b57ec66adf5857039c54a2b44afc} 
+int catchsigs}
+
+\Hypertarget{structreadline__state_aebb62b4d53fd427ddeac91fc97ea8124}\index{readline\_state@{readline\_state}!catchsigwinch@{catchsigwinch}}
+\index{catchsigwinch@{catchsigwinch}!readline\_state@{readline\_state}}
+\doxysubsubsection{\texorpdfstring{catchsigwinch}{catchsigwinch}}
+{\footnotesize\ttfamily \label{structreadline__state_aebb62b4d53fd427ddeac91fc97ea8124} 
+int catchsigwinch}
+
+\Hypertarget{structreadline__state_a5992b274cfdcacdbc1fa8347fd01ebde}\index{readline\_state@{readline\_state}!done@{done}}
+\index{done@{done}!readline\_state@{readline\_state}}
+\doxysubsubsection{\texorpdfstring{done}{done}}
+{\footnotesize\ttfamily \label{structreadline__state_a5992b274cfdcacdbc1fa8347fd01ebde} 
+int done}
+
+\Hypertarget{structreadline__state_aa9853bc886cbeea2e9933f4e1922c16d}\index{readline\_state@{readline\_state}!edmode@{edmode}}
+\index{edmode@{edmode}!readline\_state@{readline\_state}}
+\doxysubsubsection{\texorpdfstring{edmode}{edmode}}
+{\footnotesize\ttfamily \label{structreadline__state_aa9853bc886cbeea2e9933f4e1922c16d} 
+int edmode}
+
+\Hypertarget{structreadline__state_abce9f5dc9c83f2639b72024fdee5d388}\index{readline\_state@{readline\_state}!end@{end}}
+\index{end@{end}!readline\_state@{readline\_state}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily \label{structreadline__state_abce9f5dc9c83f2639b72024fdee5d388} 
+int end}
+
+\Hypertarget{structreadline__state_af32de051baa4fa71048c0638499842fb}\index{readline\_state@{readline\_state}!entryfunc@{entryfunc}}
+\index{entryfunc@{entryfunc}!readline\_state@{readline\_state}}
+\doxysubsubsection{\texorpdfstring{entryfunc}{entryfunc}}
+{\footnotesize\ttfamily \label{structreadline__state_af32de051baa4fa71048c0638499842fb} 
+\doxymbox{\hyperlink{lib_2readline_2mingw64_2include_2readline_2rltypedefs_8h_a790a4f3abe025c9e7ba3b6d447378f62}{rl\+\_\+compentry\+\_\+func\+\_\+t}} \texorpdfstring{$\ast$}{*} entryfunc}
+
+\Hypertarget{structreadline__state_a383a6c5426d9d623a83a5d33190c553f}\index{readline\_state@{readline\_state}!ignorefunc@{ignorefunc}}
+\index{ignorefunc@{ignorefunc}!readline\_state@{readline\_state}}
+\doxysubsubsection{\texorpdfstring{ignorefunc}{ignorefunc}}
+{\footnotesize\ttfamily \label{structreadline__state_a383a6c5426d9d623a83a5d33190c553f} 
+\doxymbox{\hyperlink{lib_2readline_2mingw64_2include_2readline_2rltypedefs_8h_a55df5cf38c01b19b7cc982d91f0406a5}{rl\+\_\+compignore\+\_\+func\+\_\+t}} \texorpdfstring{$\ast$}{*} ignorefunc}
+
+\Hypertarget{structreadline__state_a9d1bde92625404d7a6df08d261c31548}\index{readline\_state@{readline\_state}!inf@{inf}}
+\index{inf@{inf}!readline\_state@{readline\_state}}
+\doxysubsubsection{\texorpdfstring{inf}{inf}}
+{\footnotesize\ttfamily \label{structreadline__state_a9d1bde92625404d7a6df08d261c31548} 
+FILE \texorpdfstring{$\ast$}{*} inf}
+
+\Hypertarget{structreadline__state_ad4f8d78ba5b072aaf2a0e89f0ff9db90}\index{readline\_state@{readline\_state}!insmode@{insmode}}
+\index{insmode@{insmode}!readline\_state@{readline\_state}}
+\doxysubsubsection{\texorpdfstring{insmode}{insmode}}
+{\footnotesize\ttfamily \label{structreadline__state_ad4f8d78ba5b072aaf2a0e89f0ff9db90} 
+int insmode}
+
+\Hypertarget{structreadline__state_a0b9dc3647b7f141d29f32f8bdaa7b3d4}\index{readline\_state@{readline\_state}!kmap@{kmap}}
+\index{kmap@{kmap}!readline\_state@{readline\_state}}
+\doxysubsubsection{\texorpdfstring{kmap}{kmap}}
+{\footnotesize\ttfamily \label{structreadline__state_a0b9dc3647b7f141d29f32f8bdaa7b3d4} 
+\doxymbox{\hyperlink{lib_2readline_2mingw64_2include_2readline_2keymaps_8h_a6bb690c25047cc493b5cd284e9efde2e}{Keymap}} kmap}
+
+\Hypertarget{structreadline__state_adfd54623000dded15d2cbc99da369585}\index{readline\_state@{readline\_state}!kseq@{kseq}}
+\index{kseq@{kseq}!readline\_state@{readline\_state}}
+\doxysubsubsection{\texorpdfstring{kseq}{kseq}}
+{\footnotesize\ttfamily \label{structreadline__state_adfd54623000dded15d2cbc99da369585} 
+char \texorpdfstring{$\ast$}{*} kseq}
+
+\Hypertarget{structreadline__state_acb202a44a4f8a9d770908c5a30b4ce6d}\index{readline\_state@{readline\_state}!kseqlen@{kseqlen}}
+\index{kseqlen@{kseqlen}!readline\_state@{readline\_state}}
+\doxysubsubsection{\texorpdfstring{kseqlen}{kseqlen}}
+{\footnotesize\ttfamily \label{structreadline__state_acb202a44a4f8a9d770908c5a30b4ce6d} 
+int kseqlen}
+
+\Hypertarget{structreadline__state_ad25cb20550e0f4d9843b6abcbb2645e9}\index{readline\_state@{readline\_state}!lastfunc@{lastfunc}}
+\index{lastfunc@{lastfunc}!readline\_state@{readline\_state}}
+\doxysubsubsection{\texorpdfstring{lastfunc}{lastfunc}}
+{\footnotesize\ttfamily \label{structreadline__state_ad25cb20550e0f4d9843b6abcbb2645e9} 
+\doxymbox{\hyperlink{lib_2readline_2mingw64_2include_2readline_2rltypedefs_8h_aab34eb0191f796c9f9f418bf5c93d63d}{rl\+\_\+command\+\_\+func\+\_\+t}} \texorpdfstring{$\ast$}{*} lastfunc}
+
+\Hypertarget{structreadline__state_ab38d12a3a6bfac751cfe8530eec61bb5}\index{readline\_state@{readline\_state}!macro@{macro}}
+\index{macro@{macro}!readline\_state@{readline\_state}}
+\doxysubsubsection{\texorpdfstring{macro}{macro}}
+{\footnotesize\ttfamily \label{structreadline__state_ab38d12a3a6bfac751cfe8530eec61bb5} 
+char \texorpdfstring{$\ast$}{*} macro}
+
+\Hypertarget{structreadline__state_a29e4cceb1cfe4649dfe576defe5558e9}\index{readline\_state@{readline\_state}!mark@{mark}}
+\index{mark@{mark}!readline\_state@{readline\_state}}
+\doxysubsubsection{\texorpdfstring{mark}{mark}}
+{\footnotesize\ttfamily \label{structreadline__state_a29e4cceb1cfe4649dfe576defe5558e9} 
+int mark}
+
+\Hypertarget{structreadline__state_afb5609021064f166906f3ab09e3dc77b}\index{readline\_state@{readline\_state}!menuentryfunc@{menuentryfunc}}
+\index{menuentryfunc@{menuentryfunc}!readline\_state@{readline\_state}}
+\doxysubsubsection{\texorpdfstring{menuentryfunc}{menuentryfunc}}
+{\footnotesize\ttfamily \label{structreadline__state_afb5609021064f166906f3ab09e3dc77b} 
+\doxymbox{\hyperlink{lib_2readline_2mingw64_2include_2readline_2rltypedefs_8h_a790a4f3abe025c9e7ba3b6d447378f62}{rl\+\_\+compentry\+\_\+func\+\_\+t}} \texorpdfstring{$\ast$}{*} menuentryfunc}
+
+\Hypertarget{structreadline__state_a2ef28d0f596e33cf96ad6aef790663c2}\index{readline\_state@{readline\_state}!outf@{outf}}
+\index{outf@{outf}!readline\_state@{readline\_state}}
+\doxysubsubsection{\texorpdfstring{outf}{outf}}
+{\footnotesize\ttfamily \label{structreadline__state_a2ef28d0f596e33cf96ad6aef790663c2} 
+FILE \texorpdfstring{$\ast$}{*} outf}
+
+\Hypertarget{structreadline__state_a0cd0e34ef64f6680447022ec244db0e7}\index{readline\_state@{readline\_state}!pendingin@{pendingin}}
+\index{pendingin@{pendingin}!readline\_state@{readline\_state}}
+\doxysubsubsection{\texorpdfstring{pendingin}{pendingin}}
+{\footnotesize\ttfamily \label{structreadline__state_a0cd0e34ef64f6680447022ec244db0e7} 
+int pendingin}
+
+\Hypertarget{structreadline__state_a2dee8b7fcecc7c2d190e9304b43ea886}\index{readline\_state@{readline\_state}!point@{point}}
+\index{point@{point}!readline\_state@{readline\_state}}
+\doxysubsubsection{\texorpdfstring{point}{point}}
+{\footnotesize\ttfamily \label{structreadline__state_a2dee8b7fcecc7c2d190e9304b43ea886} 
+int \doxymbox{\hyperlink{structpoint}{point}}}
+
+\Hypertarget{structreadline__state_ae10e54958360322adfd1df135f6a5968}\index{readline\_state@{readline\_state}!prompt@{prompt}}
+\index{prompt@{prompt}!readline\_state@{readline\_state}}
+\doxysubsubsection{\texorpdfstring{prompt}{prompt}}
+{\footnotesize\ttfamily \label{structreadline__state_ae10e54958360322adfd1df135f6a5968} 
+char \texorpdfstring{$\ast$}{*} prompt}
+
+\Hypertarget{structreadline__state_a2751bbb2b7d034045bedf4fbb506fb47}\index{readline\_state@{readline\_state}!reserved@{reserved}}
+\index{reserved@{reserved}!readline\_state@{readline\_state}}
+\doxysubsubsection{\texorpdfstring{reserved}{reserved}}
+{\footnotesize\ttfamily \label{structreadline__state_a2751bbb2b7d034045bedf4fbb506fb47} 
+char reserved}
+
+\Hypertarget{structreadline__state_abd721208c863565a133171528274c434}\index{readline\_state@{readline\_state}!rlstate@{rlstate}}
+\index{rlstate@{rlstate}!readline\_state@{readline\_state}}
+\doxysubsubsection{\texorpdfstring{rlstate}{rlstate}}
+{\footnotesize\ttfamily \label{structreadline__state_abd721208c863565a133171528274c434} 
+int rlstate}
+
+\Hypertarget{structreadline__state_ad53b7d9af2b842be3d83dbfcd6f5a1f6}\index{readline\_state@{readline\_state}!ul@{ul}}
+\index{ul@{ul}!readline\_state@{readline\_state}}
+\doxysubsubsection{\texorpdfstring{ul}{ul}}
+{\footnotesize\ttfamily \label{structreadline__state_ad53b7d9af2b842be3d83dbfcd6f5a1f6} 
+\doxymbox{\hyperlink{readline_2include_2readline_2readline_8h_a81e2d502e59bdba3d55c53d623a7e670}{UNDO\+\_\+\+LIST}} \texorpdfstring{$\ast$}{*} ul}
+
+\Hypertarget{structreadline__state_a1e91119a04da4d2ca67c7db837748b65}\index{readline\_state@{readline\_state}!wordbreakchars@{wordbreakchars}}
+\index{wordbreakchars@{wordbreakchars}!readline\_state@{readline\_state}}
+\doxysubsubsection{\texorpdfstring{wordbreakchars}{wordbreakchars}}
+{\footnotesize\ttfamily \label{structreadline__state_a1e91119a04da4d2ca67c7db837748b65} 
+const char \texorpdfstring{$\ast$}{*} wordbreakchars}
+
+
+
+The documentation for this struct was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+lib/\+readline/\+mingw64/\+include/\+readline/\+\doxymbox{\hyperlink{lib_2readline_2mingw64_2include_2readline_2readline_8h}{readline.\+h}}\item 
+readline/\+include/\+readline/\+\doxymbox{\hyperlink{readline_2include_2readline_2readline_8h}{readline.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,176 @@
+\doxysection{lib/\+readline/\+mingw64/\+share/\+readline/\+excallback.c File Reference}
+\hypertarget{excallback_8c}{}\label{excallback_8c}\index{lib/readline/mingw64/share/readline/excallback.c@{lib/readline/mingw64/share/readline/excallback.c}}
+{\ttfamily \+\#include $<$sys/\+types.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+{\ttfamily \+\#include $<$termios.\+h$>$}\newline
+{\ttfamily \+\#include $<$locale.\+h$>$}\newline
+{\ttfamily \+\#include $<$readline/\+readline.\+h$>$}\newline
+Include dependency graph for excallback.\+c:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{excallback_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{excallback_8c_afcf80a6d91178952d107ad00b165752b}{STDIN\+\_\+\+FILENO}}~0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{excallback_8c_a9ac8be1b9cf5e7756e54713cfad241a5}{process\+\_\+line}} (char \texorpdfstring{$\ast$}{*}\doxymbox{\hyperlink{structline}{line}})
+\item 
+int \doxymbox{\hyperlink{excallback_8c_a9b57ad3684ac2864b542a9913724a059}{change\+\_\+prompt}} (void)
+\item 
+char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{excallback_8c_accd3b77cbc7d85358c128d57ae3f0dc8}{get\+\_\+prompt}} (void)
+\item 
+int \doxymbox{\hyperlink{excallback_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{excallback_8c_ac606ca86295982d81d1ea6ae026a634e}{prompt}} = 1
+\item 
+char \doxymbox{\hyperlink{excallback_8c_a9600bc5a12cf3518601b376476cac1be}{prompt\+\_\+buf}} \+[40]\+
+\item 
+char \doxymbox{\hyperlink{excallback_8c_af40ea27929396bdc73c0a01488042565}{line\+\_\+buf}} \+[256]\+
+\item 
+tcflag\+\_\+t \doxymbox{\hyperlink{excallback_8c_a4d19facc044902fa8cd92624624370a9}{old\+\_\+lflag}}
+\item 
+cc\+\_\+t \doxymbox{\hyperlink{excallback_8c_a9c9c66574283a250bdf6e9ec72f145b1}{old\+\_\+vtime}}
+\item 
+struct termios \doxymbox{\hyperlink{excallback_8c_a0a96a7fecf1aeddf6219c3ca92bd67a3}{term}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{excallback_8c_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{excallback_8c_afcf80a6d91178952d107ad00b165752b}\index{excallback.c@{excallback.c}!STDIN\_FILENO@{STDIN\_FILENO}}
+\index{STDIN\_FILENO@{STDIN\_FILENO}!excallback.c@{excallback.c}}
+\doxysubsubsection{\texorpdfstring{STDIN\_FILENO}{STDIN\_FILENO}}
+{\footnotesize\ttfamily \label{excallback_8c_afcf80a6d91178952d107ad00b165752b} 
+\+\#define STDIN\+\_\+\+FILENO~0}
+
+
+
+\label{doc-func-members}
+\Hypertarget{excallback_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{excallback_8c_a9b57ad3684ac2864b542a9913724a059}\index{excallback.c@{excallback.c}!change\_prompt@{change\_prompt}}
+\index{change\_prompt@{change\_prompt}!excallback.c@{excallback.c}}
+\doxysubsubsection{\texorpdfstring{change\_prompt()}{change\_prompt()}}
+{\footnotesize\ttfamily \label{excallback_8c_a9b57ad3684ac2864b542a9913724a059} 
+int change\+\_\+prompt (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{excallback_8c_a9b57ad3684ac2864b542a9913724a059_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{excallback_8c_a9b57ad3684ac2864b542a9913724a059_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{excallback_8c_accd3b77cbc7d85358c128d57ae3f0dc8}\index{excallback.c@{excallback.c}!get\_prompt@{get\_prompt}}
+\index{get\_prompt@{get\_prompt}!excallback.c@{excallback.c}}
+\doxysubsubsection{\texorpdfstring{get\_prompt()}{get\_prompt()}}
+{\footnotesize\ttfamily \label{excallback_8c_accd3b77cbc7d85358c128d57ae3f0dc8} 
+char \texorpdfstring{$\ast$}{*} get\+\_\+prompt (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{excallback_8c_accd3b77cbc7d85358c128d57ae3f0dc8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{excallback_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{excallback.c@{excallback.c}!main@{main}}
+\index{main@{main}!excallback.c@{excallback.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{excallback_8c_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{excallback_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{excallback_8c_a9ac8be1b9cf5e7756e54713cfad241a5}\index{excallback.c@{excallback.c}!process\_line@{process\_line}}
+\index{process\_line@{process\_line}!excallback.c@{excallback.c}}
+\doxysubsubsection{\texorpdfstring{process\_line()}{process\_line()}}
+{\footnotesize\ttfamily \label{excallback_8c_a9ac8be1b9cf5e7756e54713cfad241a5} 
+void process\+\_\+line (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{line}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{excallback_8c_a9ac8be1b9cf5e7756e54713cfad241a5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{excallback_8c_a9ac8be1b9cf5e7756e54713cfad241a5_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-var-members}
+\Hypertarget{excallback_8c_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{excallback_8c_af40ea27929396bdc73c0a01488042565}\index{excallback.c@{excallback.c}!line\_buf@{line\_buf}}
+\index{line\_buf@{line\_buf}!excallback.c@{excallback.c}}
+\doxysubsubsection{\texorpdfstring{line\_buf}{line\_buf}}
+{\footnotesize\ttfamily \label{excallback_8c_af40ea27929396bdc73c0a01488042565} 
+char line\+\_\+buf\+[256]\+}
+
+\Hypertarget{excallback_8c_a4d19facc044902fa8cd92624624370a9}\index{excallback.c@{excallback.c}!old\_lflag@{old\_lflag}}
+\index{old\_lflag@{old\_lflag}!excallback.c@{excallback.c}}
+\doxysubsubsection{\texorpdfstring{old\_lflag}{old\_lflag}}
+{\footnotesize\ttfamily \label{excallback_8c_a4d19facc044902fa8cd92624624370a9} 
+tcflag\+\_\+t old\+\_\+lflag}
+
+\Hypertarget{excallback_8c_a9c9c66574283a250bdf6e9ec72f145b1}\index{excallback.c@{excallback.c}!old\_vtime@{old\_vtime}}
+\index{old\_vtime@{old\_vtime}!excallback.c@{excallback.c}}
+\doxysubsubsection{\texorpdfstring{old\_vtime}{old\_vtime}}
+{\footnotesize\ttfamily \label{excallback_8c_a9c9c66574283a250bdf6e9ec72f145b1} 
+cc\+\_\+t old\+\_\+vtime}
+
+\Hypertarget{excallback_8c_ac606ca86295982d81d1ea6ae026a634e}\index{excallback.c@{excallback.c}!prompt@{prompt}}
+\index{prompt@{prompt}!excallback.c@{excallback.c}}
+\doxysubsubsection{\texorpdfstring{prompt}{prompt}}
+{\footnotesize\ttfamily \label{excallback_8c_ac606ca86295982d81d1ea6ae026a634e} 
+int prompt = 1}
+
+\Hypertarget{excallback_8c_a9600bc5a12cf3518601b376476cac1be}\index{excallback.c@{excallback.c}!prompt\_buf@{prompt\_buf}}
+\index{prompt\_buf@{prompt\_buf}!excallback.c@{excallback.c}}
+\doxysubsubsection{\texorpdfstring{prompt\_buf}{prompt\_buf}}
+{\footnotesize\ttfamily \label{excallback_8c_a9600bc5a12cf3518601b376476cac1be} 
+char prompt\+\_\+buf\+[40]\+}
+
+\Hypertarget{excallback_8c_a0a96a7fecf1aeddf6219c3ca92bd67a3}\index{excallback.c@{excallback.c}!term@{term}}
+\index{term@{term}!excallback.c@{excallback.c}}
+\doxysubsubsection{\texorpdfstring{term}{term}}
+{\footnotesize\ttfamily \label{excallback_8c_a0a96a7fecf1aeddf6219c3ca92bd67a3} 
+struct termios term}
+

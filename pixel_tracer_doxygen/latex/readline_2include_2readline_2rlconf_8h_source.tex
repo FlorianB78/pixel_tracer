@@ -1,0 +1,85 @@
+\doxysection{rlconf.\+h}
+\hypertarget{readline_2include_2readline_2rlconf_8h_source}{}\label{readline_2include_2readline_2rlconf_8h_source}\index{readline/include/readline/rlconf.h@{readline/include/readline/rlconf.h}}
+\doxymbox{\hyperlink{readline_2include_2readline_2rlconf_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*\ rlconf.h\ -\/-\/\ readline\ configuration\ definitions\ */}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{comment}{/*\ Copyright\ (C)\ 1992-\/2015\ Free\ Software\ Foundation,\ Inc.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ \ \ This\ file\ is\ part\ of\ the\ GNU\ Readline\ Library\ (Readline),\ a\ library}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ \ \ for\ reading\ lines\ of\ text\ with\ interactive\ input\ and\ history\ editing.\ \ \ \ \ \ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ \ \ Readline\ is\ free\ software:\ you\ can\ redistribute\ it\ and/or\ modify}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ \ \ it\ under\ the\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ \ \ the\ Free\ Software\ Foundation,\ either\ version\ 3\ of\ the\ License,\ or}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ \ \ (at\ your\ option)\ any\ later\ version.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ \ \ Readline\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ \ \ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ \ \ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ \ \ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ \ \ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ \ \ along\ with\ Readline.\ \ If\ not,\ see\ <http://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#if\ !defined\ (\_RLCONF\_H\_)}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#define\ \_RLCONF\_H\_}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{comment}{/*\ Define\ this\ if\ you\ want\ the\ vi-\/mode\ editing\ available.\ */}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ VI\_MODE}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{comment}{/*\ Define\ this\ to\ get\ an\ indication\ of\ file\ type\ when\ listing\ completions.\ */}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#define\ VISIBLE\_STATS}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{comment}{/*\ Define\ this\ to\ get\ support\ for\ colors\ when\ listing\ completions\ and\ in}}
+\DoxyCodeLine{00032\ \textcolor{comment}{\ \ \ other\ places.\ */}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#define\ COLOR\_SUPPORT}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{comment}{/*\ This\ definition\ is\ needed\ by\ readline.c,\ rltty.c,\ and\ signals.c.\ */}}
+\DoxyCodeLine{00036\ \textcolor{comment}{/*\ If\ on,\ then\ readline\ handles\ signals\ in\ a\ way\ that\ doesn't\ suck.\ */}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#define\ HANDLE\_SIGNALS}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{comment}{/*\ Ugly\ but\ working\ hack\ for\ binding\ prefix\ meta.\ */}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#define\ PREFIX\_META\_HACK}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{comment}{/*\ The\ next-\/to-\/last-\/ditch\ effort\ file\ name\ for\ a\ user-\/specific\ init\ file.\ */}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#define\ DEFAULT\_INPUTRC\ "{}\string~/.inputrc"{}}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{comment}{/*\ The\ ultimate\ last-\/ditch\ filename\ for\ an\ init\ file\ -\/-\/\ system-\/wide.\ */}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#define\ SYS\_INPUTRC\ "{}/etc/inputrc"{}}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{comment}{/*\ If\ defined,\ expand\ tabs\ to\ spaces.\ */}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ DISPLAY\_TABS}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{comment}{/*\ If\ defined,\ use\ the\ terminal\ escape\ sequence\ to\ move\ the\ cursor\ forward}}
+\DoxyCodeLine{00052\ \textcolor{comment}{\ \ \ over\ a\ character\ when\ updating\ the\ line\ rather\ than\ rewriting\ it.\ */}}
+\DoxyCodeLine{00053\ \textcolor{comment}{/*\ \#define\ HACK\_TERMCAP\_MOTION\ */}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{comment}{/*\ The\ string\ inserted\ by\ the\ \`{}insert\ comment'\ command.\ */}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#define\ RL\_COMMENT\_BEGIN\_DEFAULT\ "{}\#"{}}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{comment}{/*\ Define\ this\ if\ you\ want\ code\ that\ allows\ readline\ to\ be\ used\ in\ an}}
+\DoxyCodeLine{00059\ \textcolor{comment}{\ \ \ X\ \`{}callback'\ style.\ */}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#define\ READLINE\_CALLBACKS}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{comment}{/*\ Define\ this\ if\ you\ want\ the\ cursor\ to\ indicate\ insert\ or\ overwrite\ mode.\ */}}
+\DoxyCodeLine{00063\ \textcolor{comment}{/*\ \#define\ CURSOR\_MODE\ */}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{comment}{/*\ Define\ this\ if\ you\ want\ to\ enable\ code\ that\ talks\ to\ the\ Linux\ kernel}}
+\DoxyCodeLine{00066\ \textcolor{comment}{\ \ \ tty\ auditing\ system.\ */}}
+\DoxyCodeLine{00067\ \textcolor{comment}{/*\ \#define\ ENABLE\_TTY\_AUDIT\_SUPPORT\ */}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{comment}{/*\ Defaults\ for\ the\ various\ editing\ mode\ indicators,\ inserted\ at\ the\ beginning}}
+\DoxyCodeLine{00070\ \textcolor{comment}{\ \ \ of\ the\ last\ (maybe\ only)\ line\ of\ the\ prompt\ if\ show-\/mode-\/in-\/prompt\ is\ on\ */}}
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#define\ RL\_EMACS\_MODESTR\_DEFAULT\ \ \ \ "{}@"{}}}
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#define\ RL\_EMACS\_MODESTR\_DEFLEN\ \ \ \ \ 1}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#define\ RL\_VI\_INS\_MODESTR\_DEFAULT\ \ \ "{}(ins)"{}}}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#define\ RL\_VI\_INS\_MODESTR\_DEFLEN\ \ \ \ 5}}
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#define\ RL\_VI\_CMD\_MODESTR\_DEFAULT\ \ \ "{}(cmd)"{}}}
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#define\ RL\_VI\_CMD\_MODESTR\_DEFLEN\ \ \ \ 5}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_RLCONF\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

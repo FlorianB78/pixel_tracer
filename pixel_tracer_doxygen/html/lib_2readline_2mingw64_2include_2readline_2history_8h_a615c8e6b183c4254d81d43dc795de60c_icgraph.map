@@ -1,0 +1,11 @@
+<map id="history_get" name="history_get">
+<area shape="rect" id="Node000001" title=" " alt="" coords="260,31,345,57"/>
+<area shape="rect" id="Node000002" href="$hist__erasedups_8c.html#abc8b60be722ddeb29f30f2b65b58154c" title=" " alt="" coords="103,5,212,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="242,34,212,31,212,26,248,34"/>
+<area shape="rect" id="Node000004" href="$hist__purgecmd_8c.html#a1104d4e8e0474779f464f90e631aac1c" title=" " alt="" coords="104,56,210,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="247,54,211,63,210,57,242,54"/>
+<area shape="rect" id="Node000003" href="$hist__erasedups_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="85,20,56,21,55,16,89,17"/>
+<area shape="rect" id="Node000005" href="$hist__purgecmd_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,56,55,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="86,70,55,72,55,67,91,68"/>
+</map>

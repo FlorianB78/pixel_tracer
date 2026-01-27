@@ -1,0 +1,898 @@
+\doxysection{src/\+shape.h File Reference}
+\hypertarget{shape_8h}{}\label{shape_8h}\index{src/shape.h@{src/shape.h}}
+This graph shows which files directly or indirectly include this file:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{shape_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structpoint}{point}}
+\item 
+struct \doxymbox{\hyperlink{structline}{line}}
+\item 
+struct \doxymbox{\hyperlink{structsquar}{squar}}
+\item 
+struct \doxymbox{\hyperlink{structrectangle}{rectangle}}
+\item 
+struct \doxymbox{\hyperlink{structcercle}{cercle}}
+\item 
+struct \doxymbox{\hyperlink{structpolygon}{polygon}}
+\item 
+struct \doxymbox{\hyperlink{structcurve}{curve}}
+\item 
+struct \doxymbox{\hyperlink{structshape}{shape}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \doxymbox{\hyperlink{shape_8h_a82a00e336c65dad4cc04b65563b26eb5}{shape\+\_\+type}} \doxymbox{\hyperlink{shape_8h_ab298258591bd59ebc8c94c516f6827a1}{Shape\+\_\+type}}
+\item 
+typedef enum \doxymbox{\hyperlink{shape_8h_a37dbdc30935031c05304482e1be89d8f}{color}} \doxymbox{\hyperlink{shape_8h_af03b271da9a2fa2b56bab917f69c0808}{Color}}
+\item 
+typedef struct \doxymbox{\hyperlink{structpoint}{point}} \doxymbox{\hyperlink{shape_8h_a68a5f2bb08a3778580f2bc60f9181585}{Point}}
+\item 
+typedef struct \doxymbox{\hyperlink{structline}{line}} \doxymbox{\hyperlink{shape_8h_a0e3ef9454fd7a670513ea0cd5d3e4273}{Line}}
+\item 
+typedef struct \doxymbox{\hyperlink{structsquar}{squar}} \doxymbox{\hyperlink{shape_8h_aa24608cc3ae66b0f04344de9e4937b3b}{Squar}}
+\item 
+typedef struct \doxymbox{\hyperlink{structrectangle}{rectangle}} \doxymbox{\hyperlink{shape_8h_a13bca493ce80dfe198a36f528166d363}{Rectangle}}
+\item 
+typedef struct \doxymbox{\hyperlink{structcercle}{cercle}} \doxymbox{\hyperlink{shape_8h_abee569f29f324cc56b10c0fc105b1733}{Cercle}}
+\item 
+typedef struct \doxymbox{\hyperlink{structpolygon}{polygon}} \doxymbox{\hyperlink{shape_8h_a8b0040105ff2b8b6334ef0f315a06a58}{Polygon}}
+\item 
+typedef struct \doxymbox{\hyperlink{structcurve}{curve}} \doxymbox{\hyperlink{shape_8h_a38096ccae493998b79f07f814e1d546c}{Curve}}
+\item 
+typedef struct \doxymbox{\hyperlink{structshape}{shape}} \doxymbox{\hyperlink{shape_8h_ac87c23c9a508e52f7077a7012fba9424}{Shape}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \doxymbox{\hyperlink{shape_8h_a82a00e336c65dad4cc04b65563b26eb5}{shape\+\_\+type}} \{ \newline
+\doxymbox{\hyperlink{shape_8h_a82a00e336c65dad4cc04b65563b26eb5a15108ccafa3232b9067f889b6156f565}{POINT}}
+, \doxymbox{\hyperlink{shape_8h_a82a00e336c65dad4cc04b65563b26eb5ab023460c84f774a219d46ccf4665994c}{LINE}}
+, \doxymbox{\hyperlink{shape_8h_a82a00e336c65dad4cc04b65563b26eb5a6bbf18c3b9c541f6f2e858477b9156ee}{SQUAR}}
+, \doxymbox{\hyperlink{shape_8h_a82a00e336c65dad4cc04b65563b26eb5ae552ab0a96c0384a6e918e726b7f6102}{RECTANGLE}}
+, \newline
+\doxymbox{\hyperlink{shape_8h_a82a00e336c65dad4cc04b65563b26eb5abcaa0644a60d3e413e905e97a4a7878c}{CERCLE}}
+, \doxymbox{\hyperlink{shape_8h_a82a00e336c65dad4cc04b65563b26eb5ad5355465780b9a6259ebbc74d47477db}{POLYGON}}
+, \doxymbox{\hyperlink{shape_8h_a82a00e336c65dad4cc04b65563b26eb5a2267c8aab80fd31714c264f251e343cf}{CURVE}}
+ \}
+\item 
+enum \doxymbox{\hyperlink{shape_8h_a37dbdc30935031c05304482e1be89d8f}{color}} \{ \doxymbox{\hyperlink{shape_8h_a37dbdc30935031c05304482e1be89d8faf77fb67151d0c18d397069ad8c271ba3}{BLACK}}
+, \doxymbox{\hyperlink{shape_8h_a37dbdc30935031c05304482e1be89d8faaec24be219f140a1b159729feffd202c}{WIGHT}}
+, \doxymbox{\hyperlink{shape_8h_a37dbdc30935031c05304482e1be89d8faf80f9a890089d211842d59625e561f88}{RED}}
+, \doxymbox{\hyperlink{shape_8h_a37dbdc30935031c05304482e1be89d8faa60bd322f93178d68184e30e162571ca}{GREEN}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{shape_8h_a68a5f2bb08a3778580f2bc60f9181585}{Point}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{shape_8h_ab97fa9ac627755e6124e7e207e2924d4}{create\+\_\+point}} (int px, int py)
+\item 
+void \doxymbox{\hyperlink{shape_8h_a4dade23c37d4b2c409163edfc522b18f}{delete\+\_\+point}} (\doxymbox{\hyperlink{shape_8h_a68a5f2bb08a3778580f2bc60f9181585}{Point}} \texorpdfstring{$\ast$}{*}\doxymbox{\hyperlink{structpoint}{point}})
+\item 
+\doxymbox{\hyperlink{shape_8h_a0e3ef9454fd7a670513ea0cd5d3e4273}{Line}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{shape_8h_abfd6bf5e65ff572bfad113528ebd233e}{create\+\_\+line}} (\doxymbox{\hyperlink{shape_8h_a68a5f2bb08a3778580f2bc60f9181585}{Point}} \texorpdfstring{$\ast$}{*}p1, \doxymbox{\hyperlink{shape_8h_a68a5f2bb08a3778580f2bc60f9181585}{Point}} \texorpdfstring{$\ast$}{*}p2)
+\item 
+void \doxymbox{\hyperlink{shape_8h_ae8a93415a118bb4ec12ce97b1d601ba3}{delete\+\_\+line}} (\doxymbox{\hyperlink{shape_8h_a0e3ef9454fd7a670513ea0cd5d3e4273}{Line}} \texorpdfstring{$\ast$}{*}\doxymbox{\hyperlink{structline}{line}})
+\item 
+\doxymbox{\hyperlink{shape_8h_aa24608cc3ae66b0f04344de9e4937b3b}{Squar}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{shape_8h_a83413fc68532ff4b56e74c609089be32}{create\+\_\+squar}} (\doxymbox{\hyperlink{shape_8h_a68a5f2bb08a3778580f2bc60f9181585}{Point}} \texorpdfstring{$\ast$}{*}\doxymbox{\hyperlink{structpoint}{point}}, int legth)
+\item 
+void \doxymbox{\hyperlink{shape_8h_a9719ed7c7a5d88c62cf6b772797dcbf6}{delete\+\_\+squar}} (\doxymbox{\hyperlink{shape_8h_aa24608cc3ae66b0f04344de9e4937b3b}{Squar}} \texorpdfstring{$\ast$}{*}\doxymbox{\hyperlink{structsquar}{squar}})
+\item 
+\doxymbox{\hyperlink{shape_8h_a13bca493ce80dfe198a36f528166d363}{Rectangle}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{shape_8h_a73699118b7346b270993b7da411b3fac}{create\+\_\+rectangle}} (\doxymbox{\hyperlink{shape_8h_a68a5f2bb08a3778580f2bc60f9181585}{Point}} \texorpdfstring{$\ast$}{*}\doxymbox{\hyperlink{structpoint}{point}}, int width, int height)
+\item 
+void \doxymbox{\hyperlink{shape_8h_aa9e48149920001dcdba970cdcd16bb94}{delete\+\_\+rectangle}} (\doxymbox{\hyperlink{shape_8h_a13bca493ce80dfe198a36f528166d363}{Rectangle}} \texorpdfstring{$\ast$}{*}\doxymbox{\hyperlink{structrectangle}{rectangle}})
+\item 
+\doxymbox{\hyperlink{shape_8h_abee569f29f324cc56b10c0fc105b1733}{Cercle}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{shape_8h_aa2c951dd5850a2d403d43cf32b4a1aad}{create\+\_\+cercle}} (\doxymbox{\hyperlink{shape_8h_a68a5f2bb08a3778580f2bc60f9181585}{Point}} \texorpdfstring{$\ast$}{*}center, int radus)
+\item 
+void \doxymbox{\hyperlink{shape_8h_a2a66a133e444cd75bcfd3aaba3639a74}{delete\+\_\+cercle}} (\doxymbox{\hyperlink{shape_8h_abee569f29f324cc56b10c0fc105b1733}{Cercle}} \texorpdfstring{$\ast$}{*}\doxymbox{\hyperlink{structcercle}{cercle}})
+\item 
+\doxymbox{\hyperlink{shape_8h_a8b0040105ff2b8b6334ef0f315a06a58}{Polygon}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{shape_8h_a0b6ec900fe0543eb52bd50859991e909}{create\+\_\+polygon}} (int n)
+\item 
+void \doxymbox{\hyperlink{shape_8h_a8a3c09a25ea963bb9a9feabcd1ef3d67}{delete\+\_\+polygon}} (\doxymbox{\hyperlink{shape_8h_a8b0040105ff2b8b6334ef0f315a06a58}{Polygon}} \texorpdfstring{$\ast$}{*}\doxymbox{\hyperlink{structpolygon}{polygon}})
+\item 
+\doxymbox{\hyperlink{shape_8h_a38096ccae493998b79f07f814e1d546c}{Curve}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{shape_8h_a0b00018396692c013a631cf10b1efb96}{create\+\_\+curve}} (\doxymbox{\hyperlink{shape_8h_a68a5f2bb08a3778580f2bc60f9181585}{Point}} \texorpdfstring{$\ast$}{*}p1, \doxymbox{\hyperlink{shape_8h_a68a5f2bb08a3778580f2bc60f9181585}{Point}} \texorpdfstring{$\ast$}{*}p2, \doxymbox{\hyperlink{shape_8h_a68a5f2bb08a3778580f2bc60f9181585}{Point}} \texorpdfstring{$\ast$}{*}p3, \doxymbox{\hyperlink{shape_8h_a68a5f2bb08a3778580f2bc60f9181585}{Point}} \texorpdfstring{$\ast$}{*}p4)
+\item 
+void \doxymbox{\hyperlink{shape_8h_ab785bcd1ddf2cf76008057c1e3f71362}{delete\+\_\+curve}} (\doxymbox{\hyperlink{shape_8h_a38096ccae493998b79f07f814e1d546c}{Curve}} \texorpdfstring{$\ast$}{*}\doxymbox{\hyperlink{structcurve}{curve}})
+\item 
+\doxymbox{\hyperlink{shape_8h_ac87c23c9a508e52f7077a7012fba9424}{Shape}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{shape_8h_aae294a5667c8e8b32e2b4af3fa98679a}{create\+\_\+empty\+\_\+shape}} (\doxymbox{\hyperlink{shape_8h_ab298258591bd59ebc8c94c516f6827a1}{Shape\+\_\+type}} \doxymbox{\hyperlink{shape_8h_a82a00e336c65dad4cc04b65563b26eb5}{shape\+\_\+type}})
+\item 
+void \doxymbox{\hyperlink{shape_8h_ad2551f83fb7456ad8e3f913a78b59a1e}{sprint\+\_\+point}} (\doxymbox{\hyperlink{shape_8h_a68a5f2bb08a3778580f2bc60f9181585}{Point}} \texorpdfstring{$\ast$}{*}p, char \texorpdfstring{$\ast$}{*}str)
+\item 
+void \doxymbox{\hyperlink{shape_8h_a26f431cb3f02d6b1a9967dc64591b1db}{sprint\+\_\+line}} (\doxymbox{\hyperlink{shape_8h_a0e3ef9454fd7a670513ea0cd5d3e4273}{Line}} \texorpdfstring{$\ast$}{*}\doxymbox{\hyperlink{structline}{line}}, char \texorpdfstring{$\ast$}{*}str)
+\item 
+void \doxymbox{\hyperlink{shape_8h_a3571899d19b29d8571e6c090065121f3}{sprint\+\_\+squar}} (\doxymbox{\hyperlink{shape_8h_aa24608cc3ae66b0f04344de9e4937b3b}{Squar}} \texorpdfstring{$\ast$}{*}\doxymbox{\hyperlink{structsquar}{squar}}, char \texorpdfstring{$\ast$}{*}str)
+\item 
+void \doxymbox{\hyperlink{shape_8h_a9be86d5bc934d6905c849b96f71ccc14}{sprint\+\_\+rectangle}} (\doxymbox{\hyperlink{shape_8h_a13bca493ce80dfe198a36f528166d363}{Rectangle}} \texorpdfstring{$\ast$}{*}\doxymbox{\hyperlink{structrectangle}{rectangle}}, char \texorpdfstring{$\ast$}{*}str)
+\item 
+void \doxymbox{\hyperlink{shape_8h_a068a5bc38689a7b8fae84ef6a3dc0f47}{sprint\+\_\+cercle}} (\doxymbox{\hyperlink{shape_8h_abee569f29f324cc56b10c0fc105b1733}{Cercle}} \texorpdfstring{$\ast$}{*}\doxymbox{\hyperlink{structcercle}{cercle}}, char \texorpdfstring{$\ast$}{*}str)
+\item 
+void \doxymbox{\hyperlink{shape_8h_a71e3c87d1041b6439c310bb63e810f3d}{sprint\+\_\+polygon}} (\doxymbox{\hyperlink{shape_8h_a8b0040105ff2b8b6334ef0f315a06a58}{Polygon}} \texorpdfstring{$\ast$}{*}\doxymbox{\hyperlink{structpolygon}{polygon}}, char \texorpdfstring{$\ast$}{*}str)
+\item 
+void \doxymbox{\hyperlink{shape_8h_a575942d1117aebe05159a42d4aacda53}{sprint\+\_\+curve}} (\doxymbox{\hyperlink{shape_8h_a38096ccae493998b79f07f814e1d546c}{Curve}} \texorpdfstring{$\ast$}{*}\doxymbox{\hyperlink{structcurve}{curve}}, char \texorpdfstring{$\ast$}{*}str)
+\item 
+\doxymbox{\hyperlink{shape_8h_ac87c23c9a508e52f7077a7012fba9424}{Shape}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{shape_8h_a80752be52322a61e81bf4e49390c008c}{create\+\_\+point\+\_\+shape}} (int px, int py)
+\item 
+\doxymbox{\hyperlink{shape_8h_ac87c23c9a508e52f7077a7012fba9424}{Shape}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{shape_8h_aa5c6f398c4465b204e4266a41042f251}{create\+\_\+line\+\_\+shape}} (int px1, int py1, int px2, int py2)
+\item 
+\doxymbox{\hyperlink{shape_8h_ac87c23c9a508e52f7077a7012fba9424}{Shape}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{shape_8h_afdc8591882c4c221dfa8d7c6bda15953}{create\+\_\+square\+\_\+shape}} (int px, int py, int length)
+\item 
+\doxymbox{\hyperlink{shape_8h_ac87c23c9a508e52f7077a7012fba9424}{Shape}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{shape_8h_a6c0b8dee946e1a62917c8a3b098f7691}{create\+\_\+rectangle\+\_\+shape}} (int px, int py, int width, int height)
+\item 
+\doxymbox{\hyperlink{shape_8h_ac87c23c9a508e52f7077a7012fba9424}{Shape}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{shape_8h_a829c775df14dc9eec0a04894a3b62f78}{create\+\_\+cercle\+\_\+shape}} (int px, int py, int radus)
+\item 
+\doxymbox{\hyperlink{shape_8h_ac87c23c9a508e52f7077a7012fba9424}{Shape}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{shape_8h_a97f6c2418977ed6b87fe369afdff4909}{create\+\_\+polygon\+\_\+shape}} (int n, int \texorpdfstring{$\ast$}{*}tab)
+\item 
+\doxymbox{\hyperlink{shape_8h_ac87c23c9a508e52f7077a7012fba9424}{Shape}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{shape_8h_a55bd01d067a9668ed0f807817a3bf21d}{create\+\_\+curve\+\_\+shape}} (int px1, int py1, int px2, int py2, int px3, int py3, int px4, int py4)
+\item 
+void \doxymbox{\hyperlink{shape_8h_a161cb800ff00feffb5cf5d7592b3b8be}{delete\+\_\+shape}} (\doxymbox{\hyperlink{shape_8h_ac87c23c9a508e52f7077a7012fba9424}{Shape}} \texorpdfstring{$\ast$}{*}\doxymbox{\hyperlink{structshape}{shape}})
+\item 
+void \doxymbox{\hyperlink{shape_8h_a5167551a1a804f8b67d74ed0ce9b738d}{sprint\+\_\+shape}} (\doxymbox{\hyperlink{shape_8h_ac87c23c9a508e52f7077a7012fba9424}{Shape}} \texorpdfstring{$\ast$}{*}\doxymbox{\hyperlink{structshape}{shape}}, char \texorpdfstring{$\ast$}{*}str)
+\end{DoxyCompactItemize}
+
+
+\label{doc-typedef-members}
+\Hypertarget{shape_8h_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{shape_8h_abee569f29f324cc56b10c0fc105b1733}\index{shape.h@{shape.h}!Cercle@{Cercle}}
+\index{Cercle@{Cercle}!shape.h@{shape.h}}
+\doxysubsubsection{\texorpdfstring{Cercle}{Cercle}}
+{\footnotesize\ttfamily \label{shape_8h_abee569f29f324cc56b10c0fc105b1733} 
+typedef struct \doxymbox{\hyperlink{structcercle}{cercle}} \doxymbox{\hyperlink{shape_8h_abee569f29f324cc56b10c0fc105b1733}{Cercle}}}
+
+\Hypertarget{shape_8h_af03b271da9a2fa2b56bab917f69c0808}\index{shape.h@{shape.h}!Color@{Color}}
+\index{Color@{Color}!shape.h@{shape.h}}
+\doxysubsubsection{\texorpdfstring{Color}{Color}}
+{\footnotesize\ttfamily \label{shape_8h_af03b271da9a2fa2b56bab917f69c0808} 
+typedef enum \doxymbox{\hyperlink{shape_8h_a37dbdc30935031c05304482e1be89d8f}{color}} \doxymbox{\hyperlink{shape_8h_af03b271da9a2fa2b56bab917f69c0808}{Color}}}
+
+\Hypertarget{shape_8h_a38096ccae493998b79f07f814e1d546c}\index{shape.h@{shape.h}!Curve@{Curve}}
+\index{Curve@{Curve}!shape.h@{shape.h}}
+\doxysubsubsection{\texorpdfstring{Curve}{Curve}}
+{\footnotesize\ttfamily \label{shape_8h_a38096ccae493998b79f07f814e1d546c} 
+typedef struct \doxymbox{\hyperlink{structcurve}{curve}} \doxymbox{\hyperlink{shape_8h_a38096ccae493998b79f07f814e1d546c}{Curve}}}
+
+\Hypertarget{shape_8h_a0e3ef9454fd7a670513ea0cd5d3e4273}\index{shape.h@{shape.h}!Line@{Line}}
+\index{Line@{Line}!shape.h@{shape.h}}
+\doxysubsubsection{\texorpdfstring{Line}{Line}}
+{\footnotesize\ttfamily \label{shape_8h_a0e3ef9454fd7a670513ea0cd5d3e4273} 
+typedef struct \doxymbox{\hyperlink{structline}{line}} \doxymbox{\hyperlink{shape_8h_a0e3ef9454fd7a670513ea0cd5d3e4273}{Line}}}
+
+\Hypertarget{shape_8h_a68a5f2bb08a3778580f2bc60f9181585}\index{shape.h@{shape.h}!Point@{Point}}
+\index{Point@{Point}!shape.h@{shape.h}}
+\doxysubsubsection{\texorpdfstring{Point}{Point}}
+{\footnotesize\ttfamily \label{shape_8h_a68a5f2bb08a3778580f2bc60f9181585} 
+typedef struct \doxymbox{\hyperlink{structpoint}{point}} \doxymbox{\hyperlink{shape_8h_a68a5f2bb08a3778580f2bc60f9181585}{Point}}}
+
+\Hypertarget{shape_8h_a8b0040105ff2b8b6334ef0f315a06a58}\index{shape.h@{shape.h}!Polygon@{Polygon}}
+\index{Polygon@{Polygon}!shape.h@{shape.h}}
+\doxysubsubsection{\texorpdfstring{Polygon}{Polygon}}
+{\footnotesize\ttfamily \label{shape_8h_a8b0040105ff2b8b6334ef0f315a06a58} 
+typedef struct \doxymbox{\hyperlink{structpolygon}{polygon}} \doxymbox{\hyperlink{shape_8h_a8b0040105ff2b8b6334ef0f315a06a58}{Polygon}}}
+
+\Hypertarget{shape_8h_a13bca493ce80dfe198a36f528166d363}\index{shape.h@{shape.h}!Rectangle@{Rectangle}}
+\index{Rectangle@{Rectangle}!shape.h@{shape.h}}
+\doxysubsubsection{\texorpdfstring{Rectangle}{Rectangle}}
+{\footnotesize\ttfamily \label{shape_8h_a13bca493ce80dfe198a36f528166d363} 
+typedef struct \doxymbox{\hyperlink{structrectangle}{rectangle}} \doxymbox{\hyperlink{shape_8h_a13bca493ce80dfe198a36f528166d363}{Rectangle}}}
+
+\Hypertarget{shape_8h_ac87c23c9a508e52f7077a7012fba9424}\index{shape.h@{shape.h}!Shape@{Shape}}
+\index{Shape@{Shape}!shape.h@{shape.h}}
+\doxysubsubsection{\texorpdfstring{Shape}{Shape}}
+{\footnotesize\ttfamily \label{shape_8h_ac87c23c9a508e52f7077a7012fba9424} 
+typedef struct \doxymbox{\hyperlink{structshape}{shape}} \doxymbox{\hyperlink{shape_8h_ac87c23c9a508e52f7077a7012fba9424}{Shape}}}
+
+\Hypertarget{shape_8h_ab298258591bd59ebc8c94c516f6827a1}\index{shape.h@{shape.h}!Shape\_type@{Shape\_type}}
+\index{Shape\_type@{Shape\_type}!shape.h@{shape.h}}
+\doxysubsubsection{\texorpdfstring{Shape\_type}{Shape\_type}}
+{\footnotesize\ttfamily \label{shape_8h_ab298258591bd59ebc8c94c516f6827a1} 
+typedef enum \doxymbox{\hyperlink{shape_8h_a82a00e336c65dad4cc04b65563b26eb5}{shape\+\_\+type}} \doxymbox{\hyperlink{shape_8h_ab298258591bd59ebc8c94c516f6827a1}{Shape\+\_\+type}}}
+
+\Hypertarget{shape_8h_aa24608cc3ae66b0f04344de9e4937b3b}\index{shape.h@{shape.h}!Squar@{Squar}}
+\index{Squar@{Squar}!shape.h@{shape.h}}
+\doxysubsubsection{\texorpdfstring{Squar}{Squar}}
+{\footnotesize\ttfamily \label{shape_8h_aa24608cc3ae66b0f04344de9e4937b3b} 
+typedef struct \doxymbox{\hyperlink{structsquar}{squar}} \doxymbox{\hyperlink{shape_8h_aa24608cc3ae66b0f04344de9e4937b3b}{Squar}}}
+
+
+
+\label{doc-enum-members}
+\Hypertarget{shape_8h_doc-enum-members}
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{shape_8h_a37dbdc30935031c05304482e1be89d8f}\index{shape.h@{shape.h}!color@{color}}
+\index{color@{color}!shape.h@{shape.h}}
+\doxysubsubsection{\texorpdfstring{color}{color}}
+{\footnotesize\ttfamily \label{shape_8h_a37dbdc30935031c05304482e1be89d8f} 
+enum \doxymbox{\hyperlink{shape_8h_a37dbdc30935031c05304482e1be89d8f}{color}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BLACK@{BLACK}!shape.h@{shape.h}}
+\index{shape.h@{shape.h}!BLACK@{BLACK}}
+}\Hypertarget{shape_8h_a37dbdc30935031c05304482e1be89d8faf77fb67151d0c18d397069ad8c271ba3}\label{shape_8h_a37dbdc30935031c05304482e1be89d8faf77fb67151d0c18d397069ad8c271ba3} 
+BLACK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WIGHT@{WIGHT}!shape.h@{shape.h}}
+\index{shape.h@{shape.h}!WIGHT@{WIGHT}}
+}\Hypertarget{shape_8h_a37dbdc30935031c05304482e1be89d8faaec24be219f140a1b159729feffd202c}\label{shape_8h_a37dbdc30935031c05304482e1be89d8faaec24be219f140a1b159729feffd202c} 
+WIGHT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RED@{RED}!shape.h@{shape.h}}
+\index{shape.h@{shape.h}!RED@{RED}}
+}\Hypertarget{shape_8h_a37dbdc30935031c05304482e1be89d8faf80f9a890089d211842d59625e561f88}\label{shape_8h_a37dbdc30935031c05304482e1be89d8faf80f9a890089d211842d59625e561f88} 
+RED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GREEN@{GREEN}!shape.h@{shape.h}}
+\index{shape.h@{shape.h}!GREEN@{GREEN}}
+}\Hypertarget{shape_8h_a37dbdc30935031c05304482e1be89d8faa60bd322f93178d68184e30e162571ca}\label{shape_8h_a37dbdc30935031c05304482e1be89d8faa60bd322f93178d68184e30e162571ca} 
+GREEN&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{shape_8h_a82a00e336c65dad4cc04b65563b26eb5}\index{shape.h@{shape.h}!shape\_type@{shape\_type}}
+\index{shape\_type@{shape\_type}!shape.h@{shape.h}}
+\doxysubsubsection{\texorpdfstring{shape\_type}{shape\_type}}
+{\footnotesize\ttfamily \label{shape_8h_a82a00e336c65dad4cc04b65563b26eb5} 
+enum \doxymbox{\hyperlink{shape_8h_a82a00e336c65dad4cc04b65563b26eb5}{shape\+\_\+type}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{POINT@{POINT}!shape.h@{shape.h}}
+\index{shape.h@{shape.h}!POINT@{POINT}}
+}\Hypertarget{shape_8h_a82a00e336c65dad4cc04b65563b26eb5a15108ccafa3232b9067f889b6156f565}\label{shape_8h_a82a00e336c65dad4cc04b65563b26eb5a15108ccafa3232b9067f889b6156f565} 
+POINT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LINE@{LINE}!shape.h@{shape.h}}
+\index{shape.h@{shape.h}!LINE@{LINE}}
+}\Hypertarget{shape_8h_a82a00e336c65dad4cc04b65563b26eb5ab023460c84f774a219d46ccf4665994c}\label{shape_8h_a82a00e336c65dad4cc04b65563b26eb5ab023460c84f774a219d46ccf4665994c} 
+LINE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SQUAR@{SQUAR}!shape.h@{shape.h}}
+\index{shape.h@{shape.h}!SQUAR@{SQUAR}}
+}\Hypertarget{shape_8h_a82a00e336c65dad4cc04b65563b26eb5a6bbf18c3b9c541f6f2e858477b9156ee}\label{shape_8h_a82a00e336c65dad4cc04b65563b26eb5a6bbf18c3b9c541f6f2e858477b9156ee} 
+SQUAR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RECTANGLE@{RECTANGLE}!shape.h@{shape.h}}
+\index{shape.h@{shape.h}!RECTANGLE@{RECTANGLE}}
+}\Hypertarget{shape_8h_a82a00e336c65dad4cc04b65563b26eb5ae552ab0a96c0384a6e918e726b7f6102}\label{shape_8h_a82a00e336c65dad4cc04b65563b26eb5ae552ab0a96c0384a6e918e726b7f6102} 
+RECTANGLE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CERCLE@{CERCLE}!shape.h@{shape.h}}
+\index{shape.h@{shape.h}!CERCLE@{CERCLE}}
+}\Hypertarget{shape_8h_a82a00e336c65dad4cc04b65563b26eb5abcaa0644a60d3e413e905e97a4a7878c}\label{shape_8h_a82a00e336c65dad4cc04b65563b26eb5abcaa0644a60d3e413e905e97a4a7878c} 
+CERCLE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{POLYGON@{POLYGON}!shape.h@{shape.h}}
+\index{shape.h@{shape.h}!POLYGON@{POLYGON}}
+}\Hypertarget{shape_8h_a82a00e336c65dad4cc04b65563b26eb5ad5355465780b9a6259ebbc74d47477db}\label{shape_8h_a82a00e336c65dad4cc04b65563b26eb5ad5355465780b9a6259ebbc74d47477db} 
+POLYGON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CURVE@{CURVE}!shape.h@{shape.h}}
+\index{shape.h@{shape.h}!CURVE@{CURVE}}
+}\Hypertarget{shape_8h_a82a00e336c65dad4cc04b65563b26eb5a2267c8aab80fd31714c264f251e343cf}\label{shape_8h_a82a00e336c65dad4cc04b65563b26eb5a2267c8aab80fd31714c264f251e343cf} 
+CURVE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{doc-func-members}
+\Hypertarget{shape_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{shape_8h_aa2c951dd5850a2d403d43cf32b4a1aad}\index{shape.h@{shape.h}!create\_cercle@{create\_cercle}}
+\index{create\_cercle@{create\_cercle}!shape.h@{shape.h}}
+\doxysubsubsection{\texorpdfstring{create\_cercle()}{create\_cercle()}}
+{\footnotesize\ttfamily \label{shape_8h_aa2c951dd5850a2d403d43cf32b4a1aad} 
+\doxymbox{\hyperlink{shape_8h_abee569f29f324cc56b10c0fc105b1733}{Cercle}} \texorpdfstring{$\ast$}{*} create\+\_\+cercle (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{shape_8h_a68a5f2bb08a3778580f2bc60f9181585}{Point}} \texorpdfstring{$\ast$}{*}}]{center}{, }\item[{int}]{radus}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{shape_8h_aa2c951dd5850a2d403d43cf32b4a1aad_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{shape_8h_a829c775df14dc9eec0a04894a3b62f78}\index{shape.h@{shape.h}!create\_cercle\_shape@{create\_cercle\_shape}}
+\index{create\_cercle\_shape@{create\_cercle\_shape}!shape.h@{shape.h}}
+\doxysubsubsection{\texorpdfstring{create\_cercle\_shape()}{create\_cercle\_shape()}}
+{\footnotesize\ttfamily \label{shape_8h_a829c775df14dc9eec0a04894a3b62f78} 
+\doxymbox{\hyperlink{shape_8h_ac87c23c9a508e52f7077a7012fba9424}{Shape}} \texorpdfstring{$\ast$}{*} create\+\_\+cercle\+\_\+shape (\begin{DoxyParamCaption}\item[{int}]{px}{, }\item[{int}]{py}{, }\item[{int}]{radus}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{shape_8h_a829c775df14dc9eec0a04894a3b62f78_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{shape_8h_a829c775df14dc9eec0a04894a3b62f78_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{shape_8h_a0b00018396692c013a631cf10b1efb96}\index{shape.h@{shape.h}!create\_curve@{create\_curve}}
+\index{create\_curve@{create\_curve}!shape.h@{shape.h}}
+\doxysubsubsection{\texorpdfstring{create\_curve()}{create\_curve()}}
+{\footnotesize\ttfamily \label{shape_8h_a0b00018396692c013a631cf10b1efb96} 
+\doxymbox{\hyperlink{shape_8h_a38096ccae493998b79f07f814e1d546c}{Curve}} \texorpdfstring{$\ast$}{*} create\+\_\+curve (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{shape_8h_a68a5f2bb08a3778580f2bc60f9181585}{Point}} \texorpdfstring{$\ast$}{*}}]{p1}{, }\item[{\doxymbox{\hyperlink{shape_8h_a68a5f2bb08a3778580f2bc60f9181585}{Point}} \texorpdfstring{$\ast$}{*}}]{p2}{, }\item[{\doxymbox{\hyperlink{shape_8h_a68a5f2bb08a3778580f2bc60f9181585}{Point}} \texorpdfstring{$\ast$}{*}}]{p3}{, }\item[{\doxymbox{\hyperlink{shape_8h_a68a5f2bb08a3778580f2bc60f9181585}{Point}} \texorpdfstring{$\ast$}{*}}]{p4}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{shape_8h_a0b00018396692c013a631cf10b1efb96_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{shape_8h_a55bd01d067a9668ed0f807817a3bf21d}\index{shape.h@{shape.h}!create\_curve\_shape@{create\_curve\_shape}}
+\index{create\_curve\_shape@{create\_curve\_shape}!shape.h@{shape.h}}
+\doxysubsubsection{\texorpdfstring{create\_curve\_shape()}{create\_curve\_shape()}}
+{\footnotesize\ttfamily \label{shape_8h_a55bd01d067a9668ed0f807817a3bf21d} 
+\doxymbox{\hyperlink{shape_8h_ac87c23c9a508e52f7077a7012fba9424}{Shape}} \texorpdfstring{$\ast$}{*} create\+\_\+curve\+\_\+shape (\begin{DoxyParamCaption}\item[{int}]{px1}{, }\item[{int}]{py1}{, }\item[{int}]{px2}{, }\item[{int}]{py2}{, }\item[{int}]{px3}{, }\item[{int}]{py3}{, }\item[{int}]{px4}{, }\item[{int}]{py4}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{shape_8h_a55bd01d067a9668ed0f807817a3bf21d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{shape_8h_a55bd01d067a9668ed0f807817a3bf21d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{shape_8h_aae294a5667c8e8b32e2b4af3fa98679a}\index{shape.h@{shape.h}!create\_empty\_shape@{create\_empty\_shape}}
+\index{create\_empty\_shape@{create\_empty\_shape}!shape.h@{shape.h}}
+\doxysubsubsection{\texorpdfstring{create\_empty\_shape()}{create\_empty\_shape()}}
+{\footnotesize\ttfamily \label{shape_8h_aae294a5667c8e8b32e2b4af3fa98679a} 
+\doxymbox{\hyperlink{shape_8h_ac87c23c9a508e52f7077a7012fba9424}{Shape}} \texorpdfstring{$\ast$}{*} create\+\_\+empty\+\_\+shape (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{shape_8h_ab298258591bd59ebc8c94c516f6827a1}{Shape\+\_\+type}}}]{shape\+\_\+type}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=289pt]{shape_8h_aae294a5667c8e8b32e2b4af3fa98679a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{shape_8h_aae294a5667c8e8b32e2b4af3fa98679a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{shape_8h_abfd6bf5e65ff572bfad113528ebd233e}\index{shape.h@{shape.h}!create\_line@{create\_line}}
+\index{create\_line@{create\_line}!shape.h@{shape.h}}
+\doxysubsubsection{\texorpdfstring{create\_line()}{create\_line()}}
+{\footnotesize\ttfamily \label{shape_8h_abfd6bf5e65ff572bfad113528ebd233e} 
+\doxymbox{\hyperlink{shape_8h_a0e3ef9454fd7a670513ea0cd5d3e4273}{Line}} \texorpdfstring{$\ast$}{*} create\+\_\+line (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{shape_8h_a68a5f2bb08a3778580f2bc60f9181585}{Point}} \texorpdfstring{$\ast$}{*}}]{p1}{, }\item[{\doxymbox{\hyperlink{shape_8h_a68a5f2bb08a3778580f2bc60f9181585}{Point}} \texorpdfstring{$\ast$}{*}}]{p2}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{shape_8h_abfd6bf5e65ff572bfad113528ebd233e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{shape_8h_aa5c6f398c4465b204e4266a41042f251}\index{shape.h@{shape.h}!create\_line\_shape@{create\_line\_shape}}
+\index{create\_line\_shape@{create\_line\_shape}!shape.h@{shape.h}}
+\doxysubsubsection{\texorpdfstring{create\_line\_shape()}{create\_line\_shape()}}
+{\footnotesize\ttfamily \label{shape_8h_aa5c6f398c4465b204e4266a41042f251} 
+\doxymbox{\hyperlink{shape_8h_ac87c23c9a508e52f7077a7012fba9424}{Shape}} \texorpdfstring{$\ast$}{*} create\+\_\+line\+\_\+shape (\begin{DoxyParamCaption}\item[{int}]{px1}{, }\item[{int}]{py1}{, }\item[{int}]{px2}{, }\item[{int}]{py2}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{shape_8h_aa5c6f398c4465b204e4266a41042f251_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{shape_8h_aa5c6f398c4465b204e4266a41042f251_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{shape_8h_ab97fa9ac627755e6124e7e207e2924d4}\index{shape.h@{shape.h}!create\_point@{create\_point}}
+\index{create\_point@{create\_point}!shape.h@{shape.h}}
+\doxysubsubsection{\texorpdfstring{create\_point()}{create\_point()}}
+{\footnotesize\ttfamily \label{shape_8h_ab97fa9ac627755e6124e7e207e2924d4} 
+\doxymbox{\hyperlink{shape_8h_a68a5f2bb08a3778580f2bc60f9181585}{Point}} \texorpdfstring{$\ast$}{*} create\+\_\+point (\begin{DoxyParamCaption}\item[{int}]{px}{, }\item[{int}]{py}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{shape_8h_ab97fa9ac627755e6124e7e207e2924d4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{shape_8h_a80752be52322a61e81bf4e49390c008c}\index{shape.h@{shape.h}!create\_point\_shape@{create\_point\_shape}}
+\index{create\_point\_shape@{create\_point\_shape}!shape.h@{shape.h}}
+\doxysubsubsection{\texorpdfstring{create\_point\_shape()}{create\_point\_shape()}}
+{\footnotesize\ttfamily \label{shape_8h_a80752be52322a61e81bf4e49390c008c} 
+\doxymbox{\hyperlink{shape_8h_ac87c23c9a508e52f7077a7012fba9424}{Shape}} \texorpdfstring{$\ast$}{*} create\+\_\+point\+\_\+shape (\begin{DoxyParamCaption}\item[{int}]{px}{, }\item[{int}]{py}{}\end{DoxyParamCaption})}
+
+Exporte only thoses functions
+
+Export Only Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{shape_8h_a80752be52322a61e81bf4e49390c008c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{shape_8h_a80752be52322a61e81bf4e49390c008c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{shape_8h_a0b6ec900fe0543eb52bd50859991e909}\index{shape.h@{shape.h}!create\_polygon@{create\_polygon}}
+\index{create\_polygon@{create\_polygon}!shape.h@{shape.h}}
+\doxysubsubsection{\texorpdfstring{create\_polygon()}{create\_polygon()}}
+{\footnotesize\ttfamily \label{shape_8h_a0b6ec900fe0543eb52bd50859991e909} 
+\doxymbox{\hyperlink{shape_8h_a8b0040105ff2b8b6334ef0f315a06a58}{Polygon}} \texorpdfstring{$\ast$}{*} create\+\_\+polygon (\begin{DoxyParamCaption}\item[{int}]{n}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{shape_8h_a0b6ec900fe0543eb52bd50859991e909_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{shape_8h_a97f6c2418977ed6b87fe369afdff4909}\index{shape.h@{shape.h}!create\_polygon\_shape@{create\_polygon\_shape}}
+\index{create\_polygon\_shape@{create\_polygon\_shape}!shape.h@{shape.h}}
+\doxysubsubsection{\texorpdfstring{create\_polygon\_shape()}{create\_polygon\_shape()}}
+{\footnotesize\ttfamily \label{shape_8h_a97f6c2418977ed6b87fe369afdff4909} 
+\doxymbox{\hyperlink{shape_8h_ac87c23c9a508e52f7077a7012fba9424}{Shape}} \texorpdfstring{$\ast$}{*} create\+\_\+polygon\+\_\+shape (\begin{DoxyParamCaption}\item[{int}]{n}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{tab}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{shape_8h_a97f6c2418977ed6b87fe369afdff4909_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{shape_8h_a97f6c2418977ed6b87fe369afdff4909_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{shape_8h_a73699118b7346b270993b7da411b3fac}\index{shape.h@{shape.h}!create\_rectangle@{create\_rectangle}}
+\index{create\_rectangle@{create\_rectangle}!shape.h@{shape.h}}
+\doxysubsubsection{\texorpdfstring{create\_rectangle()}{create\_rectangle()}}
+{\footnotesize\ttfamily \label{shape_8h_a73699118b7346b270993b7da411b3fac} 
+\doxymbox{\hyperlink{shape_8h_a13bca493ce80dfe198a36f528166d363}{Rectangle}} \texorpdfstring{$\ast$}{*} create\+\_\+rectangle (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{shape_8h_a68a5f2bb08a3778580f2bc60f9181585}{Point}} \texorpdfstring{$\ast$}{*}}]{point}{, }\item[{int}]{width}{, }\item[{int}]{height}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{shape_8h_a73699118b7346b270993b7da411b3fac_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{shape_8h_a6c0b8dee946e1a62917c8a3b098f7691}\index{shape.h@{shape.h}!create\_rectangle\_shape@{create\_rectangle\_shape}}
+\index{create\_rectangle\_shape@{create\_rectangle\_shape}!shape.h@{shape.h}}
+\doxysubsubsection{\texorpdfstring{create\_rectangle\_shape()}{create\_rectangle\_shape()}}
+{\footnotesize\ttfamily \label{shape_8h_a6c0b8dee946e1a62917c8a3b098f7691} 
+\doxymbox{\hyperlink{shape_8h_ac87c23c9a508e52f7077a7012fba9424}{Shape}} \texorpdfstring{$\ast$}{*} create\+\_\+rectangle\+\_\+shape (\begin{DoxyParamCaption}\item[{int}]{px}{, }\item[{int}]{py}{, }\item[{int}]{width}{, }\item[{int}]{height}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{shape_8h_a6c0b8dee946e1a62917c8a3b098f7691_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{shape_8h_a6c0b8dee946e1a62917c8a3b098f7691_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{shape_8h_a83413fc68532ff4b56e74c609089be32}\index{shape.h@{shape.h}!create\_squar@{create\_squar}}
+\index{create\_squar@{create\_squar}!shape.h@{shape.h}}
+\doxysubsubsection{\texorpdfstring{create\_squar()}{create\_squar()}}
+{\footnotesize\ttfamily \label{shape_8h_a83413fc68532ff4b56e74c609089be32} 
+\doxymbox{\hyperlink{shape_8h_aa24608cc3ae66b0f04344de9e4937b3b}{Squar}} \texorpdfstring{$\ast$}{*} create\+\_\+squar (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{shape_8h_a68a5f2bb08a3778580f2bc60f9181585}{Point}} \texorpdfstring{$\ast$}{*}}]{point}{, }\item[{int}]{legth}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{shape_8h_a83413fc68532ff4b56e74c609089be32_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{shape_8h_afdc8591882c4c221dfa8d7c6bda15953}\index{shape.h@{shape.h}!create\_square\_shape@{create\_square\_shape}}
+\index{create\_square\_shape@{create\_square\_shape}!shape.h@{shape.h}}
+\doxysubsubsection{\texorpdfstring{create\_square\_shape()}{create\_square\_shape()}}
+{\footnotesize\ttfamily \label{shape_8h_afdc8591882c4c221dfa8d7c6bda15953} 
+\doxymbox{\hyperlink{shape_8h_ac87c23c9a508e52f7077a7012fba9424}{Shape}} \texorpdfstring{$\ast$}{*} create\+\_\+square\+\_\+shape (\begin{DoxyParamCaption}\item[{int}]{px}{, }\item[{int}]{py}{, }\item[{int}]{length}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{shape_8h_afdc8591882c4c221dfa8d7c6bda15953_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{shape_8h_afdc8591882c4c221dfa8d7c6bda15953_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{shape_8h_a2a66a133e444cd75bcfd3aaba3639a74}\index{shape.h@{shape.h}!delete\_cercle@{delete\_cercle}}
+\index{delete\_cercle@{delete\_cercle}!shape.h@{shape.h}}
+\doxysubsubsection{\texorpdfstring{delete\_cercle()}{delete\_cercle()}}
+{\footnotesize\ttfamily \label{shape_8h_a2a66a133e444cd75bcfd3aaba3639a74} 
+void delete\+\_\+cercle (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{shape_8h_abee569f29f324cc56b10c0fc105b1733}{Cercle}} \texorpdfstring{$\ast$}{*}}]{cercle}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{shape_8h_a2a66a133e444cd75bcfd3aaba3639a74_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{shape_8h_a2a66a133e444cd75bcfd3aaba3639a74_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{shape_8h_ab785bcd1ddf2cf76008057c1e3f71362}\index{shape.h@{shape.h}!delete\_curve@{delete\_curve}}
+\index{delete\_curve@{delete\_curve}!shape.h@{shape.h}}
+\doxysubsubsection{\texorpdfstring{delete\_curve()}{delete\_curve()}}
+{\footnotesize\ttfamily \label{shape_8h_ab785bcd1ddf2cf76008057c1e3f71362} 
+void delete\+\_\+curve (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{shape_8h_a38096ccae493998b79f07f814e1d546c}{Curve}} \texorpdfstring{$\ast$}{*}}]{curve}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{shape_8h_ab785bcd1ddf2cf76008057c1e3f71362_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{shape_8h_ab785bcd1ddf2cf76008057c1e3f71362_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{shape_8h_ae8a93415a118bb4ec12ce97b1d601ba3}\index{shape.h@{shape.h}!delete\_line@{delete\_line}}
+\index{delete\_line@{delete\_line}!shape.h@{shape.h}}
+\doxysubsubsection{\texorpdfstring{delete\_line()}{delete\_line()}}
+{\footnotesize\ttfamily \label{shape_8h_ae8a93415a118bb4ec12ce97b1d601ba3} 
+void delete\+\_\+line (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{shape_8h_a0e3ef9454fd7a670513ea0cd5d3e4273}{Line}} \texorpdfstring{$\ast$}{*}}]{line}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{shape_8h_ae8a93415a118bb4ec12ce97b1d601ba3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{shape_8h_ae8a93415a118bb4ec12ce97b1d601ba3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{shape_8h_a4dade23c37d4b2c409163edfc522b18f}\index{shape.h@{shape.h}!delete\_point@{delete\_point}}
+\index{delete\_point@{delete\_point}!shape.h@{shape.h}}
+\doxysubsubsection{\texorpdfstring{delete\_point()}{delete\_point()}}
+{\footnotesize\ttfamily \label{shape_8h_a4dade23c37d4b2c409163edfc522b18f} 
+void delete\+\_\+point (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{shape_8h_a68a5f2bb08a3778580f2bc60f9181585}{Point}} \texorpdfstring{$\ast$}{*}}]{point}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{shape_8h_a4dade23c37d4b2c409163edfc522b18f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{shape_8h_a8a3c09a25ea963bb9a9feabcd1ef3d67}\index{shape.h@{shape.h}!delete\_polygon@{delete\_polygon}}
+\index{delete\_polygon@{delete\_polygon}!shape.h@{shape.h}}
+\doxysubsubsection{\texorpdfstring{delete\_polygon()}{delete\_polygon()}}
+{\footnotesize\ttfamily \label{shape_8h_a8a3c09a25ea963bb9a9feabcd1ef3d67} 
+void delete\+\_\+polygon (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{shape_8h_a8b0040105ff2b8b6334ef0f315a06a58}{Polygon}} \texorpdfstring{$\ast$}{*}}]{polygon}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{shape_8h_a8a3c09a25ea963bb9a9feabcd1ef3d67_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=271pt]{shape_8h_a8a3c09a25ea963bb9a9feabcd1ef3d67_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{shape_8h_aa9e48149920001dcdba970cdcd16bb94}\index{shape.h@{shape.h}!delete\_rectangle@{delete\_rectangle}}
+\index{delete\_rectangle@{delete\_rectangle}!shape.h@{shape.h}}
+\doxysubsubsection{\texorpdfstring{delete\_rectangle()}{delete\_rectangle()}}
+{\footnotesize\ttfamily \label{shape_8h_aa9e48149920001dcdba970cdcd16bb94} 
+void delete\+\_\+rectangle (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{shape_8h_a13bca493ce80dfe198a36f528166d363}{Rectangle}} \texorpdfstring{$\ast$}{*}}]{rectangle}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{shape_8h_aa9e48149920001dcdba970cdcd16bb94_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{shape_8h_aa9e48149920001dcdba970cdcd16bb94_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{shape_8h_a161cb800ff00feffb5cf5d7592b3b8be}\index{shape.h@{shape.h}!delete\_shape@{delete\_shape}}
+\index{delete\_shape@{delete\_shape}!shape.h@{shape.h}}
+\doxysubsubsection{\texorpdfstring{delete\_shape()}{delete\_shape()}}
+{\footnotesize\ttfamily \label{shape_8h_a161cb800ff00feffb5cf5d7592b3b8be} 
+void delete\+\_\+shape (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{shape_8h_ac87c23c9a508e52f7077a7012fba9424}{Shape}} \texorpdfstring{$\ast$}{*}}]{shape}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{shape_8h_a161cb800ff00feffb5cf5d7592b3b8be_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{shape_8h_a9719ed7c7a5d88c62cf6b772797dcbf6}\index{shape.h@{shape.h}!delete\_squar@{delete\_squar}}
+\index{delete\_squar@{delete\_squar}!shape.h@{shape.h}}
+\doxysubsubsection{\texorpdfstring{delete\_squar()}{delete\_squar()}}
+{\footnotesize\ttfamily \label{shape_8h_a9719ed7c7a5d88c62cf6b772797dcbf6} 
+void delete\+\_\+squar (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{shape_8h_aa24608cc3ae66b0f04344de9e4937b3b}{Squar}} \texorpdfstring{$\ast$}{*}}]{squar}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{shape_8h_a9719ed7c7a5d88c62cf6b772797dcbf6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{shape_8h_a9719ed7c7a5d88c62cf6b772797dcbf6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{shape_8h_a068a5bc38689a7b8fae84ef6a3dc0f47}\index{shape.h@{shape.h}!sprint\_cercle@{sprint\_cercle}}
+\index{sprint\_cercle@{sprint\_cercle}!shape.h@{shape.h}}
+\doxysubsubsection{\texorpdfstring{sprint\_cercle()}{sprint\_cercle()}}
+{\footnotesize\ttfamily \label{shape_8h_a068a5bc38689a7b8fae84ef6a3dc0f47} 
+void sprint\+\_\+cercle (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{shape_8h_abee569f29f324cc56b10c0fc105b1733}{Cercle}} \texorpdfstring{$\ast$}{*}}]{cercle}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{str}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{shape_8h_a068a5bc38689a7b8fae84ef6a3dc0f47_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{shape_8h_a068a5bc38689a7b8fae84ef6a3dc0f47_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{shape_8h_a575942d1117aebe05159a42d4aacda53}\index{shape.h@{shape.h}!sprint\_curve@{sprint\_curve}}
+\index{sprint\_curve@{sprint\_curve}!shape.h@{shape.h}}
+\doxysubsubsection{\texorpdfstring{sprint\_curve()}{sprint\_curve()}}
+{\footnotesize\ttfamily \label{shape_8h_a575942d1117aebe05159a42d4aacda53} 
+void sprint\+\_\+curve (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{shape_8h_a38096ccae493998b79f07f814e1d546c}{Curve}} \texorpdfstring{$\ast$}{*}}]{curve}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{str}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{shape_8h_a575942d1117aebe05159a42d4aacda53_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{shape_8h_a575942d1117aebe05159a42d4aacda53_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{shape_8h_a26f431cb3f02d6b1a9967dc64591b1db}\index{shape.h@{shape.h}!sprint\_line@{sprint\_line}}
+\index{sprint\_line@{sprint\_line}!shape.h@{shape.h}}
+\doxysubsubsection{\texorpdfstring{sprint\_line()}{sprint\_line()}}
+{\footnotesize\ttfamily \label{shape_8h_a26f431cb3f02d6b1a9967dc64591b1db} 
+void sprint\+\_\+line (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{shape_8h_a0e3ef9454fd7a670513ea0cd5d3e4273}{Line}} \texorpdfstring{$\ast$}{*}}]{line}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{str}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{shape_8h_a26f431cb3f02d6b1a9967dc64591b1db_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{shape_8h_a26f431cb3f02d6b1a9967dc64591b1db_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{shape_8h_ad2551f83fb7456ad8e3f913a78b59a1e}\index{shape.h@{shape.h}!sprint\_point@{sprint\_point}}
+\index{sprint\_point@{sprint\_point}!shape.h@{shape.h}}
+\doxysubsubsection{\texorpdfstring{sprint\_point()}{sprint\_point()}}
+{\footnotesize\ttfamily \label{shape_8h_ad2551f83fb7456ad8e3f913a78b59a1e} 
+void sprint\+\_\+point (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{shape_8h_a68a5f2bb08a3778580f2bc60f9181585}{Point}} \texorpdfstring{$\ast$}{*}}]{p}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{str}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{shape_8h_ad2551f83fb7456ad8e3f913a78b59a1e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{shape_8h_a71e3c87d1041b6439c310bb63e810f3d}\index{shape.h@{shape.h}!sprint\_polygon@{sprint\_polygon}}
+\index{sprint\_polygon@{sprint\_polygon}!shape.h@{shape.h}}
+\doxysubsubsection{\texorpdfstring{sprint\_polygon()}{sprint\_polygon()}}
+{\footnotesize\ttfamily \label{shape_8h_a71e3c87d1041b6439c310bb63e810f3d} 
+void sprint\+\_\+polygon (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{shape_8h_a8b0040105ff2b8b6334ef0f315a06a58}{Polygon}} \texorpdfstring{$\ast$}{*}}]{polygon}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{str}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{shape_8h_a71e3c87d1041b6439c310bb63e810f3d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{shape_8h_a71e3c87d1041b6439c310bb63e810f3d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{shape_8h_a9be86d5bc934d6905c849b96f71ccc14}\index{shape.h@{shape.h}!sprint\_rectangle@{sprint\_rectangle}}
+\index{sprint\_rectangle@{sprint\_rectangle}!shape.h@{shape.h}}
+\doxysubsubsection{\texorpdfstring{sprint\_rectangle()}{sprint\_rectangle()}}
+{\footnotesize\ttfamily \label{shape_8h_a9be86d5bc934d6905c849b96f71ccc14} 
+void sprint\+\_\+rectangle (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{shape_8h_a13bca493ce80dfe198a36f528166d363}{Rectangle}} \texorpdfstring{$\ast$}{*}}]{rectangle}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{str}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=267pt]{shape_8h_a9be86d5bc934d6905c849b96f71ccc14_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{shape_8h_a9be86d5bc934d6905c849b96f71ccc14_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{shape_8h_a5167551a1a804f8b67d74ed0ce9b738d}\index{shape.h@{shape.h}!sprint\_shape@{sprint\_shape}}
+\index{sprint\_shape@{sprint\_shape}!shape.h@{shape.h}}
+\doxysubsubsection{\texorpdfstring{sprint\_shape()}{sprint\_shape()}}
+{\footnotesize\ttfamily \label{shape_8h_a5167551a1a804f8b67d74ed0ce9b738d} 
+void sprint\+\_\+shape (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{shape_8h_ac87c23c9a508e52f7077a7012fba9424}{Shape}} \texorpdfstring{$\ast$}{*}}]{shape}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{str}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{shape_8h_a5167551a1a804f8b67d74ed0ce9b738d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{shape_8h_a5167551a1a804f8b67d74ed0ce9b738d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{shape_8h_a3571899d19b29d8571e6c090065121f3}\index{shape.h@{shape.h}!sprint\_squar@{sprint\_squar}}
+\index{sprint\_squar@{sprint\_squar}!shape.h@{shape.h}}
+\doxysubsubsection{\texorpdfstring{sprint\_squar()}{sprint\_squar()}}
+{\footnotesize\ttfamily \label{shape_8h_a3571899d19b29d8571e6c090065121f3} 
+void sprint\+\_\+squar (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{shape_8h_aa24608cc3ae66b0f04344de9e4937b3b}{Squar}} \texorpdfstring{$\ast$}{*}}]{squar}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{str}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{shape_8h_a3571899d19b29d8571e6c090065121f3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{shape_8h_a3571899d19b29d8571e6c090065121f3_icgraph}
+\end{center}
+\end{figure}

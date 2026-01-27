@@ -1,0 +1,259 @@
+\doxysection{src/\+layers.h File Reference}
+\hypertarget{layers_8h}{}\label{layers_8h}\index{src/layers.h@{src/layers.h}}
+{\ttfamily \+\#include "{}list.\+h"{}}\newline
+{\ttfamily \+\#include "{}shape.\+h"{}}\newline
+{\ttfamily \+\#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \+\#include $<$string.\+h$>$}\newline
+Include dependency graph for layers.\+h:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{layers_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{layers_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structlayer}{layer}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{layers_8h_a6b496010573a5b6f4edb304ef5510b67}{LAYER\+\_\+\+VISIBLE}}~1
+\item 
+\+\#define \doxymbox{\hyperlink{layers_8h_aae22cd9d72ccfddb963303dbf571f486}{LAYER\+\_\+\+UNVISIBLE}}~0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \doxymbox{\hyperlink{structlayer}{layer}} \doxymbox{\hyperlink{layers_8h_ac894abb99eed76ecef180978024a023a}{Layer}}
+\item 
+typedef \doxymbox{\hyperlink{list_8h_a19e9bc457e4d336b5719026a3256c86d}{list}} \doxymbox{\hyperlink{layers_8h_a2678b532f1f9f199f7dd79f55410622e}{Layers\+List}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{layers_8h_ac894abb99eed76ecef180978024a023a}{Layer}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{layers_8h_a853dcca01b74d5b771a3c92c67f16a04}{create\+\_\+layer}} (int id, char \texorpdfstring{$\ast$}{*}name)
+\item 
+void \doxymbox{\hyperlink{layers_8h_ab3ed3647c3307a0911045c2afc1c36ab}{delete\+\_\+layer}} (\doxymbox{\hyperlink{layers_8h_ac894abb99eed76ecef180978024a023a}{Layer}} \texorpdfstring{$\ast$}{*}\doxymbox{\hyperlink{structlayer}{layer}})
+\item 
+\doxymbox{\hyperlink{layers_8h_a2678b532f1f9f199f7dd79f55410622e}{Layers\+List}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{layers_8h_a81a30ec832bc7c40ae8f8c7aa452e145}{create\+\_\+layers\+\_\+list}} ()
+\item 
+void \doxymbox{\hyperlink{layers_8h_acc379be8abba3e431a40369dbdeed98d}{delete\+\_\+layers\+\_\+list}} (\doxymbox{\hyperlink{layers_8h_a2678b532f1f9f199f7dd79f55410622e}{Layers\+List}} \texorpdfstring{$\ast$}{*}layer\+\_\+list)
+\item 
+void \doxymbox{\hyperlink{layers_8h_ab59217268dcc283a4942f7e3ed56e3c8}{add\+\_\+layer\+\_\+to\+\_\+list}} (\doxymbox{\hyperlink{layers_8h_a2678b532f1f9f199f7dd79f55410622e}{Layers\+List}} \texorpdfstring{$\ast$}{*}layer\+\_\+list, \doxymbox{\hyperlink{layers_8h_ac894abb99eed76ecef180978024a023a}{Layer}} \texorpdfstring{$\ast$}{*}\doxymbox{\hyperlink{structlayer}{layer}})
+\item 
+void \doxymbox{\hyperlink{layers_8h_a68278e8226ecbaf6bbe27addfb9152b6}{remove\+\_\+layer\+\_\+from\+\_\+list}} (\doxymbox{\hyperlink{layers_8h_a2678b532f1f9f199f7dd79f55410622e}{Layers\+List}} \texorpdfstring{$\ast$}{*}layer\+\_\+list, \doxymbox{\hyperlink{layers_8h_ac894abb99eed76ecef180978024a023a}{Layer}} \texorpdfstring{$\ast$}{*}\doxymbox{\hyperlink{structlayer}{layer}})
+\item 
+void \doxymbox{\hyperlink{layers_8h_a6a138d9be5f5e57bb32477ae04bf5696}{set\+\_\+layer\+\_\+visible}} (\doxymbox{\hyperlink{layers_8h_ac894abb99eed76ecef180978024a023a}{Layer}} \texorpdfstring{$\ast$}{*}\doxymbox{\hyperlink{structlayer}{layer}})
+\item 
+void \doxymbox{\hyperlink{layers_8h_ae65dbbb2e84affd3a5f58a1bf7974fa5}{set\+\_\+layer\+\_\+unvisible}} (\doxymbox{\hyperlink{layers_8h_ac894abb99eed76ecef180978024a023a}{Layer}} \texorpdfstring{$\ast$}{*}\doxymbox{\hyperlink{structlayer}{layer}})
+\item 
+void \doxymbox{\hyperlink{layers_8h_a047dc1f75af9fbeee695b1dca8878c5e}{add\+\_\+shape\+\_\+to\+\_\+layer}} (\doxymbox{\hyperlink{layers_8h_ac894abb99eed76ecef180978024a023a}{Layer}} \texorpdfstring{$\ast$}{*}\doxymbox{\hyperlink{structlayer}{layer}}, \doxymbox{\hyperlink{shape_8h_ac87c23c9a508e52f7077a7012fba9424}{Shape}} \texorpdfstring{$\ast$}{*}\doxymbox{\hyperlink{structshape}{shape}})
+\item 
+void \doxymbox{\hyperlink{layers_8h_aca54ff31c800dfa70eb0ff3019b9f05c}{remove\+\_\+shape\+\_\+to\+\_\+from}} (\doxymbox{\hyperlink{layers_8h_ac894abb99eed76ecef180978024a023a}{Layer}} \texorpdfstring{$\ast$}{*}\doxymbox{\hyperlink{structlayer}{layer}}, \doxymbox{\hyperlink{shape_8h_ac87c23c9a508e52f7077a7012fba9424}{Shape}} \texorpdfstring{$\ast$}{*}\doxymbox{\hyperlink{structshape}{shape}})
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{layers_8h_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{layers_8h_aae22cd9d72ccfddb963303dbf571f486}\index{layers.h@{layers.h}!LAYER\_UNVISIBLE@{LAYER\_UNVISIBLE}}
+\index{LAYER\_UNVISIBLE@{LAYER\_UNVISIBLE}!layers.h@{layers.h}}
+\doxysubsubsection{\texorpdfstring{LAYER\_UNVISIBLE}{LAYER\_UNVISIBLE}}
+{\footnotesize\ttfamily \label{layers_8h_aae22cd9d72ccfddb963303dbf571f486} 
+\+\#define LAYER\+\_\+\+UNVISIBLE~0}
+
+\Hypertarget{layers_8h_a6b496010573a5b6f4edb304ef5510b67}\index{layers.h@{layers.h}!LAYER\_VISIBLE@{LAYER\_VISIBLE}}
+\index{LAYER\_VISIBLE@{LAYER\_VISIBLE}!layers.h@{layers.h}}
+\doxysubsubsection{\texorpdfstring{LAYER\_VISIBLE}{LAYER\_VISIBLE}}
+{\footnotesize\ttfamily \label{layers_8h_a6b496010573a5b6f4edb304ef5510b67} 
+\+\#define LAYER\+\_\+\+VISIBLE~1}
+
+
+
+\label{doc-typedef-members}
+\Hypertarget{layers_8h_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{layers_8h_ac894abb99eed76ecef180978024a023a}\index{layers.h@{layers.h}!Layer@{Layer}}
+\index{Layer@{Layer}!layers.h@{layers.h}}
+\doxysubsubsection{\texorpdfstring{Layer}{Layer}}
+{\footnotesize\ttfamily \label{layers_8h_ac894abb99eed76ecef180978024a023a} 
+typedef struct \doxymbox{\hyperlink{structlayer}{layer}} \doxymbox{\hyperlink{layers_8h_ac894abb99eed76ecef180978024a023a}{Layer}}}
+
+\Hypertarget{layers_8h_a2678b532f1f9f199f7dd79f55410622e}\index{layers.h@{layers.h}!LayersList@{LayersList}}
+\index{LayersList@{LayersList}!layers.h@{layers.h}}
+\doxysubsubsection{\texorpdfstring{LayersList}{LayersList}}
+{\footnotesize\ttfamily \label{layers_8h_a2678b532f1f9f199f7dd79f55410622e} 
+typedef \doxymbox{\hyperlink{list_8h_a19e9bc457e4d336b5719026a3256c86d}{list}} \doxymbox{\hyperlink{layers_8h_a2678b532f1f9f199f7dd79f55410622e}{Layers\+List}}}
+
+
+
+\label{doc-func-members}
+\Hypertarget{layers_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{layers_8h_ab59217268dcc283a4942f7e3ed56e3c8}\index{layers.h@{layers.h}!add\_layer\_to\_list@{add\_layer\_to\_list}}
+\index{add\_layer\_to\_list@{add\_layer\_to\_list}!layers.h@{layers.h}}
+\doxysubsubsection{\texorpdfstring{add\_layer\_to\_list()}{add\_layer\_to\_list()}}
+{\footnotesize\ttfamily \label{layers_8h_ab59217268dcc283a4942f7e3ed56e3c8} 
+void add\+\_\+layer\+\_\+to\+\_\+list (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{layers_8h_a2678b532f1f9f199f7dd79f55410622e}{Layers\+List}} \texorpdfstring{$\ast$}{*}}]{layer\+\_\+list}{, }\item[{\doxymbox{\hyperlink{layers_8h_ac894abb99eed76ecef180978024a023a}{Layer}} \texorpdfstring{$\ast$}{*}}]{layer}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=293pt]{layers_8h_ab59217268dcc283a4942f7e3ed56e3c8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{layers_8h_ab59217268dcc283a4942f7e3ed56e3c8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{layers_8h_a047dc1f75af9fbeee695b1dca8878c5e}\index{layers.h@{layers.h}!add\_shape\_to\_layer@{add\_shape\_to\_layer}}
+\index{add\_shape\_to\_layer@{add\_shape\_to\_layer}!layers.h@{layers.h}}
+\doxysubsubsection{\texorpdfstring{add\_shape\_to\_layer()}{add\_shape\_to\_layer()}}
+{\footnotesize\ttfamily \label{layers_8h_a047dc1f75af9fbeee695b1dca8878c5e} 
+void add\+\_\+shape\+\_\+to\+\_\+layer (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{layers_8h_ac894abb99eed76ecef180978024a023a}{Layer}} \texorpdfstring{$\ast$}{*}}]{layer}{, }\item[{\doxymbox{\hyperlink{shape_8h_ac87c23c9a508e52f7077a7012fba9424}{Shape}} \texorpdfstring{$\ast$}{*}}]{shape}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{layers_8h_a047dc1f75af9fbeee695b1dca8878c5e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{layers_8h_a047dc1f75af9fbeee695b1dca8878c5e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{layers_8h_a853dcca01b74d5b771a3c92c67f16a04}\index{layers.h@{layers.h}!create\_layer@{create\_layer}}
+\index{create\_layer@{create\_layer}!layers.h@{layers.h}}
+\doxysubsubsection{\texorpdfstring{create\_layer()}{create\_layer()}}
+{\footnotesize\ttfamily \label{layers_8h_a853dcca01b74d5b771a3c92c67f16a04} 
+\doxymbox{\hyperlink{layers_8h_ac894abb99eed76ecef180978024a023a}{Layer}} \texorpdfstring{$\ast$}{*} create\+\_\+layer (\begin{DoxyParamCaption}\item[{int}]{id}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{name}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{layers_8h_a853dcca01b74d5b771a3c92c67f16a04_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{layers_8h_a853dcca01b74d5b771a3c92c67f16a04_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{layers_8h_a81a30ec832bc7c40ae8f8c7aa452e145}\index{layers.h@{layers.h}!create\_layers\_list@{create\_layers\_list}}
+\index{create\_layers\_list@{create\_layers\_list}!layers.h@{layers.h}}
+\doxysubsubsection{\texorpdfstring{create\_layers\_list()}{create\_layers\_list()}}
+{\footnotesize\ttfamily \label{layers_8h_a81a30ec832bc7c40ae8f8c7aa452e145} 
+\doxymbox{\hyperlink{layers_8h_a2678b532f1f9f199f7dd79f55410622e}{Layers\+List}} \texorpdfstring{$\ast$}{*} create\+\_\+layers\+\_\+list (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{layers_8h_a81a30ec832bc7c40ae8f8c7aa452e145_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{layers_8h_a81a30ec832bc7c40ae8f8c7aa452e145_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{layers_8h_ab3ed3647c3307a0911045c2afc1c36ab}\index{layers.h@{layers.h}!delete\_layer@{delete\_layer}}
+\index{delete\_layer@{delete\_layer}!layers.h@{layers.h}}
+\doxysubsubsection{\texorpdfstring{delete\_layer()}{delete\_layer()}}
+{\footnotesize\ttfamily \label{layers_8h_ab3ed3647c3307a0911045c2afc1c36ab} 
+void delete\+\_\+layer (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{layers_8h_ac894abb99eed76ecef180978024a023a}{Layer}} \texorpdfstring{$\ast$}{*}}]{layer}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{layers_8h_ab3ed3647c3307a0911045c2afc1c36ab_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{layers_8h_acc379be8abba3e431a40369dbdeed98d}\index{layers.h@{layers.h}!delete\_layers\_list@{delete\_layers\_list}}
+\index{delete\_layers\_list@{delete\_layers\_list}!layers.h@{layers.h}}
+\doxysubsubsection{\texorpdfstring{delete\_layers\_list()}{delete\_layers\_list()}}
+{\footnotesize\ttfamily \label{layers_8h_acc379be8abba3e431a40369dbdeed98d} 
+void delete\+\_\+layers\+\_\+list (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{layers_8h_a2678b532f1f9f199f7dd79f55410622e}{Layers\+List}} \texorpdfstring{$\ast$}{*}}]{layer\+\_\+list}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{layers_8h_acc379be8abba3e431a40369dbdeed98d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{layers_8h_a68278e8226ecbaf6bbe27addfb9152b6}\index{layers.h@{layers.h}!remove\_layer\_from\_list@{remove\_layer\_from\_list}}
+\index{remove\_layer\_from\_list@{remove\_layer\_from\_list}!layers.h@{layers.h}}
+\doxysubsubsection{\texorpdfstring{remove\_layer\_from\_list()}{remove\_layer\_from\_list()}}
+{\footnotesize\ttfamily \label{layers_8h_a68278e8226ecbaf6bbe27addfb9152b6} 
+void remove\+\_\+layer\+\_\+from\+\_\+list (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{layers_8h_a2678b532f1f9f199f7dd79f55410622e}{Layers\+List}} \texorpdfstring{$\ast$}{*}}]{layer\+\_\+list}{, }\item[{\doxymbox{\hyperlink{layers_8h_ac894abb99eed76ecef180978024a023a}{Layer}} \texorpdfstring{$\ast$}{*}}]{layer}{}\end{DoxyParamCaption})}
+
+\Hypertarget{layers_8h_aca54ff31c800dfa70eb0ff3019b9f05c}\index{layers.h@{layers.h}!remove\_shape\_to\_from@{remove\_shape\_to\_from}}
+\index{remove\_shape\_to\_from@{remove\_shape\_to\_from}!layers.h@{layers.h}}
+\doxysubsubsection{\texorpdfstring{remove\_shape\_to\_from()}{remove\_shape\_to\_from()}}
+{\footnotesize\ttfamily \label{layers_8h_aca54ff31c800dfa70eb0ff3019b9f05c} 
+void remove\+\_\+shape\+\_\+to\+\_\+from (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{layers_8h_ac894abb99eed76ecef180978024a023a}{Layer}} \texorpdfstring{$\ast$}{*}}]{layer}{, }\item[{\doxymbox{\hyperlink{shape_8h_ac87c23c9a508e52f7077a7012fba9424}{Shape}} \texorpdfstring{$\ast$}{*}}]{shape}{}\end{DoxyParamCaption})}
+
+\Hypertarget{layers_8h_ae65dbbb2e84affd3a5f58a1bf7974fa5}\index{layers.h@{layers.h}!set\_layer\_unvisible@{set\_layer\_unvisible}}
+\index{set\_layer\_unvisible@{set\_layer\_unvisible}!layers.h@{layers.h}}
+\doxysubsubsection{\texorpdfstring{set\_layer\_unvisible()}{set\_layer\_unvisible()}}
+{\footnotesize\ttfamily \label{layers_8h_ae65dbbb2e84affd3a5f58a1bf7974fa5} 
+void set\+\_\+layer\+\_\+unvisible (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{layers_8h_ac894abb99eed76ecef180978024a023a}{Layer}} \texorpdfstring{$\ast$}{*}}]{layer}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{layers_8h_ae65dbbb2e84affd3a5f58a1bf7974fa5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{layers_8h_a6a138d9be5f5e57bb32477ae04bf5696}\index{layers.h@{layers.h}!set\_layer\_visible@{set\_layer\_visible}}
+\index{set\_layer\_visible@{set\_layer\_visible}!layers.h@{layers.h}}
+\doxysubsubsection{\texorpdfstring{set\_layer\_visible()}{set\_layer\_visible()}}
+{\footnotesize\ttfamily \label{layers_8h_a6a138d9be5f5e57bb32477ae04bf5696} 
+void set\+\_\+layer\+\_\+visible (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{layers_8h_ac894abb99eed76ecef180978024a023a}{Layer}} \texorpdfstring{$\ast$}{*}}]{layer}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{layers_8h_a6a138d9be5f5e57bb32477ae04bf5696_icgraph}
+\end{center}
+\end{figure}

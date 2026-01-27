@@ -1,0 +1,106 @@
+\doxysection{keymaps.\+h}
+\hypertarget{lib_2readline_2mingw64_2include_2readline_2keymaps_8h_source}{}\label{lib_2readline_2mingw64_2include_2readline_2keymaps_8h_source}\index{lib/readline/mingw64/include/readline/keymaps.h@{lib/readline/mingw64/include/readline/keymaps.h}}
+\doxymbox{\hyperlink{lib_2readline_2mingw64_2include_2readline_2keymaps_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*\ keymaps.h\ -\/-\/\ Manipulation\ of\ readline\ keymaps.\ */}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{comment}{/*\ Copyright\ (C)\ 1987,\ 1989,\ 1992-\/2021\ Free\ Software\ Foundation,\ Inc.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ \ \ This\ file\ is\ part\ of\ the\ GNU\ Readline\ Library\ (Readline),\ a\ library}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ \ \ for\ reading\ lines\ of\ text\ with\ interactive\ input\ and\ history\ editing.\ \ \ \ \ \ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ \ \ Readline\ is\ free\ software:\ you\ can\ redistribute\ it\ and/or\ modify}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ \ \ it\ under\ the\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ \ \ the\ Free\ Software\ Foundation,\ either\ version\ 3\ of\ the\ License,\ or}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ \ \ (at\ your\ option)\ any\ later\ version.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ \ \ Readline\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ \ \ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ \ \ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ \ \ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ \ \ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ \ \ along\ with\ Readline.\ \ If\ not,\ see\ <http://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#ifndef\ \_KEYMAPS\_H\_}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#define\ \_KEYMAPS\_H\_}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00026\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#if\ defined\ (READLINE\_LIBRARY)}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#\ \ include\ "{}\doxymbox{\hyperlink{lib_2readline_2mingw64_2include_2readline_2rlstdc_8h}{rlstdc.h}}"{}}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#\ \ include\ "{}\doxymbox{\hyperlink{lib_2readline_2mingw64_2include_2readline_2chardefs_8h}{chardefs.h}}"{}}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#\ \ include\ "{}\doxymbox{\hyperlink{lib_2readline_2mingw64_2include_2readline_2rltypedefs_8h}{rltypedefs.h}}"{}}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#\ \ include\ <readline/rlstdc.h>}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#\ \ include\ <readline/chardefs.h>}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#\ \ include\ <readline/rltypedefs.h>}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{comment}{/*\ A\ keymap\ contains\ one\ entry\ for\ each\ key\ in\ the\ ASCII\ set.}}
+\DoxyCodeLine{00040\ \textcolor{comment}{\ \ \ Each\ entry\ consists\ of\ a\ type\ and\ a\ pointer.}}
+\DoxyCodeLine{00041\ \textcolor{comment}{\ \ \ FUNCTION\ is\ the\ address\ of\ a\ function\ to\ run,\ or\ the}}
+\DoxyCodeLine{00042\ \textcolor{comment}{\ \ \ address\ of\ a\ keymap\ to\ indirect\ through.}}
+\DoxyCodeLine{00043\ \textcolor{comment}{\ \ \ TYPE\ says\ which\ kind\ of\ thing\ FUNCTION\ is.\ */}}
+\DoxyCodeLine{00044\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct__keymap__entry}{\_keymap\_entry}}\ \{}
+\DoxyCodeLine{00045\ \ \ \textcolor{keywordtype}{char}\ \doxymbox{\hyperlink{struct__keymap__entry_aff17911edc8208aa8ddb1c7c52c78389}{type}};}
+\DoxyCodeLine{00046\ \ \ \doxymbox{\hyperlink{lib_2readline_2mingw64_2include_2readline_2rltypedefs_8h_aab34eb0191f796c9f9f418bf5c93d63d}{rl\_command\_func\_t}}\ *\doxymbox{\hyperlink{struct__keymap__entry_a70261f7ba480b79bec28fac3a4b3ef83}{function}};}
+\DoxyCodeLine{00047\ \}\ \doxymbox{\hyperlink{lib_2readline_2mingw64_2include_2readline_2keymaps_8h_aa3bbe9d9b74688bbe30c0de917fcaa89}{KEYMAP\_ENTRY}};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{comment}{/*\ This\ must\ be\ large\ enough\ to\ hold\ bindings\ for\ all\ of\ the\ characters}}
+\DoxyCodeLine{00050\ \textcolor{comment}{\ \ \ in\ a\ desired\ character\ set\ (e.g,\ 128\ for\ ASCII,\ 256\ for\ ISO\ Latin-\/x,}}
+\DoxyCodeLine{00051\ \textcolor{comment}{\ \ \ and\ so\ on)\ plus\ one\ for\ subsequence\ matching.\ */}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#define\ KEYMAP\_SIZE\ 257}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#define\ ANYOTHERKEY\ KEYMAP\_SIZE-\/1}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{keyword}{typedef}\ \doxymbox{\hyperlink{lib_2readline_2mingw64_2include_2readline_2keymaps_8h_aa3bbe9d9b74688bbe30c0de917fcaa89}{KEYMAP\_ENTRY}}\ \doxymbox{\hyperlink{lib_2readline_2mingw64_2include_2readline_2keymaps_8h_a6b349775c513c663e372f7718e4c204f}{KEYMAP\_ENTRY\_ARRAY}}[\doxymbox{\hyperlink{lib_2readline_2mingw64_2include_2readline_2keymaps_8h_a5e211a72f1c517e77dba5773be0381db}{KEYMAP\_SIZE}}];}
+\DoxyCodeLine{00056\ \textcolor{keyword}{typedef}\ \doxymbox{\hyperlink{lib_2readline_2mingw64_2include_2readline_2keymaps_8h_aa3bbe9d9b74688bbe30c0de917fcaa89}{KEYMAP\_ENTRY}}\ *\doxymbox{\hyperlink{lib_2readline_2mingw64_2include_2readline_2keymaps_8h_a6bb690c25047cc493b5cd284e9efde2e}{Keymap}};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{comment}{/*\ The\ values\ that\ TYPE\ can\ have\ in\ a\ keymap\ entry.\ */}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#define\ ISFUNC\ 0}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#define\ ISKMAP\ 1}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#define\ ISMACR\ 2}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{keyword}{extern}\ \doxymbox{\hyperlink{lib_2readline_2mingw64_2include_2readline_2keymaps_8h_a6b349775c513c663e372f7718e4c204f}{KEYMAP\_ENTRY\_ARRAY}}\ \doxymbox{\hyperlink{lib_2readline_2mingw64_2include_2readline_2keymaps_8h_a3b41a09be3c66ea185a5d7d285f46b75}{emacs\_standard\_keymap}},\ \doxymbox{\hyperlink{lib_2readline_2mingw64_2include_2readline_2keymaps_8h_abd33e4d5b50356dddfff506322246b07}{emacs\_meta\_keymap}},\ \doxymbox{\hyperlink{lib_2readline_2mingw64_2include_2readline_2keymaps_8h_a4779c4ba4815039220d743caf626c4de}{emacs\_ctlx\_keymap}};}
+\DoxyCodeLine{00064\ \textcolor{keyword}{extern}\ \doxymbox{\hyperlink{lib_2readline_2mingw64_2include_2readline_2keymaps_8h_a6b349775c513c663e372f7718e4c204f}{KEYMAP\_ENTRY\_ARRAY}}\ \doxymbox{\hyperlink{lib_2readline_2mingw64_2include_2readline_2keymaps_8h_a1ef0dc2739a73557469cd6a18c91a346}{vi\_insertion\_keymap}},\ \doxymbox{\hyperlink{lib_2readline_2mingw64_2include_2readline_2keymaps_8h_a7fbbbbf487d506d5c18414324c5fd773}{vi\_movement\_keymap}};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{comment}{/*\ Return\ a\ new,\ empty\ keymap.}}
+\DoxyCodeLine{00067\ \textcolor{comment}{\ \ \ Free\ it\ with\ free()\ when\ you\ are\ done.\ */}}
+\DoxyCodeLine{00068\ \textcolor{keyword}{extern}\ \doxymbox{\hyperlink{lib_2readline_2mingw64_2include_2readline_2keymaps_8h_a6bb690c25047cc493b5cd284e9efde2e}{Keymap}}\ \doxymbox{\hyperlink{lib_2readline_2mingw64_2include_2readline_2keymaps_8h_ab601942ee0eae0d8ce2bed7748e8b9a0}{rl\_make\_bare\_keymap}}\ (\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{comment}{/*\ Return\ a\ new\ keymap\ which\ is\ a\ copy\ of\ MAP.\ */}}
+\DoxyCodeLine{00071\ \textcolor{keyword}{extern}\ \doxymbox{\hyperlink{lib_2readline_2mingw64_2include_2readline_2keymaps_8h_a6bb690c25047cc493b5cd284e9efde2e}{Keymap}}\ \doxymbox{\hyperlink{lib_2readline_2mingw64_2include_2readline_2keymaps_8h_aee5aa89aa1a19be652dfc80c710d12cf}{rl\_copy\_keymap}}\ (\doxymbox{\hyperlink{lib_2readline_2mingw64_2include_2readline_2keymaps_8h_a6bb690c25047cc493b5cd284e9efde2e}{Keymap}});}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \textcolor{comment}{/*\ Return\ a\ new\ keymap\ with\ the\ printing\ characters\ bound\ to\ rl\_insert,}}
+\DoxyCodeLine{00074\ \textcolor{comment}{\ \ \ the\ lowercase\ Meta\ characters\ bound\ to\ run\ their\ equivalents,\ and}}
+\DoxyCodeLine{00075\ \textcolor{comment}{\ \ \ the\ Meta\ digits\ bound\ to\ produce\ numeric\ arguments.\ */}}
+\DoxyCodeLine{00076\ \textcolor{keyword}{extern}\ \doxymbox{\hyperlink{lib_2readline_2mingw64_2include_2readline_2keymaps_8h_a6bb690c25047cc493b5cd284e9efde2e}{Keymap}}\ \doxymbox{\hyperlink{lib_2readline_2mingw64_2include_2readline_2keymaps_8h_a5c1853253c9630847764779afb93968b}{rl\_make\_keymap}}\ (\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \textcolor{comment}{/*\ Free\ the\ storage\ associated\ with\ a\ keymap.\ */}}
+\DoxyCodeLine{00079\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{lib_2readline_2mingw64_2include_2readline_2keymaps_8h_a58bb085b9d43055870aa81a7ca6a93bc}{rl\_discard\_keymap}}\ (\doxymbox{\hyperlink{lib_2readline_2mingw64_2include_2readline_2keymaps_8h_a6bb690c25047cc493b5cd284e9efde2e}{Keymap}});}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \textcolor{comment}{/*\ These\ functions\ actually\ appear\ in\ bind.c\ */}}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \textcolor{comment}{/*\ Return\ the\ keymap\ corresponding\ to\ a\ given\ name.\ \ Names\ look\ like}}
+\DoxyCodeLine{00084\ \textcolor{comment}{\ \ \ \`{}emacs'\ or\ \`{}emacs-\/meta'\ or\ \`{}vi-\/insert'.\ \ */}}
+\DoxyCodeLine{00085\ \textcolor{keyword}{extern}\ \doxymbox{\hyperlink{lib_2readline_2mingw64_2include_2readline_2keymaps_8h_a6bb690c25047cc493b5cd284e9efde2e}{Keymap}}\ \doxymbox{\hyperlink{lib_2readline_2mingw64_2include_2readline_2keymaps_8h_a1c073374bc1f79481e1352f349fe1606}{rl\_get\_keymap\_by\_name}}\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *);}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \textcolor{comment}{/*\ Return\ the\ current\ keymap.\ */}}
+\DoxyCodeLine{00088\ \textcolor{keyword}{extern}\ \doxymbox{\hyperlink{lib_2readline_2mingw64_2include_2readline_2keymaps_8h_a6bb690c25047cc493b5cd284e9efde2e}{Keymap}}\ \doxymbox{\hyperlink{lib_2readline_2mingw64_2include_2readline_2keymaps_8h_ad2eaa407604547126f5de9e797a72553}{rl\_get\_keymap}}\ (\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \textcolor{comment}{/*\ Set\ the\ current\ keymap\ to\ MAP.\ */}}
+\DoxyCodeLine{00091\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{lib_2readline_2mingw64_2include_2readline_2keymaps_8h_a4c1ae347320d8102a0baccfbbf5f261f}{rl\_set\_keymap}}\ (\doxymbox{\hyperlink{lib_2readline_2mingw64_2include_2readline_2keymaps_8h_a6bb690c25047cc493b5cd284e9efde2e}{Keymap}});}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \textcolor{comment}{/*\ Set\ the\ name\ of\ MAP\ to\ NAME\ */}}
+\DoxyCodeLine{00094\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{lib_2readline_2mingw64_2include_2readline_2keymaps_8h_a4cfdd474647491f574d382d15e00820c}{rl\_set\_keymap\_name}}\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *,\ \doxymbox{\hyperlink{lib_2readline_2mingw64_2include_2readline_2keymaps_8h_a6bb690c25047cc493b5cd284e9efde2e}{Keymap}});}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00097\ \}}
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_KEYMAPS\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

@@ -1,0 +1,16 @@
+<map id="src/render.h" name="src/render.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="201,5,292,32"/>
+<area shape="rect" id="Node000002" href="$pixel__tracer_8h.html" title=" " alt="" coords="122,80,243,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="227,42,195,81,191,78,223,46"/>
+<area shape="rect" id="Node000007" href="$render_8c.html" title=" " alt="" coords="266,80,357,107"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="268,41,303,80,298,80,267,46"/>
+<area shape="rect" id="Node000003" href="$command_8h.html" title=" " alt="" coords="33,155,145,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="152,118,107,156,103,152,156,115"/>
+<area shape="rect" id="Node000005" href="$main_8c.html" title=" " alt="" coords="141,229,224,256"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="185,121,185,230,180,228,180,124"/>
+<area shape="rect" id="Node000006" href="$pixel__tracer_8c.html" title=" " alt="" coords="220,155,342,181"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="212,113,267,154,261,155,211,119"/>
+<area shape="rect" id="Node000004" href="$command_8c.html" title=" " alt="" coords="5,229,117,256"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="81,195,68,230,64,228,76,197"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="118,189,169,228,164,229,116,194"/>
+</map>

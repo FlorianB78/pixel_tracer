@@ -1,0 +1,106 @@
+\doxysection{lib/\+readline/\+mingw64/\+share/\+readline/\+hist\+\_\+erasedups.c File Reference}
+\hypertarget{hist__erasedups_8c}{}\label{hist__erasedups_8c}\index{lib/readline/mingw64/share/readline/hist\_erasedups.c@{lib/readline/mingw64/share/readline/hist\_erasedups.c}}
+{\ttfamily \+\#include $<$unistd.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+{\ttfamily \+\#include "{}history.\+h"{}}\newline
+{\ttfamily \+\#include $<$string.\+h$>$}\newline
+Include dependency graph for hist\+\_\+erasedups.\+c:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{hist__erasedups_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{hist__erasedups_8c_a3a30bc39a88ec237f66888013a879aea}{READLINE\+\_\+\+LIBRARY}}~1
+\item 
+\+\#define \doxymbox{\hyperlink{hist__erasedups_8c_aedf9a4cdd75e574d55f252e31d2ec453}{STREQ}}(a,  b)
+\item 
+\+\#define \doxymbox{\hyperlink{hist__erasedups_8c_a7208bb0a856cf177b95e8b4b1864e226}{STREQN}}(a,  b,  n)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{hist__erasedups_8c_abc8b60be722ddeb29f30f2b65b58154c}{hist\+\_\+erasedups}} (void)
+\item 
+int \doxymbox{\hyperlink{hist__erasedups_8c_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}argv)
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{hist__erasedups_8c_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{hist__erasedups_8c_a3a30bc39a88ec237f66888013a879aea}\index{hist\_erasedups.c@{hist\_erasedups.c}!READLINE\_LIBRARY@{READLINE\_LIBRARY}}
+\index{READLINE\_LIBRARY@{READLINE\_LIBRARY}!hist\_erasedups.c@{hist\_erasedups.c}}
+\doxysubsubsection{\texorpdfstring{READLINE\_LIBRARY}{READLINE\_LIBRARY}}
+{\footnotesize\ttfamily \label{hist__erasedups_8c_a3a30bc39a88ec237f66888013a879aea} 
+\+\#define READLINE\+\_\+\+LIBRARY~1}
+
+\Hypertarget{hist__erasedups_8c_aedf9a4cdd75e574d55f252e31d2ec453}\index{hist\_erasedups.c@{hist\_erasedups.c}!STREQ@{STREQ}}
+\index{STREQ@{STREQ}!hist\_erasedups.c@{hist\_erasedups.c}}
+\doxysubsubsection{\texorpdfstring{STREQ}{STREQ}}
+{\footnotesize\ttfamily \label{hist__erasedups_8c_aedf9a4cdd75e574d55f252e31d2ec453} 
+\+\#define STREQ(\begin{DoxyParamCaption}\item[{}]{a}{, }\item[{}]{b}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((a)[0]\ ==\ (b)[0]\ \&\&\ strcmp(a,\ b)\ ==\ 0)}
+
+\end{DoxyCode}
+\Hypertarget{hist__erasedups_8c_a7208bb0a856cf177b95e8b4b1864e226}\index{hist\_erasedups.c@{hist\_erasedups.c}!STREQN@{STREQN}}
+\index{STREQN@{STREQN}!hist\_erasedups.c@{hist\_erasedups.c}}
+\doxysubsubsection{\texorpdfstring{STREQN}{STREQN}}
+{\footnotesize\ttfamily \label{hist__erasedups_8c_a7208bb0a856cf177b95e8b4b1864e226} 
+\+\#define STREQN(\begin{DoxyParamCaption}\item[{}]{a}{, }\item[{}]{b}{, }\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((n\ ==\ 0)\ ?\ (1)\ \(\backslash\)}
+\DoxyCodeLine{:\ ((a)[0]\ ==\ (b)[0]\ \&\&\ strncmp(a,\ b,\ n)\ ==\ 0))}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\Hypertarget{hist__erasedups_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{hist__erasedups_8c_abc8b60be722ddeb29f30f2b65b58154c}\index{hist\_erasedups.c@{hist\_erasedups.c}!hist\_erasedups@{hist\_erasedups}}
+\index{hist\_erasedups@{hist\_erasedups}!hist\_erasedups.c@{hist\_erasedups.c}}
+\doxysubsubsection{\texorpdfstring{hist\_erasedups()}{hist\_erasedups()}}
+{\footnotesize\ttfamily \label{hist__erasedups_8c_abc8b60be722ddeb29f30f2b65b58154c} 
+int hist\+\_\+erasedups (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{hist__erasedups_8c_abc8b60be722ddeb29f30f2b65b58154c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{hist__erasedups_8c_abc8b60be722ddeb29f30f2b65b58154c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{hist__erasedups_8c_a3c04138a5bfe5d72780bb7e82a18e627}\index{hist\_erasedups.c@{hist\_erasedups.c}!main@{main}}
+\index{main@{main}!hist\_erasedups.c@{hist\_erasedups.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{hist__erasedups_8c_a3c04138a5bfe5d72780bb7e82a18e627} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{argv}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{hist__erasedups_8c_a3c04138a5bfe5d72780bb7e82a18e627_cgraph}
+\end{center}
+\end{figure}

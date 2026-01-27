@@ -1,0 +1,56 @@
+\doxysection{layers.\+h}
+\hypertarget{layers_8h_source}{}\label{layers_8h_source}\index{src/layers.h@{src/layers.h}}
+\doxymbox{\hyperlink{layers_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{list_8h}{list.h}}"{}}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{shape_8h}{shape.h}}"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ \_LAYERS\_H\_}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#\ \ define\ \_LAYERS\_H\_}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#\ \ define\ LAYER\_VISIBLE\ 1}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#\ \ define\ LAYER\_UNVISIBLE\ 0}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structlayer}{layer}}\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{structlayer_ab7ce6f462afaf105224b0ca772a33c43}{id}};}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{char}\ \doxymbox{\hyperlink{structlayer_a6db5324e662b3f6727875212f7aa6359}{name}}[255];}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \doxymbox{\hyperlink{structlayer_a63226973f6a9cd40c51a604af2e1a9a5}{visible}};}
+\DoxyCodeLine{00017\ \ \ \ \ \doxymbox{\hyperlink{list_8h_a19e9bc457e4d336b5719026a3256c86d}{list}}\ \doxymbox{\hyperlink{structlayer_a4648fc62b82f26bbfe4c6cf88b7b2555}{shapes}};}
+\DoxyCodeLine{00018\ \};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structlayer}{layer}}\ \doxymbox{\hyperlink{layers_8h_ac894abb99eed76ecef180978024a023a}{Layer}};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{typedef}\ \doxymbox{\hyperlink{list_8h_a19e9bc457e4d336b5719026a3256c86d}{list}}\ \doxymbox{\hyperlink{layers_8h_a2678b532f1f9f199f7dd79f55410622e}{LayersList}};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \doxymbox{\hyperlink{layers_8h_ac894abb99eed76ecef180978024a023a}{Layer}}\ *\doxymbox{\hyperlink{layers_8h_a853dcca01b74d5b771a3c92c67f16a04}{create\_layer}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{structlayer_a6db5324e662b3f6727875212f7aa6359}{name}});}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{layers_8h_ab3ed3647c3307a0911045c2afc1c36ab}{delete\_layer}}(\doxymbox{\hyperlink{layers_8h_ac894abb99eed76ecef180978024a023a}{Layer}}\ *\ \doxymbox{\hyperlink{structlayer}{layer}});}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \doxymbox{\hyperlink{layers_8h_a2678b532f1f9f199f7dd79f55410622e}{LayersList}}\ *\doxymbox{\hyperlink{layers_8h_a81a30ec832bc7c40ae8f8c7aa452e145}{create\_layers\_list}}();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{layers_8h_acc379be8abba3e431a40369dbdeed98d}{delete\_layers\_list}}(\doxymbox{\hyperlink{layers_8h_a2678b532f1f9f199f7dd79f55410622e}{LayersList}}\ *\ layer\_list);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{layers_8h_ab59217268dcc283a4942f7e3ed56e3c8}{add\_layer\_to\_list}}(\doxymbox{\hyperlink{layers_8h_a2678b532f1f9f199f7dd79f55410622e}{LayersList}}\ *\ layer\_list,\ \doxymbox{\hyperlink{layers_8h_ac894abb99eed76ecef180978024a023a}{Layer}}\ *\ \doxymbox{\hyperlink{structlayer}{layer}});}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{layers_8h_a68278e8226ecbaf6bbe27addfb9152b6}{remove\_layer\_from\_list}}(\doxymbox{\hyperlink{layers_8h_a2678b532f1f9f199f7dd79f55410622e}{LayersList}}\ *\ layer\_list,\ \doxymbox{\hyperlink{layers_8h_ac894abb99eed76ecef180978024a023a}{Layer}}\ *\ \doxymbox{\hyperlink{structlayer}{layer}});}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{layers_8h_a6a138d9be5f5e57bb32477ae04bf5696}{set\_layer\_visible}}(\doxymbox{\hyperlink{layers_8h_ac894abb99eed76ecef180978024a023a}{Layer}}\ *\ \doxymbox{\hyperlink{structlayer}{layer}});}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{layers_8h_ae65dbbb2e84affd3a5f58a1bf7974fa5}{set\_layer\_unvisible}}(\doxymbox{\hyperlink{layers_8h_ac894abb99eed76ecef180978024a023a}{Layer}}\ *\ \doxymbox{\hyperlink{structlayer}{layer}});}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{layers_8h_a047dc1f75af9fbeee695b1dca8878c5e}{add\_shape\_to\_layer}}(\doxymbox{\hyperlink{layers_8h_ac894abb99eed76ecef180978024a023a}{Layer}}\ *\ \doxymbox{\hyperlink{structlayer}{layer}},\ \doxymbox{\hyperlink{shape_8h_ac87c23c9a508e52f7077a7012fba9424}{Shape}}\ *\ \doxymbox{\hyperlink{structshape}{shape}});}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{layers_8h_aca54ff31c800dfa70eb0ff3019b9f05c}{remove\_shape\_to\_from}}(\doxymbox{\hyperlink{layers_8h_ac894abb99eed76ecef180978024a023a}{Layer}}\ *\ \doxymbox{\hyperlink{structlayer}{layer}},\ \doxymbox{\hyperlink{shape_8h_ac87c23c9a508e52f7077a7012fba9424}{Shape}}\ *\ \doxymbox{\hyperlink{structshape}{shape}});}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

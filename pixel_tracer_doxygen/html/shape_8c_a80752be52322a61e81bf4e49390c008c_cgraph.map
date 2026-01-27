@@ -1,0 +1,9 @@
+<map id="create_point_shape" name="create_point_shape">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,140,57"/>
+<area shape="rect" id="Node000002" href="$shape_8c.html#aae294a5667c8e8b32e2b4af3fa98679a" title=" " alt="" coords="188,5,330,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="140,32,175,30,170,31,141,37"/>
+<area shape="rect" id="Node000004" href="$shape_8c.html#ab97fa9ac627755e6124e7e207e2924d4" title=" " alt="" coords="213,56,305,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="140,50,200,61,195,61,140,56"/>
+<area shape="rect" id="Node000003" href="$id_8c.html#a0460b32f6c689432d3be850613333aab" title="Génère et retourne un nouvel identifiant unique." alt="" coords="378,5,466,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="330,16,365,18,360,19,331,21"/>
+</map>

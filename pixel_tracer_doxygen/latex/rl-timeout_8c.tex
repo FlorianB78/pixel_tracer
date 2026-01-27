@@ -1,0 +1,188 @@
+\doxysection{lib/\+readline/\+mingw64/\+share/\+readline/\+rl-\/timeout.c File Reference}
+\hypertarget{rl-timeout_8c}{}\label{rl-timeout_8c}\index{lib/readline/mingw64/share/readline/rl-\/timeout.c@{lib/readline/mingw64/share/readline/rl-\/timeout.c}}
+{\ttfamily \+\#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \+\#include $<$unistd.\+h$>$}\newline
+{\ttfamily \+\#include $<$string.\+h$>$}\newline
+{\ttfamily \+\#include $<$limits.\+h$>$}\newline
+{\ttfamily \+\#include $<$sys/\+types.\+h$>$}\newline
+{\ttfamily \+\#include $<$sys/\+select.\+h$>$}\newline
+{\ttfamily \+\#include $<$errno.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+{\ttfamily \+\#include $<$readline/\+readline.\+h$>$}\newline
+{\ttfamily \+\#include $<$readline/\+history.\+h$>$}\newline
+Include dependency graph for rl-\/timeout.c:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rl-timeout_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{rl-timeout_8c_a21c3faac79b8938569dd316b47e1c8e6}{rltest\+\_\+timeout\+\_\+readline1}} ()
+\item 
+void \doxymbox{\hyperlink{rl-timeout_8c_a1359cd587d040920e0ffac0e6bc21255}{rltest\+\_\+timeout\+\_\+readline2}} ()
+\item 
+void \doxymbox{\hyperlink{rl-timeout_8c_aac5507b72b12abac4e06563d9c21ce0a}{rltest\+\_\+timeout\+\_\+callback1}} ()
+\item 
+void \doxymbox{\hyperlink{rl-timeout_8c_ac33998d101bc539cafb5db28e8d49b04}{rltest\+\_\+timeout\+\_\+callback2}} ()
+\item 
+int \doxymbox{\hyperlink{rl-timeout_8c_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}argv)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{rl-timeout_8c_ad65a8842cc674e3ddf69355898c0ecbf}{errno}}
+\item 
+int \doxymbox{\hyperlink{rl-timeout_8c_ab34cbb69733b68598af13947c60c12b2}{timeout\+\_\+secs}} = 1
+\item 
+int \doxymbox{\hyperlink{rl-timeout_8c_ada063648304da69ae62ca3edf30c10b1}{timeout\+\_\+usecs}} = 0
+\item 
+int \doxymbox{\hyperlink{rl-timeout_8c_a2f45113638a0b749a8a205d2cd7fb42b}{running}}
+\item 
+const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{rl-timeout_8c_a5c0a0d2a5f917da7806df3849670f95c}{prompt}} = "{}rl-\/timeout\$ "{}
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{rl-timeout_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{rl-timeout_8c_a3c04138a5bfe5d72780bb7e82a18e627}\index{rl-\/timeout.c@{rl-\/timeout.c}!main@{main}}
+\index{main@{main}!rl-\/timeout.c@{rl-\/timeout.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{rl-timeout_8c_a3c04138a5bfe5d72780bb7e82a18e627} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{argv}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rl-timeout_8c_a3c04138a5bfe5d72780bb7e82a18e627_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rl-timeout_8c_aac5507b72b12abac4e06563d9c21ce0a}\index{rl-\/timeout.c@{rl-\/timeout.c}!rltest\_timeout\_callback1@{rltest\_timeout\_callback1}}
+\index{rltest\_timeout\_callback1@{rltest\_timeout\_callback1}!rl-\/timeout.c@{rl-\/timeout.c}}
+\doxysubsubsection{\texorpdfstring{rltest\_timeout\_callback1()}{rltest\_timeout\_callback1()}}
+{\footnotesize\ttfamily \label{rl-timeout_8c_aac5507b72b12abac4e06563d9c21ce0a} 
+void rltest\+\_\+timeout\+\_\+callback1 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{rl-timeout_8c_aac5507b72b12abac4e06563d9c21ce0a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=275pt]{rl-timeout_8c_aac5507b72b12abac4e06563d9c21ce0a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rl-timeout_8c_ac33998d101bc539cafb5db28e8d49b04}\index{rl-\/timeout.c@{rl-\/timeout.c}!rltest\_timeout\_callback2@{rltest\_timeout\_callback2}}
+\index{rltest\_timeout\_callback2@{rltest\_timeout\_callback2}!rl-\/timeout.c@{rl-\/timeout.c}}
+\doxysubsubsection{\texorpdfstring{rltest\_timeout\_callback2()}{rltest\_timeout\_callback2()}}
+{\footnotesize\ttfamily \label{rl-timeout_8c_ac33998d101bc539cafb5db28e8d49b04} 
+void rltest\+\_\+timeout\+\_\+callback2 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{rl-timeout_8c_ac33998d101bc539cafb5db28e8d49b04_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=275pt]{rl-timeout_8c_ac33998d101bc539cafb5db28e8d49b04_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rl-timeout_8c_a21c3faac79b8938569dd316b47e1c8e6}\index{rl-\/timeout.c@{rl-\/timeout.c}!rltest\_timeout\_readline1@{rltest\_timeout\_readline1}}
+\index{rltest\_timeout\_readline1@{rltest\_timeout\_readline1}!rl-\/timeout.c@{rl-\/timeout.c}}
+\doxysubsubsection{\texorpdfstring{rltest\_timeout\_readline1()}{rltest\_timeout\_readline1()}}
+{\footnotesize\ttfamily \label{rl-timeout_8c_a21c3faac79b8938569dd316b47e1c8e6} 
+void rltest\+\_\+timeout\+\_\+readline1 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=313pt]{rl-timeout_8c_a21c3faac79b8938569dd316b47e1c8e6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{rl-timeout_8c_a21c3faac79b8938569dd316b47e1c8e6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rl-timeout_8c_a1359cd587d040920e0ffac0e6bc21255}\index{rl-\/timeout.c@{rl-\/timeout.c}!rltest\_timeout\_readline2@{rltest\_timeout\_readline2}}
+\index{rltest\_timeout\_readline2@{rltest\_timeout\_readline2}!rl-\/timeout.c@{rl-\/timeout.c}}
+\doxysubsubsection{\texorpdfstring{rltest\_timeout\_readline2()}{rltest\_timeout\_readline2()}}
+{\footnotesize\ttfamily \label{rl-timeout_8c_a1359cd587d040920e0ffac0e6bc21255} 
+void rltest\+\_\+timeout\+\_\+readline2 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=313pt]{rl-timeout_8c_a1359cd587d040920e0ffac0e6bc21255_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{rl-timeout_8c_a1359cd587d040920e0ffac0e6bc21255_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-var-members}
+\Hypertarget{rl-timeout_8c_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{rl-timeout_8c_ad65a8842cc674e3ddf69355898c0ecbf}\index{rl-\/timeout.c@{rl-\/timeout.c}!errno@{errno}}
+\index{errno@{errno}!rl-\/timeout.c@{rl-\/timeout.c}}
+\doxysubsubsection{\texorpdfstring{errno}{errno}}
+{\footnotesize\ttfamily \label{rl-timeout_8c_ad65a8842cc674e3ddf69355898c0ecbf} 
+int errno\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{rl-timeout_8c_a5c0a0d2a5f917da7806df3849670f95c}\index{rl-\/timeout.c@{rl-\/timeout.c}!prompt@{prompt}}
+\index{prompt@{prompt}!rl-\/timeout.c@{rl-\/timeout.c}}
+\doxysubsubsection{\texorpdfstring{prompt}{prompt}}
+{\footnotesize\ttfamily \label{rl-timeout_8c_a5c0a0d2a5f917da7806df3849670f95c} 
+const char\texorpdfstring{$\ast$}{*} prompt = "{}rl-\/timeout\$ "{}}
+
+\Hypertarget{rl-timeout_8c_a2f45113638a0b749a8a205d2cd7fb42b}\index{rl-\/timeout.c@{rl-\/timeout.c}!running@{running}}
+\index{running@{running}!rl-\/timeout.c@{rl-\/timeout.c}}
+\doxysubsubsection{\texorpdfstring{running}{running}}
+{\footnotesize\ttfamily \label{rl-timeout_8c_a2f45113638a0b749a8a205d2cd7fb42b} 
+int running}
+
+\Hypertarget{rl-timeout_8c_ab34cbb69733b68598af13947c60c12b2}\index{rl-\/timeout.c@{rl-\/timeout.c}!timeout\_secs@{timeout\_secs}}
+\index{timeout\_secs@{timeout\_secs}!rl-\/timeout.c@{rl-\/timeout.c}}
+\doxysubsubsection{\texorpdfstring{timeout\_secs}{timeout\_secs}}
+{\footnotesize\ttfamily \label{rl-timeout_8c_ab34cbb69733b68598af13947c60c12b2} 
+int timeout\+\_\+secs = 1}
+
+\Hypertarget{rl-timeout_8c_ada063648304da69ae62ca3edf30c10b1}\index{rl-\/timeout.c@{rl-\/timeout.c}!timeout\_usecs@{timeout\_usecs}}
+\index{timeout\_usecs@{timeout\_usecs}!rl-\/timeout.c@{rl-\/timeout.c}}
+\doxysubsubsection{\texorpdfstring{timeout\_usecs}{timeout\_usecs}}
+{\footnotesize\ttfamily \label{rl-timeout_8c_ada063648304da69ae62ca3edf30c10b1} 
+int timeout\+\_\+usecs = 0}
+

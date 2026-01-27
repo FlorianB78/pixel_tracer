@@ -1,0 +1,50 @@
+\doxysection{command.\+h}
+\hypertarget{command_8h_source}{}\label{command_8h_source}\index{src/command.h@{src/command.h}}
+\doxymbox{\hyperlink{command_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_COMMAND\_H\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#\ \ define\ \_COMMAND\_H\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#\ \ define\ MAX\_PARAM\ 30}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#\ \ include\ <stdlib.h>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#\ \ include\ <string.h>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#\ \ include\ <stdio.h>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#\ \ include\ <readline/readline.h>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#\ \ include\ <readline/history.h>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#\ \ include\ "{}\doxymbox{\hyperlink{pixel__tracer_8h}{pixel\_tracer.h}}"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structcommand}{command}}\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{char}\ \doxymbox{\hyperlink{structcommand_ae5cb967283dbbdf75cb2032c1fa08fee}{name}}[50];}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{structcommand_a4edee4d0e40241d1f0065aafb879ed15}{int\_size}};}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{structcommand_a4721f6b27b9fe5855ac2950aa6957a1e}{int\_params}}[\doxymbox{\hyperlink{command_8h_a5732be69f55a5dbbfa3df82d31314cb1}{MAX\_PARAM}}];}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{structcommand_a40a31f6ed0a6fa4b453d86eaf46d015e}{str\_size}};}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{structcommand_a954dc907c011179e165ebae0814d9977}{str\_params}}[\doxymbox{\hyperlink{command_8h_a5732be69f55a5dbbfa3df82d31314cb1}{MAX\_PARAM}}];}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{structcommand_a9cd1b86fa94793d32af78e2cd69ad144}{flt\_size}};}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{structcommand_a5ff748c255ce097f12b262d3598a1b28}{flt\_params}}[MAX\_PARAMx];}
+\DoxyCodeLine{00023\ \};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structcommand}{command}}\ \doxymbox{\hyperlink{command_8h_a0c87688e472cb20dcda9af493bbdd6f2}{Command}};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \doxymbox{\hyperlink{command_8h_a0c87688e472cb20dcda9af493bbdd6f2}{Command}}\ *\doxymbox{\hyperlink{command_8h_a6b63852b135aad68545f0a04ccb1b966}{create\_commande}}();}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{command_8h_aaf5356b7d3e00e352c0e55e07e728ea2}{add\_int\_param}}(\doxymbox{\hyperlink{command_8h_a0c87688e472cb20dcda9af493bbdd6f2}{Command}}\ *\ cmd,\ \textcolor{keywordtype}{int}\ p);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{command_8h_a97d0318f3c3d640783b5c1efa2187e0e}{add\_float\_param}}(\doxymbox{\hyperlink{command_8h_a0c87688e472cb20dcda9af493bbdd6f2}{Command}}\ *\ cmd,\ \textcolor{keywordtype}{float}\ p);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{command_8h_adfb1fa24d5d651505e1e71b10344fd03}{add\_str\_param}}(\doxymbox{\hyperlink{command_8h_a0c87688e472cb20dcda9af493bbdd6f2}{Command}}\ *\ cmd,\ \textcolor{keywordtype}{char}\ *p);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{command_8h_aad98ce99863879716cbb6f748b12b75d}{free\_cmd}}(\doxymbox{\hyperlink{command_8h_a0c87688e472cb20dcda9af493bbdd6f2}{Command}}\ *\ cmd);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{command_8h_ab576f5b835e80a0ef9ba46654a6295cb}{read\_exec\_command}}(\doxymbox{\hyperlink{pixel__tracer_8h_a3368475f13d6bd69e1f77cd1c7c5f032}{Pixel\_tracer\_app}}\ *\ app);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{command_8h_a3ee388bf58d7da98c66b98d3d2ee63c5}{read\_from\_stdin}}(\doxymbox{\hyperlink{command_8h_a0c87688e472cb20dcda9af493bbdd6f2}{Command}}\ *\ cmd);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

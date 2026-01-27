@@ -1,0 +1,9 @@
+<map id="fgets" name="fgets">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,56,56,83"/>
+<area shape="rect" id="Node000002" href="$lib_2readline_2mingw64_2include_2readline_2history_8h.html#a300fde2d20ed66cf1d7f26e9c93fe808" title=" " alt="" coords="110,5,198,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="54,57,107,36,105,41,57,62"/>
+<area shape="rect" id="Node000003" href="$lib_2readline_2mingw64_2include_2readline_2readline_8h.html#a9df8d87faa1eb26862eb658e24dd9c89" title=" " alt="" coords="121,56,188,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="55,67,108,67,104,71,56,72"/>
+<area shape="rect" id="Node000004" href="$lib_2readline_2mingw64_2include_2readline_2readline_8h.html#af31ff68bff648f71cf3b1e1efed190ed" title=" " alt="" coords="104,107,205,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="56,77,108,99,104,102,55,82"/>
+</map>

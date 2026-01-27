@@ -1,0 +1,68 @@
+\doxysection{termcap.\+h}
+\hypertarget{termcap_8h_source}{}\label{termcap_8h_source}\index{lib/termcap/mingw64/include/termcap.h@{lib/termcap/mingw64/include/termcap.h}}
+\doxymbox{\hyperlink{termcap_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*\ Declarations\ for\ termcap\ library.}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ \ \ Copyright\ (C)\ 1991,\ 1992,\ 1995\ Free\ Software\ Foundation,\ Inc.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ \ \ This\ program\ is\ free\ software;\ you\ can\ redistribute\ it\ and/or\ modify}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ \ \ it\ under\ the\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ \ \ the\ Free\ Software\ Foundation;\ either\ version\ 2,\ or\ (at\ your\ option)}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ \ \ any\ later\ version.}}
+\DoxyCodeLine{00008\ \textcolor{comment}{}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ \ \ This\ program\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ \ \ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ \ \ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ \ \ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ \ \ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ \ \ along\ with\ this\ program;\ if\ not,\ write\ to\ the\ Free\ Software}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ \ \ Foundation,\ Inc.,\ 675\ Mass\ Ave,\ Cambridge,\ MA\ 02139,\ USA.\ \ */}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#ifndef\ \_TERMCAP\_H}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ \_TERMCAP\_H\ 1}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#if\ \_\_STDC\_\_}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{termcap_8h_a7b9ecc06f3d6410809c0301328e705af}{tgetent}}\ (\textcolor{keywordtype}{char}\ *buffer,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *termtype);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{termcap_8h_a18d2409e3743b2c08607e3500f67adc4}{tgetnum}}\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *name);}
+\DoxyCodeLine{00026\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{termcap_8h_a89c264add5b4049aeb1abde129988f1d}{tgetflag}}\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *name);}
+\DoxyCodeLine{00027\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{termcap_8h_a964b2644d3a5c39b47e59d5253d02d3b}{tgetstr}}\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *name,\ \textcolor{keywordtype}{char}\ **\doxymbox{\hyperlink{structarea}{area}});}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{char}\ \doxymbox{\hyperlink{termcap_8h_a5c0353915cefce9e14f1c887a044f8e6}{PC}};}
+\DoxyCodeLine{00030\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{short}\ \doxymbox{\hyperlink{termcap_8h_ac95761f812b1cd22186a50db1ef8030b}{ospeed}};}
+\DoxyCodeLine{00031\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{termcap_8h_a58b4ff51dd0fc14b036bb6488ee6acdf}{tputs}}\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\textcolor{keywordtype}{string},\ \textcolor{keywordtype}{int}\ nlines,\ \textcolor{keywordtype}{int}\ (*outfun)\ (\textcolor{keywordtype}{int}));}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{termcap_8h_aaa4afdddd2d2a27c0096746baf3cadc9}{tparam}}\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *ctlstring,\ \textcolor{keywordtype}{char}\ *buffer,\ \textcolor{keywordtype}{int}\ size,\ ...);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{termcap_8h_acbc41baa15d5006042edb00238a85f97}{UP}};}
+\DoxyCodeLine{00036\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{termcap_8h_a49c4bb41d1742e3b2e57330cd2071f83}{BC}};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{termcap_8h_ad75dc1375dfd4ac329216c79c856b0c5}{tgoto}}\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *cstring,\ \textcolor{keywordtype}{int}\ hpos,\ \textcolor{keywordtype}{int}\ vpos);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#else\ }\textcolor{comment}{/*\ not\ \_\_STDC\_\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{termcap_8h_a7b9ecc06f3d6410809c0301328e705af}{tgetent}}\ ();}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{termcap_8h_a18d2409e3743b2c08607e3500f67adc4}{tgetnum}}\ ();}
+\DoxyCodeLine{00045\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{termcap_8h_a89c264add5b4049aeb1abde129988f1d}{tgetflag}}\ ();}
+\DoxyCodeLine{00046\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{termcap_8h_a964b2644d3a5c39b47e59d5253d02d3b}{tgetstr}}\ ();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{char}\ \doxymbox{\hyperlink{termcap_8h_a5c0353915cefce9e14f1c887a044f8e6}{PC}};}
+\DoxyCodeLine{00049\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{short}\ \doxymbox{\hyperlink{termcap_8h_ac95761f812b1cd22186a50db1ef8030b}{ospeed}};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{termcap_8h_a58b4ff51dd0fc14b036bb6488ee6acdf}{tputs}}\ ();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{termcap_8h_aaa4afdddd2d2a27c0096746baf3cadc9}{tparam}}\ ();}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{termcap_8h_acbc41baa15d5006042edb00238a85f97}{UP}};}
+\DoxyCodeLine{00056\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{termcap_8h_a49c4bb41d1742e3b2e57330cd2071f83}{BC}};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{termcap_8h_ad75dc1375dfd4ac329216c79c856b0c5}{tgoto}}\ ();}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ not\ \_\_STDC\_\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ not\ \_TERMCAP\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

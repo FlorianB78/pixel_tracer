@@ -1,0 +1,11 @@
+<map id="hist_purgecmd" name="hist_purgecmd">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,81,112,108"/>
+<area shape="rect" id="Node000002" href="$lib_2readline_2mingw64_2include_2readline_2history_8h.html#a615c8e6b183c4254d81d43dc795de60c" title=" " alt="" coords="172,5,258,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="85,78,158,42,172,37,168,40,161,46,88,83"/>
+<area shape="rect" id="Node000003" href="$lib_2readline_2mingw64_2include_2readline_2history_8h.html#a77234d6b8ee5fa7d5a8a9bffdfe1e07e" title=" " alt="" coords="160,56,270,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="111,84,147,79,142,82,113,89"/>
+<area shape="rect" id="Node000004" href="$lib_2readline_2mingw64_2include_2readline_2history_8h.html#a05c4022b357b3d12ac51f2e1e51a0ca5" title=" " alt="" coords="166,107,264,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="112,101,153,109,148,111,113,106"/>
+<area shape="rect" id="Node000005" href="$lib_2readline_2mingw64_2include_2readline_2history_8h.html#a2e065add6d5adc3d42e190e089913208" title=" " alt="" coords="164,157,266,184"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="87,106,161,143,173,151,168,150,158,148,86,111"/>
+</map>

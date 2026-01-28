@@ -1,8 +1,21 @@
+/**
+ * @file list.c
+ * @brief Implémentation des listes doublement chaînées génériques.
+ *
+ * Ce module fournit toutes les fonctions pour manipuler des listes
+ * et leurs noeuds : création, insertion, suppression, accès aux éléments.
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include "list.h"
 
+/**
+ * @brief Crée un nouveau noeud avec les données fournies.
+ * @param dat Pointeur vers les données à stocker.
+ * @return Pointeur vers le noeud créé.
+ */
 lnode *lst_create_lnode(void *dat) {
     lnode *ptmp = (lnode *) malloc(sizeof(lnode));
     ptmp->data = dat;
@@ -11,8 +24,10 @@ lnode *lst_create_lnode(void *dat) {
     return ptmp;
 }
 
-
-
+/**
+ * @brief Crée une nouvelle liste vide.
+ * @return Pointeur vers la liste créée.
+ */
 list *lst_create_list() {
     list *lst = (list *) malloc(sizeof(list));
     lst->head = NULL;
@@ -20,14 +35,19 @@ list *lst_create_list() {
     return lst;
 }
 
-
-void lst_delete_list(list * lst) {
+/**
+ * @brief Supprime la liste et tous ses noeuds.
+ * @param lst Liste à supprimer.
+ */
+void lst_delete_list(list *lst) {
     lst_erase(lst);
     free(lst);
 }
 
-
-void lst_insert_head(list * lst, lnode * pnew) {
+/**
+ * @brief Insère un noeud au début de la liste.
+ */
+void lst_insert_head(list *lst, lnode *pnew) {
     if (lst->head == NULL) {
         lst->head = pnew;
         lst->tail = pnew;
@@ -39,7 +59,10 @@ void lst_insert_head(list * lst, lnode * pnew) {
     pnew->next->prev = pnew;
 }
 
-void lst_insert_tail(list * lst, lnode * pnew) {
+/**
+ * @brief Insère un noeud à la fin de la liste.
+ */
+void lst_insert_tail(list *lst, lnode *pnew) {
     if (lst->head == NULL) {
         lst->head = pnew;
         lst->tail = pnew;
@@ -51,7 +74,10 @@ void lst_insert_tail(list * lst, lnode * pnew) {
     pnew->prev->next = pnew;
 }
 
-void lst_insert_after(list * lst, lnode * pnew, lnode * ptr) {
+/**
+ * @brief Insère un noeud après un noeud donné.
+ */
+void lst_insert_after(list *lst, lnode *pnew, lnode *ptr) {
     if (lst->head == NULL) {
         lst->head = pnew;
         lst->tail = pnew;
@@ -67,7 +93,10 @@ void lst_insert_after(list * lst, lnode * pnew, lnode * ptr) {
     }
 }
 
-void lst_delete_head(list * lst) {
+/**
+ * @brief Supprime le premier noeud de la liste.
+ */
+void lst_delete_head(list *lst) {
     if (lst->head->next == NULL) {
         free(lst->head);
         lst->head = NULL;
@@ -79,7 +108,10 @@ void lst_delete_head(list * lst) {
     lst->head->prev = NULL;
 }
 
-void lst_delete_tail(list * lst) {
+/**
+ * @brief Supprime le dernier noeud de la liste.
+ */
+void lst_delete_tail(list *lst) {
     if (lst->tail->prev == NULL) {
         free(lst->tail);
         lst->head = NULL;
@@ -91,9 +123,11 @@ void lst_delete_tail(list * lst) {
     lst->tail->next = NULL;
 }
 
-void lst_delete_lnode(list * lst, lnode * ptr) {
-    if (ptr == NULL)
-        return;
+/**
+ * @brief Supprime un noeud spécifique de la liste.
+ */
+void lst_delete_lnode(list *lst, lnode *ptr) {
+    if (ptr == NULL) return;
     if (ptr == lst->head) {
         lst_delete_head(lst);
         return;
@@ -107,9 +141,11 @@ void lst_delete_lnode(list * lst, lnode * ptr) {
     free(ptr);
 }
 
-void lst_erase(list * lst) {
-    if (lst->head == NULL)
-        return;
+/**
+ * @brief Supprime tous les noeuds de la liste.
+ */
+void lst_erase(list *lst) {
+    if (lst->head == NULL) return;
     while (lst->head != lst->tail) {
         lst->head = lst->head->next;
         free(lst->head->prev);
@@ -119,26 +155,34 @@ void lst_erase(list * lst) {
     lst->tail = NULL;
 }
 
-lnode *get_first_node(list * lst) {
-    if (lst->head == NULL)
-        return NULL;
+/**
+ * @brief Retourne le premier noeud de la liste.
+ */
+lnode *get_first_node(list *lst) {
+    if (lst->head == NULL) return NULL;
     return lst->head;
 }
 
-lnode *get_last_node(list * lst) {
-    if (lst->tail == NULL)
-        return NULL;
+/**
+ * @brief Retourne le dernier noeud de la liste.
+ */
+lnode *get_last_node(list *lst) {
+    if (lst->tail == NULL) return NULL;
     return lst->tail;
 }
 
-lnode *get_next_node(list * lst, lnode * lnode) {
-    if (lnode == NULL)
-        return NULL;
+/**
+ * @brief Retourne le noeud suivant d'un noeud donné.
+ */
+lnode *get_next_node(list *lst, lnode *lnode) {
+    if (lnode == NULL) return NULL;
     return lnode->next;
 }
 
-void *get_previous_elem(list * lst, lnode * lnode) {
-    if (lnode == NULL)
-        return NULL;
+/**
+ * @brief Retourne le noeud précédent d'un noeud donné.
+ */
+void *get_previous_elem(list *lst, lnode *lnode) {
+    if (lnode == NULL) return NULL;
     return lnode->prev;
 }

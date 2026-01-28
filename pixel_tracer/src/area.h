@@ -7,131 +7,96 @@
 
 /**
  * @file area.h
- * @brief Gestion des zones (Area) et des listes de zones.
+ * @brief Définition des structures et fonctions de gestion des zones (Area).
  *
- * Ce fichier définit la structure Area ainsi que les fonctions permettant
- * de créer, supprimer et manipuler des zones et des listes de zones.
+ * Ce module permet de créer, manipuler et supprimer des zones rectangulaires,
+ * ainsi que de gérer des listes de zones et leurs couches (layers).
  */
+
+#include <stdlib.h>
+#include <stdio.h>
+#include "layers.h"
 
 /**
  * @struct area
- * @brief Représente une zone rectangulaire du monde.
+ * @brief Structure représentant une zone rectangulaire.
  *
- * Une zone contient une grille de caractères, des dimensions, un identifiant,
- * un nom, une liste de couches ainsi que les caractères représentant les
- * cellules vides et pleines.
+ * Une zone contient sa taille, son identifiant, son nom,
+ * la grille de caractères, et la liste de ses couches.
  */
 struct area {
     unsigned char id;          /**< Identifiant unique de la zone */
     char name[255];            /**< Nom de la zone */
     unsigned int width;        /**< Largeur de la zone */
     unsigned int height;       /**< Hauteur de la zone */
-    char **area;               /**< Grille représentant la zone */
-    LayersList *lst_layers;    /**< Liste des couches associées à la zone */
-    char empty_char;           /**< Caractère représentant une cellule vide */
-    char full_char;            /**< Caractère représentant une cellule pleine */
+    char **area;               /**< Grille de caractères représentant la zone */
+    LayersList *lst_layers;    /**< Liste des couches de la zone */
+    char empty_char;           /**< Caractère représentant une case vide */
+    char full_char;            /**< Caractère représentant une case pleine */
 };
 
-/**
- * @typedef Area
- * @brief Alias de la structure area.
- */
 typedef struct area Area;
 
-/**
- * @typedef AreaList
- * @brief Type représentant une liste de zones.
+/** @typedef AreaList
+ *  @brief Liste de zones.
  */
 typedef list AreaList;
 
 /**
- * @brief Crée et initialise une nouvelle zone.
+ * @brief Crée une nouvelle zone.
  *
- * Alloue et initialise une structure Area avec ses dimensions, son identifiant,
- * son nom, sa grille, ses caractères par défaut et sa liste de couches.
+ * Alloue dynamiquement une zone et sa grille.
  *
- * @param width unsigned int
- *        Largeur de la zone.
- * @param height unsigned int
- *        Hauteur de la zone.
- * @param id unsigned char
- *        Identifiant unique de la zone.
- * @param name char *
- *        Nom de la zone.
- *
- * @return Area *
- *         Pointeur vers la zone nouvellement créée.
+ * @param width Largeur de la zone.
+ * @param height Hauteur de la zone.
+ * @param id Identifiant unique de la zone.
+ * @param name Nom de la zone.
+ * @return Pointeur vers la zone créée.
  */
-Area *create_area(unsigned int width,
-                  unsigned int height,
-                  unsigned char id,
-                  char *name);
+Area *create_area(unsigned int width, unsigned int height,
+                  unsigned char id, char *name);
 
 /**
- * @brief Supprime une zone et libère la mémoire associée.
+ * @brief Supprime une zone et libère sa mémoire.
  *
- * Libère la mémoire allouée pour la grille et la structure Area.
- * Les couches associées ne sont pas encore supprimées.
- *
- * @param area Area *
- *        Zone à supprimer.
+ * @param area Pointeur vers la zone à supprimer.
  */
 void delete_area(Area *area);
 
 /**
- * @brief Réinitialise le contenu d'une zone.
+ * @brief Vide une zone en remettant toutes les cases à empty_char.
  *
- * Remet la grille de la zone dans un état vide sans détruire la structure
- * ni ses dimensions.
- *
- * @param area Area *
- *        Zone à réinitialiser.
+ * @param area Pointeur vers la zone à vider.
  */
 void clear_area(Area *area);
 
 /**
  * @brief Crée une liste de zones.
  *
- * Initialise et retourne une liste vide destinée à contenir des zones.
- *
- * @return AreaList *
- *         Pointeur vers la liste de zones créée.
+ * @return Pointeur vers la liste créée.
  */
 AreaList *create_area_list();
 
 /**
- * @brief Supprime une liste de zones.
+ * @brief Supprime une liste de zones et libère sa mémoire.
  *
- * Supprime la structure de la liste. Les zones contenues dans la liste
- * ne sont pas supprimées automatiquement.
- *
- * @param area_list AreaList *
- *        Liste de zones à supprimer.
+ * @param area_list Pointeur vers la liste à supprimer.
  */
 void delete_area_list(AreaList *area_list);
 
 /**
- * @brief Ajoute une zone à une liste de zones.
+ * @brief Ajoute une zone à une liste.
  *
- * Insère la zone donnée à la fin de la liste de zones.
- *
- * @param area_list AreaList *
- *        Liste dans laquelle ajouter la zone.
- * @param area Area *
- *        Zone à ajouter.
+ * @param area_list Pointeur vers la liste.
+ * @param area Pointeur vers la zone à ajouter.
  */
 void add_area_to_list(AreaList *area_list, Area *area);
 
 /**
- * @brief Retire une zone d'une liste de zones.
+ * @brief Supprime une zone d'une liste.
  *
- * Supprime la zone spécifiée de la liste sans libérer la mémoire
- * associée à la zone.
- *
- * @param area_list AreaList *
- *        Liste depuis laquelle retirer la zone.
- * @param area Area *
- *        Zone à retirer.
+ * @param area_list Pointeur vers la liste.
+ * @param area Pointeur vers la zone à supprimer.
  */
 void remove_area_from_list(AreaList *area_list, Area *area);
 

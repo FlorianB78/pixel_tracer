@@ -1,5 +1,26 @@
+/**
+ * @file pixel.c
+ * @brief Implémentation des fonctions de création et gestion des pixels
+ *
+ * Ce fichier contient l'implémentation complète de la conversion
+ * des formes en pixels et des algorithmes de tracé des formes :
+ * - Points, lignes, carrés, rectangles, cercles, polygones, courbes
+ *
+ * Il utilise les modules :
+ * - list.h : pour gérer la liste de pixels
+ * - shape.h : pour accéder aux données des formes
+ */
+
 #include "pixel.h"
 
+/**
+ * @brief Crée un pixel à une position donnée avec une couleur
+ *
+ * @param px Coordonnée X
+ * @param py Coordonnée Y
+ * @param color Couleur du pixel
+ * @return Pixel* Pointeur vers le pixel créé
+ */
 Pixel *create_pixel(int px, int py, int color) {
     Pixel *pixel = (Pixel *) malloc(sizeof(Pixel));
     pixel->px = px;
@@ -8,11 +29,24 @@ Pixel *create_pixel(int px, int py, int color) {
     return pixel;
 }
 
+/**
+ * @brief Supprime un pixel
+ *
+ * @param pixel Pointeur vers le pixel à supprimer
+ */
 void delete_pixel(Pixel * pixel) {
     free(pixel);
 }
 
-
+/**
+ * @brief Crée une liste de pixels pour une forme
+ *
+ * Détermine le type de la forme et appelle la fonction
+ * correspondante pour générer les pixels.
+ *
+ * @param shape Pointeur vers la forme
+ * @return list* Liste de pixels générés
+ */
 list *create_shape_to_pixel(Shape * shape) {
     if (shape->ptrShape == NULL) {
         return NULL;
@@ -41,23 +75,44 @@ list *create_shape_to_pixel(Shape * shape) {
     case CURVE:
         pixel_curve(shape, lst);
         break;
-
     }
 
     return lst;
 }
 
+/**
+ * @brief Supprime les pixels d'une liste (non implémentée)
+ *
+ * @param pixel_lst Liste de pixels à supprimer
+ */
 void remove_pixel_shape(list * pixel_lst) {
-
+    /* TODO */
 }
 
-
+/**
+ * @brief Génère les pixels d'un point
+ *
+ * @param shape Forme de type POINT
+ * @param lst Liste dans laquelle insérer les pixels
+ */
 void pixel_point(Shape * shape, list * lst) {
     Point *pt = (Point *) shape->ptrShape;
     Pixel *px = create_pixel(pt->pos_x, pt->pos_y, shape->color);
     lst_insert_tail(lst, lst_create_lnode(px));
 }
 
+/**
+ * @brief Trace un segment de pixels entre deux points
+ *
+ * Utilise l'algorithme de tracé classique (Bresenham-like)
+ *
+ * @param x Coordonnée de départ X
+ * @param y Coordonnée de départ Y
+ * @param dx Déplacement X
+ * @param dy Déplacement Y
+ * @param color Couleur du segment
+ * @param lst Liste de pixels
+ */
 void draw_segment(int x, int y, int dx, int dy, Color color, list * lst) {
     int i, cumul;
     int xinc, yinc;
@@ -98,6 +153,12 @@ void draw_segment(int x, int y, int dx, int dy, Color color, list * lst) {
     }
 }
 
+/**
+ * @brief Génère les pixels d'une ligne
+ *
+ * @param shape Forme de type LINE
+ * @param lst Liste dans laquelle insérer les pixels
+ */
 void pixel_line(Shape * shape, list * lst) {
     Line *p_line = (Line *) shape->ptrShape;
     int dx, dy, x, y;
@@ -109,7 +170,13 @@ void pixel_line(Shape * shape, list * lst) {
     draw_segment(x, y, dx, dy, shape->color, lst);
 }
 
-void pixel_cercle(Shape * shashapepe, list * lst) {
+/**
+ * @brief Génère les pixels d'un cercle
+ *
+ * @param shape Forme de type CERCLE
+ * @param lst Liste dans laquelle insérer les pixels
+ */
+void pixel_cercle(Shape * shape, list * lst) {
     Cercle *p_cercle = (Cercle *) shape->ptrShape;
     int x = 0;
     int y = p_cercle->radus;
@@ -117,6 +184,7 @@ void pixel_cercle(Shape * shashapepe, list * lst) {
     Pixel *px;
 
     while (y >= x) {
+        /* Insère tous les octants du cercle */
         px = create_pixel(p_cercle->center->pos_x + x,
                           p_cercle->center->pos_y + y, shape->color);
         lst_insert_tail(lst, lst_create_lnode(px));
@@ -159,6 +227,12 @@ void pixel_cercle(Shape * shashapepe, list * lst) {
     }
 }
 
+/**
+ * @brief Génère les pixels d'un rectangle
+ *
+ * @param shape Forme de type RECTANGLE
+ * @param lst Liste de pixels
+ */
 void pixel_rectangle(Shape * shape, list * lst) {
     Rectangle *p_rec = (Rectangle *) shape->ptrShape;
     draw_segment(p_rec->p1->pos_x, p_rec->p1->pos_y, 0, p_rec->width - 1,
@@ -169,40 +243,51 @@ void pixel_rectangle(Shape * shape, list * lst) {
                  p_rec->height - 1, 0, shape->color, lst);
     draw_segment(p_rec->p1->pos_x + p_rec->height - 1, p_rec->p1->pos_y, 0,
                  p_rec->width - 1, shape->color, lst);
-
 }
 
+/**
+ * @brief Génère les pixels d'un carré
+ *
+ * @param shape Forme de type SQUAR
+ * @param lst Liste de pixels
+ */
 void pixel_square(Shape * shape, list * lst) {
     Squar *p_sqaure = (Squar *) shape->ptrShape;
     draw_segment(p_sqaure->p1->pos_x, p_sqaure->p1->pos_y,
                  p_sqaure->length - 1, 0, shape->color, lst);
     draw_segment(p_sqaure->p1->pos_x, p_sqaure->p1->pos_y, 0,
                  p_sqaure->length - 1, shape->color, lst);
-    draw_segment(p_sqaure->p1->pos_x,
-                 p_sqaure->p1->pos_y + p_sqaure->length - 1,
+    draw_segment(p_sqaure->p1->pos_x, p_sqaure->p1->pos_y + p_sqaure->length - 1,
                  p_sqaure->length - 1, 0, shape->color, lst);
-    draw_segment(p_sqaure->p1->pos_x + p_sqaure->length - 1,
-                 p_sqaure->p1->pos_y, 0, p_sqaure->length - 1,
-                 shape->color, lst);
+    draw_segment(p_sqaure->p1->pos_x + p_sqaure->length - 1, p_sqaure->p1->pos_y,
+                 0, p_sqaure->length - 1, shape->color, lst);
 }
 
+/**
+ * @brief Génère les pixels d'un polygone
+ *
+ * @param shape Forme de type POLYGON
+ * @param lst Liste de pixels
+ */
 void pixel_polygon(Shape * shape, list * lst) {
-
     Polygon *poly = (Polygon *) shape->ptrShape;
-    int i;
-    for (i = 1; i < poly->n; i++) {
+    for (int i = 1; i < poly->n; i++) {
         Point *p1 = poly->points[i - 1];
         Point *p2 = poly->points[i];
-        int dx, dy, x, y;
-        x = p1->pos_x;
-        y = p1->pos_y;
-        dx = p2->pos_x - p1->pos_x;0
-        dy = p2->pos_y - p1->pos_y;
-        draw_segment(x, y, dx, dy, shape->color, lst);
+        int dx = p2->pos_x - p1->pos_x;
+        int dy = p2->pos_y - p1->pos_y;
+        draw_segment(p1->pos_x, p1->pos_y, dx, dy, shape->color, lst);
     }
 }
 
-
+/**
+ * @brief Calcule le point intermédiaire entre deux points
+ *
+ * @param p1 Premier point
+ * @param p2 Deuxième point
+ * @param t Paramètre entre 0 et 1
+ * @return Point Point interpolé
+ */
 Point calc_point_median(Point * p1, Point * p2, double t) {
     double x = p1->pos_x * (1 - t) + p2->pos_x * t;
     double y = p1->pos_y * (1 - t) + p2->pos_y * t;
@@ -210,7 +295,14 @@ Point calc_point_median(Point * p1, Point * p2, double t) {
     return result;
 }
 
-// calc courbe de Bezier avec  Casteljau
+/**
+ * @brief Calcule un point sur la courbe de Bezier via Casteljau
+ *
+ * @param points Tableau de points de contrôle
+ * @param num_pt Nombre de points
+ * @param t Paramètre entre 0 et 1
+ * @return Point Calculé sur la courbe
+ */
 Point cj_calc(Point ** points, int num_pt, double t) {
     Point tmp_pt[num_pt];
     for (int i = 0; i < num_pt; ++i) {
@@ -224,15 +316,19 @@ Point cj_calc(Point ** points, int num_pt, double t) {
     return tmp_pt[0];
 }
 
-
+/**
+ * @brief Génère les pixels pour une courbe de Bezier
+ *
+ * @param shape Forme de type CURVE
+ * @param lst Liste de pixels
+ */
 void pixel_curve(Shape * shape, list * lst) {
     Curve *p_curve = (Curve *) shape->ptrShape;
-    Point *points[] =
-        { p_curve->p1, p_curve->p2, p_curve->p3, p_curve->p4 };
-    int num_pt = sizeof(points) / sizeof(Point);
-    double t = 0;
+    Point *points[] = { p_curve->p1, p_curve->p2, p_curve->p3, p_curve->p4 };
+    int num_pt = sizeof(points) / sizeof(Point *);
+    double t;
 
-    for (t = 0; t < 1.0; t = t + 0.0001) {
+    for (t = 0; t < 1.0; t += 0.0001) {
         Point cjp1 = cj_calc(points, num_pt, t);
         Pixel *px = create_pixel(cjp1.pos_x, cjp1.pos_y, shape->color);
         lst_insert_tail(lst, lst_create_lnode(px));

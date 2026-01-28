@@ -1,10 +1,5 @@
 #include "id.h"
 
-unsigned long long int get_next_id();
-void set_id(unsigned long long int id);
-void save_id();
-void load_id();
-
 static unsigned long long int global_id = 0;
 
 /**

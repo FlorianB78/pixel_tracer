@@ -1,0 +1,21 @@
+<map id="src/area.h" name="src/area.h">
+<area shape="rect" id="Node000001" title="Définition des structures et fonctions de gestion des zones (Area)." alt="" coords="143,5,222,32"/>
+<area shape="rect" id="Node000002" href="$area_8c.html" title=" " alt="" coords="65,80,145,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="156,45,120,81,116,78,159,41"/>
+<area shape="rect" id="Node000003" href="$pixel__tracer_8h.html" title="Gestion globale de l&#39;application Pixel Tracer." alt="" coords="122,155,243,181"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="184,45,185,155,180,154,181,50"/>
+<area shape="rect" id="Node000008" href="$render_8h.html" title="Fonctions de rendu pour les zones et calques." alt="" coords="220,80,310,107"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="208,40,253,79,248,80,208,45"/>
+<area shape="rect" id="Node000004" href="$command_8h.html" title="Interface pour la gestion des commandes utilisateur." alt="" coords="33,229,145,256"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="152,193,107,231,103,227,156,189"/>
+<area shape="rect" id="Node000006" href="$main_8c.html" title="Point d&#39;entrée de l&#39;application Pixel Tracer." alt="" coords="141,304,224,331"/>
+<area shape="poly" id="edge6_Node000003_Node000006" title=" " alt="" coords="185,195,185,304,180,303,180,198"/>
+<area shape="rect" id="Node000007" href="$pixel__tracer_8c.html" title="Implémentation de l&#39;initialisation et destruction de l&#39;application." alt="" coords="220,229,342,256"/>
+<area shape="poly" id="edge7_Node000003_Node000007" title=" " alt="" coords="212,188,267,229,261,229,211,193"/>
+<area shape="rect" id="Node000005" href="$command_8c.html" title="Gestion des commandes utilisateur et de leur exécution." alt="" coords="5,304,117,331"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="81,269,68,305,64,302,76,272"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="118,263,169,303,164,304,116,268"/>
+<area shape="poly" id="edge9_Node000008_Node000003" title=" " alt="" coords="237,119,198,156,195,152,241,115"/>
+<area shape="rect" id="Node000009" href="$render_8c.html" title="Implémentation des fonctions de rendu." alt="" coords="266,155,357,181"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="282,117,306,155,301,154,281,122"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="add_shape_to_layer" name="add_shape_to_layer">
+<area shape="rect" id="Node000001" title="Ajoute une forme à la couche." alt="" coords="5,31,143,57"/>
+<area shape="rect" id="Node000002" href="$list_8c.html#ae601318c758e55737363c7445bcb1b8f" title="Crée un nouveau noeud avec les données fournies." alt="" coords="191,5,307,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="142,31,178,29,173,30,143,37"/>
+<area shape="rect" id="Node000003" href="$list_8c.html#a8f0a81e76357062b9b85825cd0bf7669" title="Insère un noeud à la fin de la liste." alt="" coords="200,56,298,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="143,51,187,60,182,60,143,57"/>
+</map>

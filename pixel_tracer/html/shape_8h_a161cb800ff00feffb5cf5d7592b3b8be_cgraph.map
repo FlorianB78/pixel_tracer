@@ -1,0 +1,23 @@
+<map id="delete_shape" name="delete_shape">
+<area shape="rect" id="Node000001" title="Supprime une Shape et toutes ses formes internes." alt="" coords="5,157,104,184"/>
+<area shape="rect" id="Node000002" href="$shape_8c.html#a2a66a133e444cd75bcfd3aaba3639a74" title="Supprime un cercle et son centre." alt="" coords="161,5,259,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="62,156,97,106,122,76,150,49,167,38,164,42,153,53,126,80,101,109,67,158"/>
+<area shape="rect" id="Node000003" href="$shape_8c.html#a4dade23c37d4b2c409163edfc522b18f" title="Supprime un point." alt="" coords="316,157,407,184"/>
+<area shape="poly" id="edge7_Node000001_Node000003" title=" " alt="" coords="65,156,100,122,124,105,151,92,183,82,210,79,237,82,269,92,310,115,342,146,337,146,307,120,267,97,236,88,210,84,184,88,153,97,127,109,104,126,69,159"/>
+<area shape="rect" id="Node000004" href="$shape_8c.html#ab785bcd1ddf2cf76008057c1e3f71362" title="Supprime une courbe et ses points." alt="" coords="162,107,258,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="97,154,154,137,150,141,99,159"/>
+<area shape="rect" id="Node000005" href="$shape_8c.html#ae8a93415a118bb4ec12ce97b1d601ba3" title="Supprime une ligne et ses points." alt="" coords="168,157,252,184"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="103,168,155,169,150,172,105,173"/>
+<area shape="rect" id="Node000006" href="$shape_8c.html#a8a3c09a25ea963bb9a9feabcd1ef3d67" title="Supprime un polygone et tous ses points." alt="" coords="156,208,264,235"/>
+<area shape="poly" id="edge8_Node000001_Node000006" title=" " alt="" coords="98,182,154,201,150,204,98,187"/>
+<area shape="rect" id="Node000007" href="$shape_8c.html#aa9e48149920001dcdba970cdcd16bb94" title="Supprime un rectangle et son point." alt="" coords="152,259,268,285"/>
+<area shape="poly" id="edge10_Node000001_Node000007" title=" " alt="" coords="71,182,108,212,153,244,163,251,157,251,150,249,105,217,70,187"/>
+<area shape="rect" id="Node000008" href="$shape_8c.html#a9719ed7c7a5d88c62cf6b772797dcbf6" title="Supprime un carré et son point." alt="" coords="162,309,258,336"/>
+<area shape="poly" id="edge12_Node000001_Node000008" title=" " alt="" coords="64,182,99,236,124,268,153,295,160,302,155,301,150,299,120,271,95,240,62,187"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="241,30,270,49,314,96,347,144,342,144,310,100,266,53,241,35"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="252,131,308,151,303,153,252,137"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="251,168,303,170,298,172,253,173"/>
+<area shape="poly" id="edge9_Node000006_Node000003" title=" " alt="" coords="251,205,308,188,303,191,253,210"/>
+<area shape="poly" id="edge11_Node000007_Node000003" title=" " alt="" coords="245,256,267,244,302,219,333,196,337,193,306,223,269,249,247,261"/>
+<area shape="poly" id="edge13_Node000008_Node000003" title=" " alt="" coords="248,306,266,295,291,272,312,246,344,199,348,196,316,249,294,276,270,299,250,311"/>
+</map>

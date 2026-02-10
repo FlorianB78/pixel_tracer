@@ -1,0 +1,10 @@
+<map id="create_area" name="create_area">
+<area shape="rect" id="Node000001" title="Crée et initialise une nouvelle zone (Area)." alt="" coords="5,55,95,81"/>
+<area shape="rect" id="Node000002" href="$structarea.html#ae91b06b396885143d0a414054321ac77" title=" " alt="" coords="165,29,244,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,58,152,50,147,53,96,63"/>
+<area shape="rect" id="Node000003" href="$layers_8c.html#a81a30ec832bc7c40ae8f8c7aa452e145" title="Crée une liste de couches." alt="" coords="143,80,266,107"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="95,73,130,80,125,81,95,78"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="177,28,173,21,176,11,187,5,204,3,223,5,234,14,229,14,221,10,204,8,189,10,180,15,178,20,182,30"/>
+<area shape="rect" id="Node000004" href="$list_8c.html#afec467a8af7733df57ff079150c68032" title="Crée une nouvelle liste vide." alt="" coords="314,80,416,107"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="266,91,301,93,296,93,266,96"/>
+</map>

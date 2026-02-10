@@ -1,0 +1,5 @@
+<map id="delete_line" name="delete_line">
+<area shape="rect" id="Node000001" title="Supprime une ligne et ses points." alt="" coords="5,5,89,32"/>
+<area shape="rect" id="Node000002" href="$shape_8c.html#a4dade23c37d4b2c409163edfc522b18f" title="Supprime un point." alt="" coords="137,5,228,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="89,16,124,18,119,19,89,21"/>
+</map>

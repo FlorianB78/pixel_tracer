@@ -1,0 +1,54 @@
+<map id="draw_layer_shapes" name="draw_layer_shapes">
+<area shape="rect" id="Node000001" title="Dessine toutes les formes d&#39;un calque dans la zone." alt="" coords="5,233,139,260"/>
+<area shape="rect" id="Node000002" href="$structarea.html#ae91b06b396885143d0a414054321ac77" title=" " alt="" coords="223,132,302,159"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="89,231,132,200,185,168,210,160,206,163,188,173,135,204,93,235"/>
+<area shape="rect" id="Node000003" href="$pixel_8c.html#af2b24bb22e3d5a45d19efc4c547034e8" title="Crée une liste de pixels pour une forme." alt="" coords="187,183,338,209"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="124,230,197,212,193,216,126,235"/>
+<area shape="rect" id="Node000018" href="$list_8c.html#aa94f272997d853b524e0f4d5b1f3ee8b" title="Retourne le premier noeud de la liste." alt="" coords="211,233,314,260"/>
+<area shape="poly" id="edge30_Node000001_Node000018" title=" " alt="" coords="138,244,198,245,193,248,140,249"/>
+<area shape="rect" id="Node000019" href="$list_8c.html#a24e54c1388bec46264923c4116a0e787" title="Retourne le noeud suivant d&#39;un noeud donné." alt="" coords="209,284,316,311"/>
+<area shape="poly" id="edge31_Node000001_Node000019" title=" " alt="" coords="125,258,197,278,192,281,125,263"/>
+<area shape="rect" id="Node000020" href="$pixel_8c.html#aa885a1c0aceaa86e24b2822756553f14" title="Supprime les pixels d&#39;une liste (non implémentée)." alt="" coords="192,335,332,361"/>
+<area shape="poly" id="edge32_Node000001_Node000020" title=" " alt="" coords="91,258,135,289,188,320,202,329,197,328,185,325,132,293,90,263"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="231,131,226,123,230,114,242,107,262,105,284,108,296,116,291,117,282,113,262,111,244,113,234,117,232,123,237,132"/>
+<area shape="rect" id="Node000004" href="$list_8c.html#afec467a8af7733df57ff079150c68032" title="Crée une nouvelle liste vide." alt="" coords="389,5,491,32"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="320,180,336,169,348,154,355,141,361,112,366,82,373,66,384,49,394,43,398,40,388,52,377,68,371,83,366,113,360,142,353,157,340,173,323,184"/>
+<area shape="rect" id="Node000005" href="$pixel_8c.html#a87abc331cfb87a9a9a56f1db0c1ca587" title="Génère les pixels d&#39;un cercle." alt="" coords="550,157,641,184"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="307,180,337,168,360,154,385,143,425,137,465,138,540,152,535,153,464,143,425,142,387,148,363,159,339,173,309,185"/>
+<area shape="rect" id="Node000009" href="$pixel_8c.html#a1a17e77b9983a5d25c11f697bb1f6147" title="Génère les pixels pour une courbe de Bezier." alt="" coords="552,107,639,133"/>
+<area shape="poly" id="edge9_Node000003_Node000009" title=" " alt="" coords="313,180,337,168,350,157,359,144,369,132,385,122,423,110,463,105,539,109,534,111,463,110,424,115,387,126,372,136,363,147,354,160,339,173,316,184"/>
+<area shape="rect" id="Node000012" href="$pixel_8c.html#a49e9a749297e1988b199d7fb75c7f7cd" title="Génère les pixels d&#39;une ligne." alt="" coords="402,259,478,285"/>
+<area shape="poly" id="edge15_Node000003_Node000012" title=" " alt="" coords="308,207,339,219,387,244,399,252,393,251,385,249,337,224,308,213"/>
+<area shape="rect" id="Node000014" href="$pixel_8c.html#ac5fdff7e509d6ede5e290a32044d4ae9" title="Génère les pixels d&#39;un point." alt="" coords="554,259,637,285"/>
+<area shape="poly" id="edge20_Node000003_Node000014" title=" " alt="" coords="322,207,340,219,353,236,359,253,362,287,366,319,374,333,388,346,414,359,438,361,463,356,493,346,536,323,569,297,574,295,539,327,495,350,464,361,438,367,412,364,384,350,369,336,361,320,357,288,354,255,348,239,336,223,321,213"/>
+<area shape="rect" id="Node000015" href="$pixel_8c.html#a5667750b581fe21ec08d266b521b98f4" title="Génère les pixels d&#39;un polygone." alt="" coords="390,309,490,336"/>
+<area shape="poly" id="edge24_Node000003_Node000015" title=" " alt="" coords="319,207,340,219,357,238,365,258,373,276,388,295,393,302,388,300,384,299,368,279,360,260,352,241,336,223,318,213"/>
+<area shape="rect" id="Node000016" href="$pixel_8c.html#a4be84707cddae4c88c715fc31a89db84" title="Génère les pixels d&#39;un rectangle." alt="" coords="386,157,494,184"/>
+<area shape="poly" id="edge26_Node000003_Node000016" title=" " alt="" coords="338,183,373,180,368,181,339,188"/>
+<area shape="rect" id="Node000017" href="$pixel_8c.html#a33ac3154a410a7daf32aa794ed4c000a" title="Génère les pixels d&#39;un carré" alt="" coords="393,208,487,235"/>
+<area shape="poly" id="edge28_Node000003_Node000017" title=" " alt="" coords="338,204,380,212,375,213,339,209"/>
+<area shape="rect" id="Node000006" href="$pixel_8c.html#a88186143f92662a89216b505395926a0" title="Crée un pixel à une position donnée avec une couleur." alt="" coords="709,157,800,184"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="641,168,697,170,691,171,642,173"/>
+<area shape="rect" id="Node000007" href="$list_8c.html#ae601318c758e55737363c7445bcb1b8f" title="Crée un nouveau noeud avec les données fournies." alt="" coords="697,208,813,235"/>
+<area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="640,182,699,203,693,203,640,187"/>
+<area shape="rect" id="Node000008" href="$list_8c.html#a8f0a81e76357062b9b85825cd0bf7669" title="Insère un noeud à la fin de la liste." alt="" coords="706,259,804,285"/>
+<area shape="poly" id="edge8_Node000005_Node000008" title=" " alt="" coords="630,182,650,194,665,207,675,220,684,232,698,245,707,252,701,251,695,249,680,236,670,223,661,211,647,198,629,187"/>
+<area shape="poly" id="edge12_Node000009_Node000006" title=" " alt="" coords="640,131,699,152,694,152,640,137"/>
+<area shape="poly" id="edge13_Node000009_Node000007" title=" " alt="" coords="630,131,650,143,665,157,675,169,684,181,698,194,707,201,701,200,695,198,680,185,670,172,661,160,647,147,629,136"/>
+<area shape="poly" id="edge14_Node000009_Node000008" title=" " alt="" coords="634,131,651,143,668,170,675,196,681,220,699,245,703,251,698,249,695,248,677,222,670,197,663,172,647,147,633,137"/>
+<area shape="rect" id="Node000010" href="$pixel_8c.html#a5f5b30d66d93f7fce626c1547736471c" title="Calcule un point sur la courbe de Bezier via Casteljau." alt="" coords="724,107,786,133"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="639,117,711,119,706,121,640,123"/>
+<area shape="rect" id="Node000011" href="$pixel_8c.html#ab70bfd04ebb4770aa9fbc3c828c15d74" title="Calcule le point intermédiaire entre deux points." alt="" coords="861,107,990,133"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="786,117,848,120,843,120,787,123"/>
+<area shape="rect" id="Node000013" href="$pixel_8c.html#ada24bb1dd5c74df0c61ffd451a603da6" title="Trace un segment de pixels entre deux points." alt="" coords="542,208,649,235"/>
+<area shape="poly" id="edge16_Node000012_Node000013" title=" " alt="" coords="478,257,536,241,541,239,479,262"/>
+<area shape="poly" id="edge17_Node000013_Node000006" title=" " alt="" coords="639,205,693,190,699,189,641,210"/>
+<area shape="poly" id="edge18_Node000013_Node000007" title=" " alt="" coords="649,219,684,221,678,222,649,224"/>
+<area shape="poly" id="edge19_Node000013_Node000008" title=" " alt="" coords="640,233,699,253,693,253,640,238"/>
+<area shape="poly" id="edge21_Node000014_Node000006" title=" " alt="" coords="629,256,647,245,661,232,670,220,680,207,695,194,701,192,706,190,698,198,684,211,675,223,665,235,650,249,631,261"/>
+<area shape="poly" id="edge22_Node000014_Node000007" title=" " alt="" coords="637,256,694,240,699,239,638,261"/>
+<area shape="poly" id="edge23_Node000014_Node000008" title=" " alt="" coords="637,269,693,272,687,272,638,275"/>
+<area shape="poly" id="edge25_Node000015_Node000013" title=" " alt="" coords="474,306,493,295,507,282,516,270,526,258,541,245,546,243,551,241,544,249,530,262,520,274,511,286,496,299,476,311"/>
+<area shape="poly" id="edge27_Node000016_Node000013" title=" " alt="" coords="484,182,540,202,535,203,484,187"/>
+<area shape="poly" id="edge29_Node000017_Node000013" title=" " alt="" coords="487,219,529,221,524,222,488,224"/>
+</map>

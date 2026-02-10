@@ -1,0 +1,5 @@
+<map id="cj_calc" name="cj_calc">
+<area shape="rect" id="Node000001" title="Calcule un point sur la courbe de Bezier via Casteljau." alt="" coords="5,5,68,32"/>
+<area shape="rect" id="Node000002" href="$pixel_8c.html#ab70bfd04ebb4770aa9fbc3c828c15d74" title="Calcule le point intermédiaire entre deux points." alt="" coords="116,5,245,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="68,16,103,18,98,19,68,21"/>
+</map>

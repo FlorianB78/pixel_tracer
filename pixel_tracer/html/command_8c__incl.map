@@ -1,0 +1,46 @@
+<map id="src/command.c" name="src/command.c">
+<area shape="rect" id="Node000001" title="Gestion des commandes utilisateur et de leur exécution." alt="" coords="460,5,572,32"/>
+<area shape="rect" id="Node000002" href="$command_8h.html" title="Interface pour la gestion des commandes utilisateur." alt="" coords="471,80,561,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="517,30,518,65,513,63,515,35"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="240,453,304,480"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="514,105,501,165,496,203,493,241,493,319,488,348,475,374,455,396,430,414,374,442,319,458,318,453,372,437,427,410,451,392,471,371,483,347,488,318,488,241,490,202,496,164,511,109"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="418,453,483,480"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="521,105,536,164,541,202,544,241,544,319,542,345,536,365,511,407,479,445,476,440,507,404,531,363,537,344,539,319,539,241,536,203,530,165,518,110"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="310,379,370,405"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="508,105,474,156,406,272,355,366,351,363,401,269,470,153,504,109"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="578,155,704,181"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="538,105,609,146,604,147,538,110"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="728,155,848,181"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="561,104,728,150,723,151,561,109"/>
+<area shape="rect" id="Node000008" href="$pixel__tracer_8h.html" title="Gestion globale de l&#39;application Pixel Tracer." alt="" coords="84,155,183,181"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="469,105,199,157,197,152,472,101"/>
+<area shape="rect" id="Node000009" href="$list_8h.html" title="Gestion de listes doublement chaînées génériques." alt="" coords="35,453,85,480"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="90,184,57,203,41,215,27,231,15,256,9,284,9,312,13,341,29,396,48,439,43,440,24,397,7,342,3,313,4,283,10,254,23,228,37,212,54,198,93,180"/>
+<area shape="rect" id="Node000010" href="$id_8h.html" title="Gestion des identifiants uniques persistants." alt="" coords="83,229,125,256"/>
+<area shape="poly" id="edge9_Node000008_Node000010" title=" " alt="" coords="129,179,117,216,112,214,127,184"/>
+<area shape="rect" id="Node000011" href="$area_8h.html" title="Définition des structures et fonctions de gestion des zones (Area)." alt="" coords="243,304,301,331"/>
+<area shape="poly" id="edge10_Node000008_Node000011" title=" " alt="" coords="183,173,211,180,238,190,263,206,283,228,290,243,292,259,286,291,281,288,286,259,285,244,279,231,260,210,236,195,209,185,184,178"/>
+<area shape="rect" id="Node000012" href="$layers_8h.html" title="Définition des structures et fonctions pour gérer les couches (Layer)." alt="" coords="168,379,235,405"/>
+<area shape="poly" id="edge18_Node000008_Node000012" title=" " alt="" coords="139,180,196,364,190,364,135,184"/>
+<area shape="rect" id="Node000013" href="$shape_8h.html" title="Gestion des formes géométriques pour Pixel Tracer." alt="" coords="109,453,176,480"/>
+<area shape="poly" id="edge19_Node000008_Node000013" title=" " alt="" coords="106,184,82,203,61,231,52,242,42,250,32,258,24,268,22,285,26,311,39,350,65,404,82,426,105,445,99,445,78,430,60,407,34,352,20,313,16,285,19,266,28,254,38,246,49,238,56,228,79,200,109,180"/>
+<area shape="rect" id="Node000014" href="$pixel_8h.html" title="Gestion des pixels et conversion des formes en pixels." alt="" coords="74,379,134,405"/>
+<area shape="poly" id="edge20_Node000008_Node000014" title=" " alt="" coords="112,184,92,204,73,230,66,265,69,301,79,335,92,364,87,365,74,337,64,302,60,265,68,228,88,200,115,180"/>
+<area shape="rect" id="Node000015" href="$render_8h.html" title="Fonctions de rendu pour les zones et calques." alt="" coords="200,229,269,256"/>
+<area shape="poly" id="edge24_Node000008_Node000015" title=" " alt="" coords="151,179,207,219,202,221,151,185"/>
+<area shape="poly" id="edge11_Node000011_Node000003" title=" " alt="" coords="274,330,274,439,269,437,270,333"/>
+<area shape="poly" id="edge12_Node000011_Node000005" title=" " alt="" coords="285,329,320,367,315,367,283,334"/>
+<area shape="poly" id="edge13_Node000011_Node000012" title=" " alt="" coords="262,330,226,370,222,366,257,333"/>
+<area shape="poly" id="edge16_Node000012_Node000003" title=" " alt="" coords="215,403,252,443,247,442,212,408"/>
+<area shape="poly" id="edge17_Node000012_Node000004" title=" " alt="" coords="236,401,406,451,401,453,235,406"/>
+<area shape="poly" id="edge14_Node000012_Node000009" title=" " alt="" coords="179,406,99,448,97,443,174,406"/>
+<area shape="poly" id="edge15_Node000012_Node000013" title=" " alt="" coords="193,405,164,443,161,439,189,407"/>
+<area shape="poly" id="edge21_Node000014_Node000003" title=" " alt="" coords="134,403,231,446,226,448,133,408"/>
+<area shape="poly" id="edge23_Node000014_Node000009" title=" " alt="" coords="98,404,77,442,73,438,94,407"/>
+<area shape="poly" id="edge22_Node000014_Node000013" title=" " alt="" coords="112,404,131,440,126,439,109,408"/>
+<area shape="poly" id="edge25_Node000015_Node000003" title=" " alt="" coords="265,254,304,274,340,302,369,336,385,378,389,392,385,407,372,423,355,437,319,455,317,450,353,432,368,420,380,404,383,392,380,379,365,339,337,306,301,278,265,259"/>
+<area shape="poly" id="edge26_Node000015_Node000005" title=" " alt="" coords="258,254,289,275,315,302,330,333,338,365,334,363,325,335,311,306,285,279,258,259"/>
+<area shape="poly" id="edge28_Node000015_Node000011" title=" " alt="" coords="242,254,261,291,256,290,240,259"/>
+<area shape="poly" id="edge27_Node000015_Node000012" title=" " alt="" coords="234,255,210,365,205,362,230,258"/>
+<area shape="poly" id="edge29_Node000015_Node000014" title=" " alt="" coords="226,255,127,369,123,365,221,258"/>
+</map>

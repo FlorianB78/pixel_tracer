@@ -1,0 +1,23 @@
+<map id="sprint_point" name="sprint_point">
+<area shape="rect" id="Node000001" title="Sérialisation point en chaîne." alt="" coords="310,157,398,184"/>
+<area shape="rect" id="Node000002" href="$shape_8c.html#a068a5bc38689a7b8fae84ef6a3dc0f47" title="Sérialisation cercle en chaîne." alt="" coords="158,5,253,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="334,144,303,100,260,53,236,35,235,30,264,49,307,96,340,144"/>
+<area shape="rect" id="Node000003" href="$shape_8c.html#a5167551a1a804f8b67d74ed0ce9b738d" title="Sérialise une Shape en chaîne de caractères." alt="" coords="5,157,101,184"/>
+<area shape="poly" id="edge11_Node000001_Node000003" title=" " alt="" coords="329,146,300,119,261,97,230,88,205,85,180,88,150,97,124,109,102,126,68,159,63,156,98,122,122,105,148,92,179,83,205,79,232,82,263,92,303,115,335,146"/>
+<area shape="rect" id="Node000004" href="$shape_8c.html#a575942d1117aebe05159a42d4aacda53" title="Sérialisation courbe en chaîne." alt="" coords="159,107,252,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="295,152,247,137,247,131,301,151"/>
+<area shape="rect" id="Node000005" href="$shape_8c.html#a26f431cb3f02d6b1a9967dc64591b1db" title="Sérialisation ligne en chaîne." alt="" coords="165,157,246,184"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="292,172,246,173,245,168,297,170"/>
+<area shape="rect" id="Node000006" href="$shape_8c.html#a71e3c87d1041b6439c310bb63e810f3d" title="Sérialisation polygone en chaîne." alt="" coords="153,208,258,235"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="296,191,248,210,246,205,300,189"/>
+<area shape="rect" id="Node000007" href="$shape_8c.html#a9be86d5bc934d6905c849b96f71ccc14" title="Sérialisation rectangle en chaîne." alt="" coords="149,259,262,285"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="330,193,299,223,263,249,242,261,240,256,261,244,296,219,326,196"/>
+<area shape="rect" id="Node000008" href="$shape_8c.html#a3571899d19b29d8571e6c090065121f3" title="Sérialisation carré en chaîne." alt="" coords="159,309,252,336"/>
+<area shape="poly" id="edge12_Node000001_Node000008" title=" " alt="" coords="341,197,309,249,288,276,264,299,245,311,243,306,260,295,284,272,305,246,337,200"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="161,42,150,53,123,79,99,109,65,158,60,155,95,105,120,76,147,49,164,38"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="147,141,97,159,94,155,150,137"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="148,172,102,173,100,168,152,169"/>
+<area shape="poly" id="edge8_Node000006_Node000003" title=" " alt="" coords="146,204,96,187,95,182,151,201"/>
+<area shape="poly" id="edge10_Node000007_Node000003" title=" " alt="" coords="154,251,147,249,102,217,69,187,69,182,106,212,150,244,159,251"/>
+<area shape="poly" id="edge13_Node000008_Node000003" title=" " alt="" coords="151,301,147,299,118,271,93,240,61,187,62,182,97,237,122,268,150,295,157,302"/>
+</map>

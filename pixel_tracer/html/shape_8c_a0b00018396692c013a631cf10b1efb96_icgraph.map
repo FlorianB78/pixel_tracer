@@ -1,0 +1,5 @@
+<map id="create_curve" name="create_curve">
+<area shape="rect" id="Node000001" title="Crée une courbe de Bézier." alt="" coords="192,5,288,32"/>
+<area shape="rect" id="Node000002" href="$shape_8c.html#a55bd01d067a9668ed0f807817a3bf21d" title="Crée une Shape Curve." alt="" coords="5,5,144,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="173,19,144,21,144,16,178,19"/>
+</map>

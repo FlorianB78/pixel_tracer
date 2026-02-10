@@ -1,0 +1,5 @@
+<map id="cercle" name="cercle">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,104,62,131"/>
+<area shape="rect" id="Node000002" href="$structpoint.html" title=" " alt="" coords="9,5,58,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="36,47,36,104,31,103,31,49"/>
+</map>

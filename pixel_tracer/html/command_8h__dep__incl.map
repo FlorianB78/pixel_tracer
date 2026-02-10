@@ -1,0 +1,7 @@
+<map id="src/command.h" name="src/command.h">
+<area shape="rect" id="Node000001" title="Interface pour la gestion des commandes utilisateur." alt="" coords="65,5,177,32"/>
+<area shape="rect" id="Node000002" href="$command_8c.html" title="Gestion des commandes utilisateur et de leur exécution." alt="" coords="5,80,117,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="104,43,73,82,69,78,98,45"/>
+<area shape="rect" id="Node000003" href="$main_8c.html" title="Point d&#39;entrée de l&#39;application Pixel Tracer." alt="" coords="141,80,224,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="143,42,174,80,169,79,140,46"/>
+</map>

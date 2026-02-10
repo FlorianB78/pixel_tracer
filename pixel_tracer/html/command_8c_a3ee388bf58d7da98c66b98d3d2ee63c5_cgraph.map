@@ -1,0 +1,15 @@
+<map id="read_from_stdin" name="read_from_stdin">
+<area shape="rect" id="Node000001" title="Lit une commande depuis l&#39;entrée standard." alt="" coords="5,107,120,133"/>
+<area shape="rect" id="Node000002" href="$command_8c.html#aaf5356b7d3e00e352c0e55e07e728ea2" title="Ajoute un paramètre entier à une commande." alt="" coords="168,5,274,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="79,104,118,74,166,42,178,38,173,41,169,46,121,78,83,108"/>
+<area shape="rect" id="Node000003" href="$command_8c.html#adfb1fa24d5d651505e1e71b10344fd03" title="Ajoute un paramètre chaîne à une commande." alt="" coords="168,56,275,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="106,104,165,86,161,90,108,108"/>
+<area shape="rect" id="Node000004" href="$command_8c.html#a038516a235e9d99f4b126c6f662fd2d4" title="Nettoie une ligne de texte utilisateur." alt="" coords="181,107,262,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="120,117,167,119,163,121,121,123"/>
+<area shape="rect" id="Node000006" href="$command_8c.html#a05868663acd37e7f059fee90128ebecc" title="Vérifie si une chaîne représente un entier." alt="" coords="195,157,248,184"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="107,131,182,156,178,159,107,137"/>
+<area shape="rect" id="Node000007" href="$command_8c.html#a944c5ae6f5e963f5a0f75bf4a43f24b2" title="Vérifie si une chaîne est un mot en minuscules." alt="" coords="188,208,254,235"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="81,131,121,162,169,194,178,201,173,200,166,198,118,166,80,137"/>
+<area shape="rect" id="Node000005" href="$command_8c.html#aa14cf721a9645a14868ee70af7c2b274" title="Convertit une chaîne en minuscules." alt="" coords="323,107,383,133"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="262,117,310,119,305,121,263,123"/>
+</map>

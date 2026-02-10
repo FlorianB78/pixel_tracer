@@ -1,0 +1,26 @@
+var annotated_dup =
+[
+    [ "area", "structarea.html", "structarea" ],
+    [ "Cercle", "struct_cercle.html", null ],
+    [ "cercle", "structcercle.html", "structcercle" ],
+    [ "command", "structcommand.html", "structcommand" ],
+    [ "Curve", "struct_curve.html", null ],
+    [ "curve", "structcurve.html", "structcurve" ],
+    [ "layer", "structlayer.html", "structlayer" ],
+    [ "Line", "struct_line.html", null ],
+    [ "line", "structline.html", "structline" ],
+    [ "list_", "structlist__.html", "structlist__" ],
+    [ "lnode_", "structlnode__.html", "structlnode__" ],
+    [ "pixel", "structpixel.html", "structpixel" ],
+    [ "pixel_tracer", "structpixel__tracer.html", "structpixel__tracer" ],
+    [ "Point", "struct_point.html", null ],
+    [ "point", "structpoint.html", "structpoint" ],
+    [ "Polygon", "struct_polygon.html", null ],
+    [ "polygon", "structpolygon.html", "structpolygon" ],
+    [ "Rectangle", "struct_rectangle.html", null ],
+    [ "rectangle", "structrectangle.html", "structrectangle" ],
+    [ "Shape", "struct_shape.html", null ],
+    [ "shape", "structshape.html", "structshape" ],
+    [ "Squar", "struct_squar.html", null ],
+    [ "squar", "structsquar.html", "structsquar" ]
+];

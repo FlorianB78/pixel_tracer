@@ -1,0 +1,26 @@
+<map id="src/render.h" name="src/render.h">
+<area shape="rect" id="Node000001" title="Fonctions de rendu pour les zones et calques." alt="" coords="226,5,316,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="258,229,322,256"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="289,30,314,51,342,80,367,114,385,154,388,168,384,183,363,208,337,226,335,221,360,204,380,180,383,168,379,156,362,117,338,83,310,55,288,35"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="309,155,370,181"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="283,30,315,79,336,140,331,139,310,81,281,35"/>
+<area shape="rect" id="Node000004" href="$layers_8h.html" title="Définition des structures et fonctions pour gérer les couches (Layer)." alt="" coords="167,155,234,181"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="264,30,234,81,210,142,206,139,229,79,260,34"/>
+<area shape="rect" id="Node000008" href="$area_8h.html" title="Définition des structures et fonctions de gestion des zones (Area)." alt="" coords="243,80,300,107"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="273,30,274,65,269,63,270,35"/>
+<area shape="rect" id="Node000009" href="$pixel_8h.html" title="Gestion des pixels et conversion des formes en pixels." alt="" coords="83,155,142,181"/>
+<area shape="poly" id="edge12_Node000001_Node000009" title=" " alt="" coords="260,31,139,146,136,142,255,34"/>
+<area shape="poly" id="edge6_Node000004_Node000002" title=" " alt="" coords="217,179,265,219,260,219,215,184"/>
+<area shape="rect" id="Node000005" href="$list_8h.html" title="Gestion de listes doublement chaînées génériques." alt="" coords="5,229,55,256"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="172,184,70,227,68,223,170,179"/>
+<area shape="rect" id="Node000006" href="$shape_8h.html" title="Gestion des formes géométriques pour Pixel Tracer." alt="" coords="79,229,146,256"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="188,181,141,222,138,217,183,183"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="170,229,234,256"/>
+<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="203,180,204,215,199,212,199,184"/>
+<area shape="poly" id="edge9_Node000008_Node000002" title=" " alt="" coords="275,105,289,215,284,213,271,109"/>
+<area shape="poly" id="edge10_Node000008_Node000003" title=" " alt="" coords="284,105,320,143,315,143,282,110"/>
+<area shape="poly" id="edge11_Node000008_Node000004" title=" " alt="" coords="261,106,225,146,222,142,257,109"/>
+<area shape="poly" id="edge13_Node000009_Node000002" title=" " alt="" coords="143,179,248,222,243,224,142,184"/>
+<area shape="poly" id="edge15_Node000009_Node000005" title=" " alt="" coords="101,181,57,221,54,217,96,183"/>
+<area shape="poly" id="edge14_Node000009_Node000006" title=" " alt="" coords="114,180,115,215,110,213,111,184"/>
+</map>

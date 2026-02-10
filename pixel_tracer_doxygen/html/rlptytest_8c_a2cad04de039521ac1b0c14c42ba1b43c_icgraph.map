@@ -1,8 +1,0 @@
-<map id="tty_reset" name="tty_reset">
-<area shape="rect" id="Node000001" title=" " alt="" coords="203,5,275,32"/>
-<area shape="rect" id="Node000002" href="$rlptytest_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="186,21,55,21,55,16,188,16"/>
-<area shape="rect" id="Node000003" href="$rlptytest_8c.html#ab2be9c2b6bda657665a518567ff1393b" title=" " alt="" coords="103,31,155,57"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="190,30,156,41,155,35,185,31"/>
-<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="85,35,55,28,55,22,90,32"/>
-</map>

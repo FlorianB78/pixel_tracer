@@ -1,9 +1,0 @@
-<map id="create_curve" name="create_curve">
-<area shape="rect" id="Node000001" title=" " alt="" coords="482,5,579,32"/>
-<area shape="rect" id="Node000002" href="$shape_8c.html#a55bd01d067a9668ed0f807817a3bf21d" title=" " alt="" coords="296,5,434,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="464,19,435,21,435,16,469,19"/>
-<area shape="rect" id="Node000003" href="$command_8c.html#ab576f5b835e80a0ef9ba46654a6295cb" title=" " alt="" coords="103,5,248,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="278,19,248,21,248,16,283,19"/>
-<area shape="rect" id="Node000004" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="85,20,55,21,55,16,90,18"/>
-</map>

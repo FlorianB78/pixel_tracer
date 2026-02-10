@@ -1,7 +1,0 @@
-<map id="main" name="main">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,55,57"/>
-<area shape="rect" id="Node000002" href="$rl_8c.html#a358d2e2397ca11ccd17553e3c40e7901" title=" " alt="" coords="115,5,157,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="54,36,101,25,98,29,56,41"/>
-<area shape="rect" id="Node000003" href="$lib_2readline_2mingw64_2include_2readline_2readline_8h.html#a9df8d87faa1eb26862eb658e24dd9c89" title=" " alt="" coords="103,56,169,83"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="55,47,90,57,85,59,55,53"/>
-</map>

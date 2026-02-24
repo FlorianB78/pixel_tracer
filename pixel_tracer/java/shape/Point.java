@@ -55,6 +55,8 @@ public class Point extends Shape {
     super(id, fill, thickness, rotation, color);
     double_pos_x = x;
     double_pos_y = y;
+    pos_x = (int) Math.round(x);
+    pos_y = (int) Math.round(y);
   };
 
   //
@@ -143,7 +145,7 @@ public class Point extends Shape {
 
   @Override
   public ArrayList<Pixel> draw(ArrayList<Pixel> lst) {
-    Pixel px = new Pixel(pos_y, pos_x, super.color);
+    Pixel px = new Pixel(pos_x, pos_y, super.color);
     lst.add(px);
     return lst;
   }

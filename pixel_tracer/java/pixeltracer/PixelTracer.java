@@ -3,6 +3,7 @@ package pixeltracer;
 import shape.*;
 import java.util.ArrayList;
 import java.awt.Color;
+import pixel.Pixel;
 
 /**
  * Core drawing engine of the application.
@@ -339,169 +340,36 @@ public class PixelTracer {
         }
 
         Area area = areas.get(currentArea);
+        area.setEmpty_char(backgroundChar);
+        area.setFull_char(borderChar);
 
         // 1️⃣ Nettoyer le plateau
         area.clearArea();
 
         char[][] grid = area.getArea();
+        char drawChar = area.getFull_char();
 
         // 2️⃣ Parcourir les layers
         for (Layer layer : area.getLayers()) {
 
-            if (!layer.getVisible())
+            if (!layer.getVisible()) {
                 continue;
+            }
 
-            // 3️⃣ Parcourir les shapes
             for (Shape s : layer.getListShapes()) {
-
-                // ===== POINT =====
-                if (s instanceof Point) {
-
-                    Point p = (Point) s;
-
-                    int x = p.getPos_x();
-                    int y = p.getPos_y();
+                ArrayList<Pixel> pixels = s.draw(new ArrayList<>());
+                for (Pixel px : pixels) {
+                    int x = px.getPx();
+                    int y = px.getPy();
 
                     if (x >= 0 && x < area.getWidth()
                             && y >= 0 && y < area.getHeight()) {
-
-                        grid[y][x] = area.getFull_char();
-                    }
-                }
-
-                // ===== LINE =====
-                else if (s instanceof Line) {
-
-                    Line line = (Line) s;
-
-                    ArrayList<Point> pts = line.getPoints();
-
-                    for (Point p : pts) {
-
-                        int x = p.getPos_x();
-                        int y = p.getPos_y();
-
-                        if (x >= 0 && x < area.getWidth()
-                                && y >= 0 && y < area.getHeight()) {
-
-                            grid[y][x] = area.getFull_char();
-                        }
-                    }
-                }
-
-                // ===== CURVE =====
-                else if (s instanceof Curve) {
-
-                    Curve curve = (Curve) s;
-
-                    for (Point p : curve.getPoints()) {
-
-                        int x = p.getPos_x();
-                        int y = p.getPos_y();
-
-                        if (x >= 0 && x < area.getWidth()
-                                && y >= 0 && y < area.getHeight()) {
-
-                            grid[y][x] = area.getFull_char();
-                        }
-                    }
-                }
-
-                // ===== POLYGON =====
-                else if (s instanceof Polygon) {
-
-                    Polygon poly = (Polygon) s;
-
-                    for (Point p : poly.getPoints()) {
-
-                        int x = p.getPos_x();
-                        int y = p.getPos_y();
-
-                        if (x >= 0 && x < area.getWidth()
-                                && y >= 0 && y < area.getHeight()) {
-
-                            grid[y][x] = area.getFull_char();
-                        }
-                    }
-                }
-
-                // ===== RECTANGLE =====
-                else if (s instanceof Rectangle) {
-
-                    Rectangle rect = (Rectangle) s;
-
-                    Point origin = rect.getPoints();
-
-                    int startX = origin.getPos_x();
-                    int startY = origin.getPos_y();
-
-                    for (int i = 0; i < rect.getLength(); i++) {
-                        for (int j = 0; j < rect.getWidth(); j++) {
-
-                            int x = startX + i;
-                            int y = startY + j;
-
-                            if (x >= 0 && x < area.getWidth()
-                                    && y >= 0 && y < area.getHeight()) {
-
-                                grid[y][x] = area.getFull_char();
-                            }
-                        }
-                    }
-                }
-
-                // ===== SQUARE =====
-                else if (s instanceof Square) {
-
-                    Square sq = (Square) s;
-
-                    Point origin = sq.getPoints();
-
-                    int startX = origin.getPos_x();
-                    int startY = origin.getPos_y();
-
-                    for (int i = 0; i < sq.getLength(); i++) {
-                        for (int j = 0; j < sq.getLength(); j++) {
-
-                            int x = startX + i;
-                            int y = startY + j;
-
-                            if (x >= 0 && x < area.getWidth()
-                                    && y >= 0 && y < area.getHeight()) {
-
-                                grid[y][x] = area.getFull_char();
-                            }
-                        }
-                    }
-                }
-
-                // ===== CIRCLE =====
-                else if (s instanceof Circle) {
-
-                    Circle circle = (Circle) s;
-
-                    Point center = circle.getCenter();
-                    int radius = circle.getRadius();
-
-                    int cx = center.getPos_x();
-                    int cy = center.getPos_y();
-
-                    for (int y = 0; y < area.getHeight(); y++) {
-                        for (int x = 0; x < area.getWidth(); x++) {
-
-                            int dx = x - cx;
-                            int dy = y - cy;
-
-                            if (dx * dx + dy * dy <= radius * radius) {
-                                grid[y][x] = area.getFull_char();
-                            }
-                        }
+                        grid[y][x] = drawChar;
                     }
                 }
             }
         }
 
-        // 4️⃣ Affichage final
         area.printArea();
     }
 
@@ -705,3 +573,4 @@ public class PixelTracer {
         }
     }
 }
+

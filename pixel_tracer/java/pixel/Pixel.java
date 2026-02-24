@@ -24,4 +24,16 @@ public class Pixel {
         this.color = color;
     }
 
+    public int getPx() {
+        return px;
+    }
+
+    public int getPy() {
+        return py;
+    }
+
+    public Color getColor() {
+        return color;
+    }
+
 }

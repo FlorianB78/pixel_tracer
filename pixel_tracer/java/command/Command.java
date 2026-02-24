@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import pixeltracer.PixelTracer;
 
+/**
+ * Parses and executes user commands entered in the terminal.
+ */
 public class Command {
     
     private String name;
@@ -27,6 +30,9 @@ public class Command {
     private int strSize;
     private int floatSize;
 
+    /**
+     * Builds an empty command.
+     */
     public Command() {
         this.intParams = new ArrayList<>();
         this.stringParams = new ArrayList<>();
@@ -35,20 +41,40 @@ public class Command {
         this.strSize = 0;
         this.floatSize = 0;
     }
+    /**
+     * Sets the command keyword.
+     *
+     * @param name command name
+     */
     public void setName(String name) {
         this.name = name;
     }
 
+    /**
+     * Adds an integer parameter.
+     *
+     * @param var1 integer value
+     */
     public void addInt(int var1) {
         this.intParams.add(var1);
         this.intSize++;
     }
 
+    /**
+     * Adds a string parameter.
+     *
+     * @param var1 string value
+     */
     public void addString(String var1) {
         this.stringParams.add(var1);
         this.strSize++;
     }
 
+    /**
+     * Adds a float parameter.
+     *
+     * @param var1 float value
+     */
     public void addFloat(Float var1) {
         this.floatParams.add(var1);
         this.floatSize++;
@@ -62,6 +88,13 @@ public class Command {
 //        }
 //    }
 //
+
+    /**
+     * Checks if a token is a worf.
+     *
+     * @param str token to test
+     * @return true if token is a word
+     */
     public static boolean is_word(String str) {
         try {  
             Integer.parseInt(str); 
@@ -74,14 +107,32 @@ public class Command {
           }
     }
 
+    /**
+     * Checks if a token is a positive decimal integer.
+     *
+     * @param str token to test
+     * @return true if token matches int format
+     */
     public static boolean isInteger(String str) {
         return str.matches("\\d+");
     }
 
+    /**
+     * Checks if a token is a positive decimal float.
+     *
+     * @param str token to test
+     * @return true if token matches float format
+     */
     public static boolean isFloat(String str) {
         return str.matches("\\d+\\.\\d+");
     }
 
+    /**
+     * Normalizes input line and strips comments starting with '#'.
+     *
+     * @param str raw input line
+     * @return normalized line
+     */
     public static String cleanText(String str) {
         str = str.toLowerCase();
 
@@ -93,6 +144,11 @@ public class Command {
         return str.trim();
     }
 
+    /**
+     * Reads one command from stdin and parses its arguments.
+     *
+     * @return parsed command, or null if input is blank
+     */
     public static Command readFromStdin() {
 
         Scanner scanner = new Scanner(System.in);
@@ -133,6 +189,11 @@ public class Command {
         return cmd;
     }
 
+    /**
+     * Executes this command on the given PixelTracer instance.
+     *
+     * @param app drawing engine
+     */
     public void execute(PixelTracer app) {
 
         switch (name) {
@@ -412,6 +473,11 @@ public class Command {
         }
     }
 
+    /**
+     * Handles subcommands of the "set" command.
+     *
+     * @param app drawing engine
+     */
     private void executeSet(PixelTracer app) {
 
         if (stringParams.size() < 2) {
@@ -468,6 +534,9 @@ public class Command {
         }
     }
 
+    /**
+     * Prints help for all available commands.
+     */
     private void printHelp() {
 
 
@@ -497,6 +566,9 @@ public class Command {
         System.out.println("set color r g b (ne fait rien en ligne de texte)");
     }
 
+    /**
+     * Prints a generic parameter error message.
+     */
     private void error() {
         System.out.println("erreur paramètres");
     }

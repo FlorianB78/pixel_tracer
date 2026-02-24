@@ -4,6 +4,10 @@ import shape.*;
 import java.util.ArrayList;
 import java.awt.Color;
 
+/**
+ * Core drawing engine of the application.
+ * Manages areas, layers, shapes, and ASCII rendering to stdout.
+ */
 public class PixelTracer {
 
     private Color color;
@@ -17,10 +21,19 @@ public class PixelTracer {
     private char backgroundChar = '.';
 
 
+    /**
+     * Creates an engine with one default area of size 40x20.
+     */
     public PixelTracer() {
         areas.add(new Area(0, 40, 20));
     }
 
+    /**
+     * Adds a point to the current layer.
+     *
+     * @param x x coordinate
+     * @param y y coordinate
+     */
     public void addPoint(int x, int y) {
 
         Point p = new Point(
@@ -42,6 +55,14 @@ public class PixelTracer {
                 .addShapeToLayer(p);
     }
 
+    /**
+     * Adds a line to the current layer.
+     *
+     * @param x1 start x
+     * @param y1 start y
+     * @param x2 end x
+     * @param y2 end y
+     */
     public void addLine(int x1, int y1, int x2, int y2) {
 
         ArrayList<Point> pts = new ArrayList<>();
@@ -67,6 +88,13 @@ public class PixelTracer {
                 .addShapeToLayer(l);
     }
 
+    /**
+     * Adds a circle to the current layer.
+     *
+     * @param x center x
+     * @param y center y
+     * @param radius circle radius
+     */
     public void addCircle(int x, int y, int radius) {
 
         Point center = new Point(
@@ -98,6 +126,14 @@ public class PixelTracer {
                 .addShapeToLayer(c);
     }
 
+    /**
+     * Adds a rectangle to the current layer.
+     *
+     * @param x origin x
+     * @param y origin y
+     * @param length rectangle length
+     * @param width rectangle width
+     */
     public void addRectangle(int x, int y, int length, int width) {
 
         Point origin = new Point(
@@ -130,6 +166,13 @@ public class PixelTracer {
                 .addShapeToLayer(rect);
     }
 
+    /**
+     * Adds a square to the current layer.
+     *
+     * @param x origin x
+     * @param y origin y
+     * @param length side length
+     */
     public void addSquare(int x, int y, int length) {
 
         Point origin = new Point(
@@ -161,6 +204,11 @@ public class PixelTracer {
                 .addShapeToLayer(s);
     }
 
+    /**
+     * Adds a polygon from pairs of integer coordinates.
+     *
+     * @param intParams list [x1, y1, x2, y2, ...]
+     */
     public void addPolygon(ArrayList<Integer> intParams) {
 
         ArrayList<Point> pts = new ArrayList<>();
@@ -195,6 +243,11 @@ public class PixelTracer {
                 .addShapeToLayer(poly);
     }
 
+    /**
+     * Adds a Bezier curve from control points encoded as integer pairs.
+     *
+     * @param intParams list [x1, y1, x2, y2, ...]
+     */
     public void addCurve(ArrayList<Integer> intParams) {
 
         ArrayList<Point> pts = new ArrayList<>();
@@ -237,6 +290,11 @@ public class PixelTracer {
    //     shapes.print();
    // }
 
+    /**
+     * Deletes a shape by index in the current layer.
+     *
+     * @param id shape index
+     */
     public void deleteShape(int id) {
 
         Layer layer =
@@ -251,10 +309,18 @@ public class PixelTracer {
         draw();
     }
 
+    /**
+     * Sets current drawing color.
+     *
+     * @param color color to use for newly created shapes
+     */
     public void setColor(Color color) {
         this.color = color;
     }
 
+    /**
+     * Removes all shapes from the current layer.
+     */
     public void clear() {
         areas.get(currentArea)
                 .getLayers()
@@ -262,6 +328,9 @@ public class PixelTracer {
                 .getListShapes().clear();
     }
 
+    /**
+     * Renders visible layers of the current area into the ASCII grid and prints it.
+     */
     public void draw() {
 
         if (areas.isEmpty()) {
@@ -471,6 +540,9 @@ public class PixelTracer {
         }
     }
 
+    /**
+     * Prints shapes of the current layer.
+     */
     public void listShapes() {
 
         Layer layer =
@@ -485,6 +557,13 @@ public class PixelTracer {
         }
     }
 
+    /**
+     * Sets current drawing color from RGB values.
+     *
+     * @param r red channel in [0, 255]
+     * @param g green channel in [0, 255]
+     * @param b blue channel in [0, 255]
+     */
     public void setColor(int r, int g, int b) {
 
         if (r < 0 || r > 255 ||
@@ -498,12 +577,22 @@ public class PixelTracer {
         this.color = new Color(r, g, b);
     }
 
+    /**
+     * Selects current layer by id in the current area.
+     *
+     * @param id layer id
+     */
     public void setLayer(int id) {
         if (id >= 0 && id < areas.get(currentArea).getLayers().size()) {
             currentLayer = id;
         }
     }
 
+    /**
+     * Deletes a layer by id, except layer 0.
+     *
+     * @param id layer id
+     */
     public void deleteLayer(int id) {
 
         if (id > 0 && id < areas.get(currentArea).getLayers().size()) { // on protège layer 0
@@ -511,10 +600,19 @@ public class PixelTracer {
         }
     }
 
+    /**
+     * Creates and selects a new layer in the current area.
+     */
     public void newLayer() {
         areas.get(currentArea).getLayers().add(new Layer(areas.get(currentArea).getLayers().size()));
     }
 
+    /**
+     * Toggles visibility of a layer.
+     *
+     * @param id layer id
+     * @param visible true to show, false to hide
+     */
     public void setLayerVisible(int id, boolean visible) {
 
         if (id >= 0 && id < areas.get(currentArea).getLayers().size()) {
@@ -526,14 +624,27 @@ public class PixelTracer {
         }
     }
 
+    /**
+     * Sets border character used by low-level plotting helpers.
+     *
+     * @param c border character
+     */
     public void setBorderChar(char c) {
         borderChar = c;
     }
 
+    /**
+     * Sets background character used by low-level plotting helpers.
+     *
+     * @param c background character
+     */
     public void setBackgroundChar(char c) {
         backgroundChar = c;
     }
 
+    /**
+     * Prints layers of the current area.
+     */
     public void listLayers() {
 
         Area area = areas.get(currentArea);
@@ -550,6 +661,9 @@ public class PixelTracer {
         }
     }
 
+    /**
+     * Prints all areas with their layer count.
+     */
     public void listAreas() {
 
         for (Area area : areas) {
@@ -561,10 +675,18 @@ public class PixelTracer {
         }
     }
 
+    /**
+     * Creates a new default area of size 40x20.
+     */
     public void newArea() {
         areas.add(new Area(areas.size(), 40, 20));
     }
 
+    /**
+     * Selects current area and resets current layer to 0.
+     *
+     * @param id area id
+     */
     public void selectArea(int id) {
         if (id >= 0 && id < areas.size()) {
             currentArea = id;
@@ -572,6 +694,11 @@ public class PixelTracer {
         }
     }
 
+    /**
+     * Deletes an area by id, except area 0.
+     *
+     * @param id area id
+     */
     public void deleteArea(int id) {
         if (id > 0 && id < areas.size()) {
             areas.remove(id);

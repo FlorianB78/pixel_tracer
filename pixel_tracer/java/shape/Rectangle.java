@@ -6,7 +6,7 @@ import pixeltracer.*;
 import pixel.*;
 
 /**
- * Class Rectangle
+ * Represents an axis-aligned rectangle.
  */
 public class Rectangle extends Shape {
 
@@ -21,6 +21,18 @@ public class Rectangle extends Shape {
   //
   // Constructors
   //
+  /**
+   * Creates a rectangle from origin point, length, and width.
+   *
+   * @param id shape identifier
+   * @param fill fill mode
+   * @param thickness stroke thickness
+   * @param rotation rotation value
+   * @param color rectangle color
+   * @param length rectangle length
+   * @param width rectangle width
+   * @param points origin point
+   */
   public Rectangle (int id, boolean fill, float thickness, double rotation, Color color, int length, int width, Point points) {
     super(id, fill, thickness, rotation, color);
     this.length = length;

@@ -7,7 +7,7 @@ import pixel.*;
 
 
 /**
- * Class Circle
+ * Represents a circle defined by center and radius.
  */
 public class Circle extends Shape {
 
@@ -21,6 +21,17 @@ public class Circle extends Shape {
   //
   // Constructors
   //
+  /**
+   * Creates a circle.
+   *
+   * @param id shape identifier
+   * @param fill fill mode
+   * @param thickness stroke thickness
+   * @param rotation rotation value
+   * @param color circle color
+   * @param radius circle radius
+   * @param point circle center
+   */
   public Circle (int id, boolean fill, float thickness, double rotation, Color color, int radius, Point point) {
     super(id, fill, thickness, rotation, color);
     this.radius = radius;

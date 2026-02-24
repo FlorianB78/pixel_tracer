@@ -6,7 +6,8 @@ import java.awt.Color;
 import pixel.*;
 
 /**
- * Class Shape
+ * Abstract base class for all drawable shapes.
+ * Contains common rendering attributes and line-segment drawing helper.
  */
 abstract public class Shape {
 
@@ -14,15 +15,29 @@ abstract public class Shape {
   // Fields
   //
 
+  /** Shape identifier. */
   protected int id;
+  /** Fill mode for closed shapes. */
   protected boolean fill;
+  /** Stroke thickness. */
   protected float thickness;
+  /** Rotation angle in degrees/radians depending on consumer. */
   protected double rotation;
+  /** Display color. */
   protected Color color;
   
   //
   // Constructors
   //
+  /**
+   * Creates a shape.
+   *
+   * @param id shape identifier
+   * @param fill fill mode
+   * @param thickness stroke thickness
+   * @param rotation rotation angle
+   * @param color shape color
+   */
   public Shape (int id, boolean fill, float thickness, double rotation, Color color) {
     this.id = id;
     this.fill = fill;
@@ -104,10 +119,20 @@ abstract public class Shape {
     return rotation;
   }
 
+  /**
+   * Sets shape color.
+   *
+   * @param newVar new color
+   */
   public void setColor (Color newVar) {
         color = newVar;
     }
 
+    /**
+     * Gets shape color.
+     *
+     * @return current color
+     */
     public Color getColor () {
         return color;
     }
@@ -125,6 +150,16 @@ abstract public class Shape {
     return str;
   }
 
+  /**
+   * Draws a segment into a list of pixels using an incremental algorithm.
+   *
+   * @param x start x
+   * @param y start y
+   * @param dx delta x
+   * @param dy delta y
+   * @param lst target pixel list
+   * @return updated pixel list
+   */
   public ArrayList<Pixel> drawSegment(int x, int y, int dx, int dy, ArrayList<Pixel> lst){
     int i, cumul;
     int xinc, yinc;
@@ -166,6 +201,13 @@ abstract public class Shape {
     return lst;
   }
 
+  /**
+   * Draws the shape into a list of pixels.
+   * Subclasses override this method.
+   *
+   * @param lst target pixel list
+   * @return updated pixel list
+   */
   public ArrayList<Pixel> draw(ArrayList<Pixel> lst) {
     return lst;
   }

@@ -6,7 +6,7 @@ import pixeltracer.*;
 import pixel.*;
 
 /**
- * Class Curve
+ * Represents a Bezier curve defined by control points.
  */
 public class Curve extends Shape {
 
@@ -19,6 +19,16 @@ public class Curve extends Shape {
   //
   // Constructors
   //
+  /**
+   * Creates a curve from control points.
+   *
+   * @param id shape identifier
+   * @param fill fill mode
+   * @param thickness stroke thickness
+   * @param rotation rotation value
+   * @param color curve color
+   * @param points control points
+   */
   public Curve (int id, boolean fill, float thickness, double rotation, Color color, ArrayList<Point> points) {
     super(id, fill, thickness, rotation, color);
     this.points = points;
@@ -62,7 +72,7 @@ public class Curve extends Shape {
   }
 
   /**
-   * @brief Calcule le point intermédiaire entre deux points
+   * Calcule le point intermédiaire entre deux points
    *
    * @param p1 Premier point
    * @param p2 Deuxième point
@@ -77,7 +87,7 @@ public class Curve extends Shape {
   }
 
   /**
-  * @brief Calcule un point sur la courbe de Bezier via Casteljau
+  * Calcule un point sur la courbe de Bezier via Casteljau
   *
   * @param points Tableau de points de contrôle
   * @param num_pt Nombre de points

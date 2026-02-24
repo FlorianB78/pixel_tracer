@@ -7,7 +7,7 @@ import pixel.*;
 
 
 /**
- * Class Line
+ * Represents a segment defined by two points.
  */
 public class Line extends Shape {
 
@@ -20,6 +20,16 @@ public class Line extends Shape {
   //
   // Constructors
   //
+  /**
+   * Creates a line from a list containing start and end points.
+   *
+   * @param id shape identifier
+   * @param fill fill mode
+   * @param thickness stroke thickness
+   * @param rotation rotation value
+   * @param color line color
+   * @param points two endpoints of the line
+   */
   public Line (int id, boolean fill, float thickness, double rotation, Color color, ArrayList<Point> points) {
     super(id, fill, thickness, rotation, color);
     this.points = points;

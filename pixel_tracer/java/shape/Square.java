@@ -6,7 +6,7 @@ import pixeltracer.*;
 import pixel.*;
 
 /**
- * Class Square
+ * Represents an axis-aligned square.
  */
 public class Square extends Shape {
 
@@ -20,6 +20,17 @@ public class Square extends Shape {
   //
   // Constructors
   //
+  /**
+   * Creates a square from origin point and side length.
+   *
+   * @param id shape identifier
+   * @param fill fill mode
+   * @param thickness stroke thickness
+   * @param rotation rotation value
+   * @param color square color
+   * @param length side length
+   * @param points origin point
+   */
   public Square (int id, boolean fill, float thickness, double rotation, Color color, int length, shape.Point points) {
     super(id, fill, thickness, rotation, color);
     this.length = length;

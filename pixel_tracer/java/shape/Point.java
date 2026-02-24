@@ -7,7 +7,7 @@ import pixel.*;
 
 
 /**
- * Class Point
+ * Represents a 2D point shape.
  */
 public class Point extends Shape {
 
@@ -23,12 +23,34 @@ public class Point extends Shape {
   //
   // Constructors
   //
+  /**
+   * Creates a point from integer coordinates.
+   *
+   * @param id shape identifier
+   * @param fill fill mode
+   * @param thickness stroke thickness
+   * @param rotation rotation value
+   * @param color point color
+   * @param x x coordinate
+   * @param y y coordinate
+   */
   public Point (int id, boolean fill, float thickness, double rotation, Color color, int x, int y) {
     super(id, fill, thickness, rotation, color);
     pos_x = x;
     pos_y = y;
   };
   
+  /**
+   * Creates a point from floating point coordinates.
+   *
+   * @param id shape identifier
+   * @param fill fill mode
+   * @param thickness stroke thickness
+   * @param rotation rotation value
+   * @param color point color
+   * @param x x coordinate
+   * @param y y coordinate
+   */
   public Point (int id, boolean fill, float thickness, double rotation, Color color, double x, double y) {
     super(id, fill, thickness, rotation, color);
     double_pos_x = x;

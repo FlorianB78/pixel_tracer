@@ -7,7 +7,7 @@ import pixel.*;
 
 
 /**
- * Class Polygone
+ * Represents a polygon defined by ordered vertices.
  */
 public class Polygon extends Shape {
 
@@ -20,6 +20,16 @@ public class Polygon extends Shape {
   //
   // Constructors
   //
+  /**
+   * Creates a polygon from a list of points.
+   *
+   * @param id shape identifier
+   * @param fill fill mode
+   * @param thickness stroke thickness
+   * @param rotation rotation value
+   * @param color polygon color
+   * @param points polygon vertices
+   */
   public Polygon (int id, boolean fill, float thickness, double rotation, Color color, ArrayList<Point> points) {
     super(id, fill, thickness, rotation, color);
     this.points = points;

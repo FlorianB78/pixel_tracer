@@ -1,0 +1,132 @@
+@startuml
+title PixelTracer - Diagramme de classes
+
+skinparam classAttributeIconSize 0
+hide empty members
+
+package main {
+  class Main
+}
+
+package command {
+  class Command {
+    - name : String
+    - intParams : ArrayList<Integer>
+    - stringParams : ArrayList<String>
+    - floatParams : ArrayList<Float>
+    + readFromStdin() : Command
+    + execute(app : PixelTracer) : void
+  }
+}
+
+package pixeltracer {
+  class PixelTracer {
+    - areas : ArrayList<Area>
+    - currentArea : int
+    - currentLayer : int
+    - color : Color
+    + addPoint(x:int, y:int) : void
+    + addLine(x1:int, y1:int, x2:int, y2:int) : void
+    + addCircle(x:int, y:int, radius:int) : void
+    + addRectangle(x:int, y:int, length:int, width:int) : void
+    + addSquare(x:int, y:int, length:int) : void
+    + addPolygon(intParams:ArrayList<Integer>) : void
+    + addCurve(intParams:ArrayList<Integer>) : void
+    + draw() : void
+  }
+
+  class Area {
+    - id : int
+    - width : int
+    - height : int
+    - area : char[][]
+    - layers : ArrayList<Layer>
+    + clearArea() : void
+    + printArea() : void
+  }
+
+  class Layer {
+    - id : int
+    - visible : boolean
+    - listShapes : ArrayList<Shape>
+    + addShapeToLayer(shape:Shape) : void
+  }
+}
+
+package shape {
+  abstract class Shape {
+    # id : int
+    # fill : boolean
+    # thickness : float
+    # rotation : double
+    # color : Color
+    + draw(lst:ArrayList<Pixel>) : ArrayList<Pixel>
+  }
+
+  class Point {
+    - pos_x : int
+    - pos_y : int
+  }
+
+  class Line {
+    - points : ArrayList<Point>
+  }
+
+  class Curve {
+    - points : ArrayList<Point>
+  }
+
+  class Rectangle {
+    - length : int
+    - width : int
+    - points : Point
+  }
+
+  class Square {
+    - length : int
+    - points : Point
+  }
+
+  class Circle {
+    - radius : int
+    - center : Point
+  }
+
+  class Polygon {
+    - points : ArrayList<Point>
+  }
+}
+
+package pixel {
+  class Pixel {
+    - px : int
+    - py : int
+    - color : Color
+  }
+}
+
+Shape <|-- Point
+Shape <|-- Line
+Shape <|-- Curve
+Shape <|-- Rectangle
+Shape <|-- Square
+Shape <|-- Circle
+Shape <|-- Polygon
+
+PixelTracer "1" *-- "1..*" Area
+Area "1" *-- "1..*" Layer
+Layer "1" *-- "0..*" Shape
+
+Line "1" o-- "2" Point
+Curve "1" o-- "2..*" Point
+Polygon "1" o-- "2..*" Point
+Rectangle "1" o-- "1" Point : origin
+Square "1" o-- "1" Point : origin
+Circle "1" o-- "1" Point : center
+
+Main ..> PixelTracer
+Main ..> Command
+Command ..> PixelTracer
+Shape ..> Pixel
+
+@enduml
